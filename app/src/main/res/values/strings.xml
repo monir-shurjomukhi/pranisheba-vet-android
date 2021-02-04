@@ -3,4 +3,11 @@
   <string name="enter_your_mobile_number">Enter your mobile number</string>
   <string name="next">Next</string>
   <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
+  <string name="already_registered_login">Already registered? Login</string>
+  <string name="submit">Submit</string>
+  <string name="name">Name</string>
+  <string name="mobile_number">Mobile Number</string>
+  <string name="email">Email</string>
+  <string name="farm_name">Farm Name</string>
+  <string name="address">Address</string>
 </resources>

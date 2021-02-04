@@ -9,55 +9,54 @@
 
   <ImageView
     android:id="@+id/logoImageView"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
     android:layout_marginTop="40dp"
     android:src="@drawable/ic_logo"
-    android:layout_width="0dp"
-    android:layout_marginHorizontal="24dp"
-    android:layout_height="wrap_content"/>
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
   <com.google.android.material.textfield.TextInputLayout
     android:id="@+id/mobileLayout"
     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
     android:hint="@string/enter_your_mobile_number"
-    app:layout_constraintBottom_toTopOf="@id/nextButton"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/logoImageView"
     app:layout_constraintVertical_chainStyle="packed">
 
     <com.google.android.material.textfield.TextInputEditText
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:textSize="20sp"
-      android:inputType="phone" />
+      android:inputType="phone"
+      android:textSize="20sp" />
   </com.google.android.material.textfield.TextInputLayout>
 
   <com.google.android.material.button.MaterialButton
     android:id="@+id/nextButton"
     android:layout_width="0dp"
-    android:layout_marginTop="24dp"
     android:layout_height="wrap_content"
-    android:text="@string/next"
-    android:textSize="24sp"
-    android:textAllCaps="false"
+    android:layout_marginTop="24dp"
     android:padding="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:text="@string/next"
+    android:textAllCaps="false"
+    android:textSize="24sp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/mobileLayout" />
 
   <com.google.android.material.textview.MaterialTextView
     android:id="@+id/signUpTextView"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:text="@string/don_t_have_account_sign_up"
-    android:textSize="20sp"
-    android:textColor="@color/purple_500"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:text="@string/don_t_have_account_sign_up"
+    android:textColor="@color/purple_500"
+    android:textSize="20sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
