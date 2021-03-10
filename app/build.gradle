@@ -71,4 +71,7 @@ dependencies {
 
   // Logger for Retrofit
   implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
+
+  // Webkit
+  implementation "androidx.webkit:webkit:1.4.0"
 }
