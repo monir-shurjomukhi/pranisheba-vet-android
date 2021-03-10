@@ -1,14 +1,14 @@
 package com.pranisheba.vet.ui.activity
 
+import android.app.ProgressDialog
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.KeyEvent
 import android.view.KeyEvent.ACTION_UP
 import android.view.KeyEvent.KEYCODE_BACK
-import android.webkit.WebResourceError
-import android.webkit.WebResourceRequest
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.webkit.WebSettingsCompat
@@ -21,23 +21,42 @@ class MainActivity : AppCompatActivity() {
 
   private lateinit var binding: ActivityMainBinding
 
+  private lateinit var progress: ProgressDialog
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
     binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+    progress = ProgressDialog(this)
+    progress.setMessage("Please Wait...")
+    progress.setCancelable(false)
+
     binding.webView.settings.javaScriptEnabled = true
     binding.webView.settings.loadWithOverviewMode = true
     binding.webView.settings.useWideViewPort = true
     binding.webView.settings.domStorageEnabled = true
-    binding.webView.settings.builtInZoomControls = false
+    binding.webView.settings.setAppCacheEnabled(true)
+    binding.webView.settings.loadsImagesAutomatically = true
+    binding.webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
     binding.webView.webViewClient = object : WebViewClient() {
       override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-        view.loadUrl(url)
+        if (Uri.parse(url).host == "pranishebavet.com.bd" ||
+          Uri.parse(url).host == "https://pranishebavet.com.bd" ||
+          Uri.parse(url).host == "admin.pranishebavet.com.bd" ||
+          Uri.parse(url).host == "https://admin.pranishebavet.com.bd") {
+          // This is my web site, so do not override; let my WebView load the page
+          return false
+        }
+        // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
+        Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+          startActivity(this)
+        }
         return true
       }
 
       override fun onPageFinished(view: WebView, url: String) {
+        //progress.dismiss()
       }
 
       override fun onReceivedError(
@@ -47,6 +66,7 @@ class MainActivity : AppCompatActivity() {
       ) {
         super.onReceivedError(view, request, error)
         Log.e(TAG, "onReceivedError:")
+        //progress.dismiss()
       }
     }
 
