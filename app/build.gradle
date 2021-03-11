@@ -18,11 +18,29 @@ android {
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
   }
 
+  signingConfigs {
+    config {
+      storeFile file('../app/keystore/psvet_key.jks')
+      keyAlias = 'psVet'
+      storePassword 'psVet1123'
+      keyPassword 'psVet1123'
+    }
+  }
+
   buildTypes {
     release {
       minifyEnabled false
+      signingConfig signingConfigs.config
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
       buildConfigField("String", "BASE_URL", "\"http://182.16.159.22:8682/FFMSAPI/api/\"")
+
+      applicationVariants.all { variant ->
+        def date = new Date()
+        def formattedDate = date.format('HHmmss-dd-MM-yyyy')
+        variant.outputs.all {
+          outputFileName = "psVet_${variant.buildType.name}_v${defaultConfig.versionCode}_${formattedDate}.apk"
+        }
+      }
     }
     debug {
       buildConfigField("String", "BASE_URL", "\"http://192.168.0.117:8084/FFMS/api/\"")
