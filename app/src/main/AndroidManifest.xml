@@ -11,8 +11,12 @@
     android:label="@string/app_name"
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
-    android:usesCleartextTraffic="true"
-    android:theme="@style/Theme.PranishebaVet">
+    android:theme="@style/Theme.PranishebaVet"
+    android:usesCleartextTraffic="true">
+    <activity
+      android:name=".ui.activity.MainActivity2"
+      android:label="@string/title_activity_main2"
+      android:theme="@style/Theme.PranishebaVet.NoActionBar"/>
     <activity android:name=".ui.activity.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
