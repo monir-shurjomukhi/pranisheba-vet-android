@@ -21,4 +21,24 @@
   <string name="menu_home">Home</string>
   <string name="menu_gallery">Gallery</string>
   <string name="menu_slideshow">Slideshow</string>
+  <string name="farmer_s_information">Farmer\'s Information:</string>
+  <string name="mobile_number_">Mobile Number:</string>
+  <string name="name_of_farmer_">Name of Farmer:</string>
+  <string name="name_of_farm_">Name of Farm:</string>
+  <string name="address_">Address:</string>
+  <string name="email_">Email:</string>
+  <string name="farm_s_information">Farm\'s Information</string>
+  <string name="type_of_farm_">Type of Farm:</string>
+  <string name="number_of_animal_">Number of Animal:</string>
+  <string name="address_of_farm_">Address of Farm:</string>
+  <string name="farm_and_farmer_s_information">Farm and Farmer\'s Information</string>
+  <string name="service_related_information">Service Related Information</string>
+  <string name="service_receiving_form">Service Receiving Form</string>
+  <string name="payment_form">Payment Form</string>
+  <string name="farm_registration">Farm Registration</string>
+  <string name="registered_farm_related_information">Registered Farm Related Information</string>
+  <string name="agent_registration">Agent Registration</string>
+  <string name="farm_management_information">Farm Management Information</string>
+  <string name="weight_measurement">Weight Measurement</string>
+  <string name="hotline_number">Hotline Number</string>
 </resources>

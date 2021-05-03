@@ -1,4 +1,4 @@
-package com.pranisheba.vet.ui.activity.ui.gallery
+package com.pranisheba.vet.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
+import com.pranisheba.vet.ui.viewmodel.GalleryViewModel
 
 class GalleryFragment : Fragment() {
 

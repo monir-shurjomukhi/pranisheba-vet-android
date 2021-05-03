@@ -4,7 +4,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".ui.activity.ui.home.HomeFragment">
+  tools:context=".ui.fragment.HomeFragment">
 
   <ScrollView
     android:id="@+id/scrollView"
@@ -28,6 +28,7 @@
       <!-- Row 1 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
+        android:id="@+id/farmAndFarmersInfoCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -57,7 +58,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Farm and Farmer's Information"
+            android:text="@string/farm_and_farmer_s_information"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp"/>
@@ -66,6 +67,7 @@
 
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
+        android:id="@+id/serviceRelatedInfoCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -93,7 +95,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Service Related Information"
+            android:text="@string/service_related_information"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -103,6 +105,7 @@
       <!-- Row 2 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
+        android:id="@+id/serviceReceivingFormCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -129,7 +132,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Service Receiving Form"
+            android:text="@string/service_receiving_form"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -138,6 +141,7 @@
 
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
+        android:id="@+id/paymentFormCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -164,7 +168,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Payment Form"
+            android:text="@string/payment_form"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -174,6 +178,7 @@
       <!-- Row 2 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
+        android:id="@+id/farmRegistrationCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -200,7 +205,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Farm Registration"
+            android:text="@string/farm_registration"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -209,6 +214,7 @@
 
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
+        android:id="@+id/registeredFarmRelatedInfoCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -235,7 +241,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registered Farm Related Information"
+            android:text="@string/registered_farm_related_information"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -243,6 +249,7 @@
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
+        android:id="@+id/agentRegistrationCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -269,7 +276,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agent Registration"
+            android:text="@string/agent_registration"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -277,6 +284,7 @@
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
+        android:id="@+id/farmManagementInfoCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -303,7 +311,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Farm Management Information"
+            android:text="@string/farm_management_information"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -311,6 +319,7 @@
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
+        android:id="@+id/weightMeasurementCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -338,7 +347,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Weight Measurement"
+            android:text="@string/weight_measurement"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
@@ -346,6 +355,7 @@
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
+        android:id="@+id/hotlineNumberCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -372,7 +382,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hotline Number"
+            android:text="@string/hotline_number"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="16sp" />

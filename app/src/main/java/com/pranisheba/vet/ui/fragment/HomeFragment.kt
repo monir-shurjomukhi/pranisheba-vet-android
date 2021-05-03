@@ -1,5 +1,6 @@
-package com.pranisheba.vet.ui.activity.ui.home
+package com.pranisheba.vet.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
+import com.pranisheba.vet.ui.activity.FarmAndFarmerInfoActivity
+import com.pranisheba.vet.ui.viewmodel.HomeViewModel
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
@@ -25,6 +29,15 @@ class HomeFragment : Fragment() {
     homeViewModel.text.observe(viewLifecycleOwner, Observer {
       //textView.text = it
     })
+
     return root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    farmAndFarmersInfoCardView.setOnClickListener {
+      startActivity(Intent(context, FarmAndFarmerInfoActivity::class.java))
+    }
   }
 }
