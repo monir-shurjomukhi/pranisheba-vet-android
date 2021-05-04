@@ -13,7 +13,8 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.PranishebaVet"
     android:usesCleartextTraffic="true">
-    <activity android:name=".ui.activity.FarmAndFarmerInfoActivity"></activity>
+    <activity android:name=".ui.activity.EditFarmAndFarmerInfoActivity"></activity>
+    <activity android:name=".ui.activity.FarmAndFarmerInfoActivity" />
     <activity
       android:name=".ui.activity.MainActivity2"
       android:label="@string/title_activity_main2"

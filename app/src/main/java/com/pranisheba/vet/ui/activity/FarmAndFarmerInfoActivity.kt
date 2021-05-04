@@ -1,6 +1,7 @@
 package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
@@ -14,7 +15,11 @@ class FarmAndFarmerInfoActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
+  }
 
+  override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    menuInflater.inflate(R.menu.farm_and_farmer, menu)
+    return super.onCreateOptionsMenu(menu)
   }
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
