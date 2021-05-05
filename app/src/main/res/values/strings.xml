@@ -6,9 +6,12 @@
   <string name="already_registered_login">Already registered? Login</string>
   <string name="submit">Submit</string>
   <string name="name">Name</string>
+  <string name="farmer_name">Farmer Name</string>
   <string name="mobile_number">Mobile Number</string>
   <string name="email">Email</string>
   <string name="farm_name">Farm Name</string>
+  <string name="farm_type">Farm Type</string>
+  <string name="number_of_animal">Number of Animal</string>
   <string name="address">Address</string>
   <string name="title_activity_main2">MainActivity2</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -33,6 +36,7 @@
   <string name="number_of_animal_">Number of Animal:</string>
   <string name="address_of_farm_">Address of Farm:</string>
   <string name="farm_and_farmer_s_information">Farm and Farmer\'s Information</string>
+  <string name="edit_farm_and_farmer_s_information">Edit Farm and Farmer\'s Information</string>
   <string name="service_related_information">Service Related Information</string>
   <string name="service_receiving_form">Service Receiving Form</string>
   <string name="payment_form">Payment Form</string>

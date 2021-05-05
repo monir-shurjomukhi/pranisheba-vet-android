@@ -1,5 +1,6 @@
 package com.pranisheba.vet.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -25,7 +26,9 @@ class FarmAndFarmerInfoActivity : AppCompatActivity() {
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
     // handle arrow click here
     if (item.itemId == android.R.id.home) {
-      finish() // close this activity and return to preview activity (if there is any)
+      onBackPressed()
+    } else if (item.itemId == R.id.action_edit) {
+      startActivity(Intent(this, EditFarmAndFarmerInfoActivity::class.java))
     }
     return super.onOptionsItemSelected(item)
   }
