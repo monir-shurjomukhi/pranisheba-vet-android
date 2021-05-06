@@ -26,6 +26,37 @@
   <string name="menu_gallery">Gallery</string>
   <string name="menu_slideshow">Slideshow</string>
   <string name="farmer_s_information">Farmer\'s Information:</string>
+  <string name="treatment_service">Treatment Service</string>
+  <string name="treatment_service_details">You can call the hotline number (09643207003) to get
+    medical treatment for your animal through the customer service officer or by filling out the
+    initial patient information form by yourself. Then you can make payment from your own bKash
+    account with the counter number received on your mobile or by clicking on the link received.
+    You can pay with the counter number from the personal number of any bKash agent. Our service
+    price is Tk.200 per cow / buffalo, Tk.100 per goat / sheep; The service price for each batch of
+    chicken, duck, turkey, quail etc. is Tk. 500, dog, cat, rabbit Tk.500 each, birds Tk.100 each
+    and other animals Tk.500 each. You can also find out the information of the service from our
+    Facebook or website.</string>
+  <string name="consultancy_service">Consultancy Service</string>
+  <string name="consultancy_service_details">You can fill and submit the consultancy information
+    form yourself from the service receiving form to take the consultancy service of your animal or
+    you can fill and submit it through the customer service officer by calling hotline
+    (09643207003).Then you can make payment from your bKash / Rocket / Cash or by clicking on the
+    link received with the counter number received on your mobile. Or you can make payment with the
+    counter number from the personal number of any bKash / rocket / cash agent. Our consultancy
+    service prices are divided into two categories, one-time and yearly.</string>
+  <string name="registered_farm_service">Treatment Service</string>
+  <string name="registered_farm_service_details">The country\'s first government-approved online
+    veterinary hospital has launched a special service called \'Registered Farm Service\'.
+    The service will specifically help a farmer to build a profitable farm through proper farm
+    management. A farm needs scientific accommodation, quality rations, breeding
+    decisions / planning, production and storage of green grass, routine wise vaccination and
+    deworming, proper daily care, cure, disease prevention and treatment and production and
+    marketing of quality products etc. You can ensure all these things through the farm registration
+    service. Proper management is the main controller of the implementation of the goals and
+    objectives of the farm. Management is an art or technique that combines farm resources,
+    decisions, opportunities and time to make it profitable. We do farm mainly for production.
+    Production refers to milk, meat, eggs, chicks, and fur. Farm registration to ensure this
+    production!</string>
   <string name="mobile_number_">Mobile Number:</string>
   <string name="name_of_farmer_">Name of Farmer:</string>
   <string name="name_of_farm_">Name of Farm:</string>
