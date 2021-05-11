@@ -33,14 +33,14 @@
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
+        android:focusable="true"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
-        android:focusable="true">
+        app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
@@ -55,13 +55,13 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/farm_and_farmer_s_information"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/farm_and_farmer_s_information"
             android:textColor="@android:color/black"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
         </LinearLayout>
       </androidx.cardview.widget.CardView>
 
@@ -72,8 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="8dp"
@@ -92,11 +92,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/service_related_information"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/service_related_information"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -129,11 +129,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/service_receiving_form"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/service_receiving_form"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -165,11 +165,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/payment_form"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/payment_form"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -202,11 +202,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/farm_registration"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/farm_registration"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -238,11 +238,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/registered_farm_related_information"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/registered_farm_related_information"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -273,11 +273,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/agent_registration"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/agent_registration"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -308,11 +308,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/farm_management_information"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/farm_management_information"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -337,18 +337,18 @@
           android:orientation="vertical">
 
           <ImageView
-            android:layout_marginTop="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/weight_measurement"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/weight_measurement"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>
@@ -379,11 +379,11 @@
             android:src="@mipmap/ic_launcher" />
 
           <TextView
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hotline_number"
+            android:layout_marginTop="8dp"
             android:gravity="center"
+            android:text="@string/hotline_number"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>

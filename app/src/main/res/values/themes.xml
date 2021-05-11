@@ -22,4 +22,17 @@
   <style name="Theme.PranishebaVet.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
   <style name="Theme.PranishebaVet.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+  <!-- Style for a tab that displays a category name -->
+  <style name="CategoryTab" parent="Widget.Design.TabLayout">
+    <item name="tabIndicatorColor">@android:color/white</item>
+    <item name="tabSelectedTextColor">@android:color/white</item>
+    <item name="android:background">@color/purple_500</item>
+    <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+  </style>
+
+  <!-- Text appearance style for a category tab -->
+  <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+    <item name="android:textColor">#BBBBBB</item>
+  </style>
 </resources>
