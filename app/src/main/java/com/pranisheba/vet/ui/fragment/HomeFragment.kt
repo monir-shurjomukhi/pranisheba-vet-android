@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
 import com.pranisheba.vet.ui.activity.FarmAndFarmerInfoActivity
+import com.pranisheba.vet.ui.activity.ServiceReceivingFormActivity
 import com.pranisheba.vet.ui.activity.ServiceRelatedInfoActivity
 import com.pranisheba.vet.ui.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -43,6 +44,10 @@ class HomeFragment : Fragment() {
 
     serviceRelatedInfoCardView.setOnClickListener {
       startActivity(Intent(context, ServiceRelatedInfoActivity::class.java))
+    }
+
+    serviceReceivingFormCardView.setOnClickListener {
+      startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
     }
   }
 }

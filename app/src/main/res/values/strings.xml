@@ -77,4 +77,6 @@
   <string name="farm_management_information">Farm Management Information</string>
   <string name="weight_measurement">Weight Measurement</string>
   <string name="hotline_number">Hotline Number</string>
+  <string name="treatment">Treatment</string>
+  <string name="consultancy">Consultancy</string>
 </resources>
