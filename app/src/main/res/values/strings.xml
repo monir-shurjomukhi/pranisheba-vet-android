@@ -79,4 +79,6 @@
   <string name="hotline_number">Hotline Number</string>
   <string name="treatment">Treatment</string>
   <string name="consultancy">Consultancy</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
