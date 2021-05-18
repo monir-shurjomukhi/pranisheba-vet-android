@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.pranisheba.vet.R
-import com.pranisheba.vet.ui.fragment.GalleryFragment
-import com.pranisheba.vet.ui.fragment.HomeFragment
+import com.pranisheba.vet.ui.fragment.ConsultancyFormFragment
+import com.pranisheba.vet.ui.fragment.TreatmentFormFragment
 
 class ServiceReceivingFormPagerAdapter(val context: Context, fragmentManager: FragmentManager?) :
   FragmentStatePagerAdapter(
@@ -15,9 +15,9 @@ class ServiceReceivingFormPagerAdapter(val context: Context, fragmentManager: Fr
 
   override fun getItem(position: Int): Fragment {
     return if (position == 0) {
-      GalleryFragment()
+      TreatmentFormFragment()
     } else {
-      HomeFragment()
+      ConsultancyFormFragment()
     }
   }
 

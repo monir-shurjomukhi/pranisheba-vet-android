@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.pranisheba.vet.R
 
 
-class TreatmentFormFragment : Fragment() {
+class ConsultancyFormFragment : Fragment() {
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
