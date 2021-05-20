@@ -108,5 +108,182 @@ class TreatmentFormFragment : Fragment() {
         vaccinationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
+
+    temperatureLevelLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("High", "Low", "Normal")
+      ).also { adapter ->
+        temperatureLevelTextView.setAdapter(adapter)
+        temperatureLevelTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    feedIntakeLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Normal", "Low", "No")
+      ).also { adapter ->
+        feedIntakeTextView.setAdapter(adapter)
+        feedIntakeTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    defecationStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf(
+          "No",
+          "Normal",
+          "Loose motion",
+          "Bloody with mucus",
+          "Constipation",
+          "Whitish",
+          "Yellowish",
+          "Greenish"
+        )
+      ).also { adapter ->
+        defecationStatusTextView.setAdapter(adapter)
+        defecationStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    urinationStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("No", "Normal color", "Red color")
+      ).also { adapter ->
+        urinationStatusTextView.setAdapter(adapter)
+        urinationStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    hairStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Normal", "Erected")
+      ).also { adapter ->
+        hairStatusTextView.setAdapter(adapter)
+        hairStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    salivationStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("No", "Only salivation", "Salivation with foam")
+      ).also { adapter ->
+        salivationStatusTextView.setAdapter(adapter)
+        salivationStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    postureStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Standing", "Sitting", "Lying on head up", "Lying on the ground")
+      ).also { adapter ->
+        postureStatusTextView.setAdapter(adapter)
+        postureStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    muzzleStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Wet", "Dry")
+      ).also { adapter ->
+        muzzleStatusTextView.setAdapter(adapter)
+        muzzleStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    sneezingStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Yes", "No", "With mucus")
+      ).also { adapter ->
+        sneezingStatusTextView.setAdapter(adapter)
+        sneezingStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    gestureStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Normal", "Abnormal")
+      ).also { adapter ->
+        gestureStatusTextView.setAdapter(adapter)
+        gestureStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    firstTimeLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Yes", "No")
+      ).also { adapter ->
+        firstTimeTextView.setAdapter(adapter)
+        firstTimeTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    soughtElsewhereLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Yes", "No")
+      ).also { adapter ->
+        soughtElsewhereTextView.setAdapter(adapter)
+        soughtElsewhereTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    otherAnimalsLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Yes", "No")
+      ).also { adapter ->
+        otherAnimalsTextView.setAdapter(adapter)
+        otherAnimalsTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    emergencyTypeLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Normal", "Emergency")
+      ).also { adapter ->
+        emergencyTypeTextView.setAdapter(adapter)
+        emergencyTypeTextView.inputType = InputType.TYPE_NULL
+      }
+    }
   }
 }

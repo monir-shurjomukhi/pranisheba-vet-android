@@ -28,8 +28,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
           android:id="@+id/treatedBeforeTextView"
@@ -48,8 +47,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/treatedBeforeLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/treatedBeforeLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -68,8 +66,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/previousPrescriptionLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/previousPrescriptionLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -88,8 +85,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalNameOrIdLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/animalNameOrIdLayout">
 
         <AutoCompleteTextView
           android:id="@+id/animalGroupTextView"
@@ -128,8 +124,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalTypeLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/animalTypeLayout">
 
         <AutoCompleteTextView
           android:id="@+id/animalBreedTextView"
@@ -148,8 +143,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalBreedLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/animalBreedLayout">
 
         <AutoCompleteTextView
           android:id="@+id/partOfIotTextView"
@@ -168,8 +162,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/partOfIotLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/partOfIotLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -203,10 +196,10 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="@string/unit"
         app:errorEnabled="true"
-        android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/animalAgeLayout"
         app:layout_constraintTop_toBottomOf="@id/bolusIdLayout"
@@ -229,8 +222,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ageUnitLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/ageUnitLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -249,8 +241,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalWeightLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/animalWeightLayout">
 
         <AutoCompleteTextView
           android:id="@+id/animalGenderTextView"
@@ -269,8 +260,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalGenderLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/animalGenderLayout">
 
         <AutoCompleteTextView
           android:id="@+id/dewormingStatusTextView"
@@ -289,8 +279,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dewormingStatusLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/dewormingStatusLayout">
 
         <AutoCompleteTextView
           android:id="@+id/vaccinationStatusTextView"
@@ -300,57 +289,35 @@
       </com.google.android.material.textfield.TextInputLayout>
 
       <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/farmNameLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/temperatureLevelLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/farm_name"
+        android:hint="@string/select_the_level_of_temperature"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vaccinationStatusLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/vaccinationStatusLayout">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
+          android:id="@+id/temperatureLevelTextView"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:inputType="textPersonName"
           android:textSize="20sp" />
       </com.google.android.material.textfield.TextInputLayout>
 
       <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/farmTypeLayout"
+        android:id="@+id/temperatureLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/farm_type"
+        android:hint="@string/temperature_f"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/farmNameLayout"
-        app:layout_constraintVertical_chainStyle="packed">
-
-        <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPersonName"
-          android:textSize="20sp" />
-      </com.google.android.material.textfield.TextInputLayout>
-
-      <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/numberOfAnimalLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/number_of_animal"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/farmTypeLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/temperatureLevelLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -360,22 +327,269 @@
       </com.google.android.material.textfield.TextInputLayout>
 
       <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/addressLayout"
+        android:id="@+id/feedIntakeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_feed_water_intake_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temperatureLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/feedIntakeTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/defecationStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_defecation_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feedIntakeLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/defecationStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/urinationStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_urination_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/defecationStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/urinationStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hairStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_hair_of_the_animal_s_body_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/urinationStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/hairStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/salivationStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_salivation_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hairStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/salivationStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/postureStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_animal_static_posture_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/salivationStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/postureStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/muzzleStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_muzzle_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postureStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/muzzleStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sneezingStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_sneezing_coughing_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/muzzleStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/sneezingStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/gestureStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_the_posture_and_gesture_status"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sneezingStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/gestureStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstTimeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/is_the_illness_happening_for_the_first_time"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gestureStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/firstTimeTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/soughtElsewhereLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/was_treatment_sought_elsewhere"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstTimeLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/soughtElsewhereTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/problemDescriptionLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/address"
+        android:hint="@string/problem_description_in_100_words"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/numberOfAnimalLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintTop_toBottomOf="@id/soughtElsewhereLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
+          android:layout_height="160dp"
+          android:gravity="start"
+          android:inputType="text"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otherAnimalsLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/are_any_other_animals_affected_by_the_same_disease"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/problemDescriptionLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/otherAnimalsTextView"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:inputType="textPostalAddress"
+          android:textSize="20sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emergencyTypeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/select_type_of_emergency"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otherAnimalsLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/emergencyTypeTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
           android:textSize="20sp" />
       </com.google.android.material.textfield.TextInputLayout>
 
@@ -391,7 +605,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addressLayout" />
+        app:layout_constraintTop_toBottomOf="@id/emergencyTypeLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
   </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
