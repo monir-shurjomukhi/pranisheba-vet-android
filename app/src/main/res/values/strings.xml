@@ -85,4 +85,14 @@
   <string name="previous_prescription_number">Previous prescription number</string>
   <string name="animal_name_or_id_number">Animal name or ID number</string>
   <string name="select_animal_group">Select animal group*</string>
+  <string name="select_animal_type">Select animal type*</string>
+  <string name="select_animal_breed">Select animal breed</string>
+  <string name="select_animal_gender">Select animal gender</string>
+  <string name="is_this_animal_part_of_ps_iot_network">Is this animal part of pS IoT network?*</string>
+  <string name="bolus_id">Bolus ID</string>
+  <string name="age_of_the_animal">Age of the animal*</string>
+  <string name="unit">Unit*</string>
+  <string name="age_of_the_animal_in_kg">Age of the animal in KG*</string>
+  <string name="select_deworming_status_within_the_last">Select deworming status within the last*</string>
+  <string name="select_vaccination_status_within_the_last">Select vaccination status within the last*</string>
 </resources>

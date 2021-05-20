@@ -26,11 +26,87 @@ class TreatmentFormFragment : Fragment() {
 
     treatedBeforeLayout.setOnKeyListener(null)
     context?.let {
-      ArrayAdapter(it, android.R.layout.simple_expandable_list_item_1, listOf("Yes", "No"))
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
         .also { adapter ->
           treatedBeforeTextView.setAdapter(adapter)
           treatedBeforeTextView.inputType = InputType.TYPE_NULL
         }
+    }
+
+    animalGroupLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it, android.R.layout.simple_list_item_1,
+        listOf("Ruminants", "Poultry", "Bird", "Pet", "Elephant", "Horse", "Monkey")
+      ).also { adapter ->
+        animalGroupTextView.setAdapter(adapter)
+        animalGroupTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    animalTypeLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it, android.R.layout.simple_list_item_1,
+        listOf("Cattle", "Sheep", "Goat", "Buffalo")
+      ).also { adapter ->
+        animalTypeTextView.setAdapter(adapter)
+        animalTypeTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    partOfIotLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
+        .also { adapter ->
+          partOfIotTextView.setAdapter(adapter)
+          partOfIotTextView.inputType = InputType.TYPE_NULL
+        }
+    }
+
+    ageUnitLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Years", "Months", "Weeks", "Days")
+      ).also { adapter ->
+        ageUnitTextView.setAdapter(adapter)
+        ageUnitTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    animalGenderLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Male", "Female"))
+        .also { adapter ->
+          animalGenderTextView.setAdapter(adapter)
+          animalGenderTextView.inputType = InputType.TYPE_NULL
+        }
+    }
+
+    dewormingStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("3 months", "2 months", "1 month", "No")
+      ).also { adapter ->
+        dewormingStatusTextView.setAdapter(adapter)
+        dewormingStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    vaccinationStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("3 months", "2 months", "1 month", "No")
+      ).also { adapter ->
+        vaccinationStatusTextView.setAdapter(adapter)
+        vaccinationStatusTextView.inputType = InputType.TYPE_NULL
+      }
     }
   }
 }
