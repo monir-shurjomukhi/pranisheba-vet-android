@@ -22,27 +22,25 @@
       android:alignmentMode="alignMargins"
       android:columnCount="2"
       android:columnOrderPreserved="false"
-      android:padding="16dp"
-      android:rowCount="3">
+      android:padding="24dp">
 
       <!-- Row 1 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
         android:id="@+id/serviceRelatedInfoCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -68,19 +66,18 @@
       <androidx.cardview.widget.CardView
         android:id="@+id/farmManagementInfoCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginStart="12dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -106,18 +103,19 @@
       <androidx.cardview.widget.CardView
         android:id="@+id/weightMeasurementCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -144,18 +142,19 @@
       <androidx.cardview.widget.CardView
         android:id="@+id/oneTimeServiceCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -176,26 +175,24 @@
         </LinearLayout>
       </androidx.cardview.widget.CardView>
 
-      <!-- Row 2 -->
-      <!-- Column 2 -->
-
       <!-- Row 3 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
         android:id="@+id/monthlyServiceRegistrationCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -219,20 +216,21 @@
       <!-- Row 3 -->
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/registeredFarmRelatedInfoCardView"
+        android:id="@+id/monthlyServiceRelatedInfoCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -258,18 +256,19 @@
       <androidx.cardview.widget.CardView
         android:id="@+id/agentRegistrationCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 
@@ -295,18 +294,19 @@
       <androidx.cardview.widget.CardView
         android:id="@+id/paymentFormCardView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
         <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_margin="16dp"
           android:orientation="vertical">
 

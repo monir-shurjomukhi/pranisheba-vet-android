@@ -56,5 +56,17 @@ class HomeFragment : Fragment() {
     monthlyServiceRegistrationCardView.setOnClickListener {
       //startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
     }
+
+    monthlyServiceRelatedInfoCardView.setOnClickListener {
+      //startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+    }
+
+    agentRegistrationCardView.setOnClickListener {
+      //startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+    }
+
+    paymentFormCardView.setOnClickListener {
+      //startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+    }
   }
 }
