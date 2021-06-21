@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
-import com.pranisheba.vet.ui.activity.FarmAndFarmerInfoActivity
 import com.pranisheba.vet.ui.activity.ServiceReceivingFormActivity
 import com.pranisheba.vet.ui.activity.ServiceRelatedInfoActivity
 import com.pranisheba.vet.ui.viewmodel.HomeViewModel
@@ -38,16 +37,24 @@ class HomeFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    farmAndFarmersInfoCardView.setOnClickListener {
-      startActivity(Intent(context, FarmAndFarmerInfoActivity::class.java))
-    }
-
     serviceRelatedInfoCardView.setOnClickListener {
       startActivity(Intent(context, ServiceRelatedInfoActivity::class.java))
     }
 
-    serviceReceivingFormCardView.setOnClickListener {
+    farmManagementInfoCardView.setOnClickListener {
+      //startActivity(Intent(context, ServiceRelatedInfoActivity::class.java))
+    }
+
+    weightMeasurementCardView.setOnClickListener {
+      //startActivity(Intent(context, ServiceRelatedInfoActivity::class.java))
+    }
+
+    oneTimeServiceCardView.setOnClickListener {
       startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+    }
+
+    monthlyServiceRegistrationCardView.setOnClickListener {
+      //startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
     }
   }
 }

@@ -28,45 +28,6 @@
       <!-- Row 1 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/farmAndFarmersInfoCardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/farm_and_farmer_s_information"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <!-- Column 2 -->
-      <androidx.cardview.widget.CardView
         android:id="@+id/serviceRelatedInfoCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -102,187 +63,8 @@
         </LinearLayout>
       </androidx.cardview.widget.CardView>
 
-      <!-- Row 2 -->
-      <!-- Column 1 -->
-      <androidx.cardview.widget.CardView
-        android:id="@+id/serviceReceivingFormCardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/service_receiving_form"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
+      <!-- Row 1 -->
       <!-- Column 2 -->
-      <androidx.cardview.widget.CardView
-        android:id="@+id/paymentFormCardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/payment_form"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <!-- Row 2 -->
-      <!-- Column 1 -->
-      <androidx.cardview.widget.CardView
-        android:id="@+id/farmRegistrationCardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/farm_registration"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <!-- Column 2 -->
-      <androidx.cardview.widget.CardView
-        android:id="@+id/registeredFarmRelatedInfoCardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/registered_farm_related_information"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
-      <androidx.cardview.widget.CardView
-        android:id="@+id/agentRegistrationCardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
-
-        <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/agent_registration"
-            android:textColor="@android:color/black"
-            android:textSize="16sp" />
-        </LinearLayout>
-      </androidx.cardview.widget.CardView>
-
       <androidx.cardview.widget.CardView
         android:id="@+id/farmManagementInfoCardView"
         android:layout_width="0dp"
@@ -290,6 +72,7 @@
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="8dp"
@@ -318,6 +101,8 @@
         </LinearLayout>
       </androidx.cardview.widget.CardView>
 
+      <!-- Row 2 -->
+      <!-- Column 1 -->
       <androidx.cardview.widget.CardView
         android:id="@+id/weightMeasurementCardView"
         android:layout_width="0dp"
@@ -354,8 +139,10 @@
         </LinearLayout>
       </androidx.cardview.widget.CardView>
 
+      <!-- Row 2 -->
+      <!-- Column 2 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/hotlineNumberCardView"
+        android:id="@+id/oneTimeServiceCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_rowWeight="1"
@@ -383,7 +170,158 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="@string/hotline_number"
+            android:text="@string/one_time_service"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Row 2 -->
+      <!-- Column 2 -->
+
+      <!-- Row 3 -->
+      <!-- Column 1 -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/monthlyServiceRegistrationCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher" />
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/monthly_service_registration"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Row 3 -->
+      <!-- Column 2 -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/registeredFarmRelatedInfoCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher" />
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/monthly_service_related_information"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Row 4 -->
+      <!-- Column 1 -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/agentRegistrationCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher" />
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/agent_registration"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+        </LinearLayout>
+      </androidx.cardview.widget.CardView>
+
+      <!-- Row 4 -->
+      <!-- Column 2 -->
+      <androidx.cardview.widget.CardView
+        android:id="@+id/paymentFormCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:orientation="vertical">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher" />
+
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/payment_form"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
         </LinearLayout>

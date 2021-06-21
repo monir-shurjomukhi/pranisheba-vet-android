@@ -70,9 +70,12 @@
   <string name="edit_farm_and_farmer_s_information">Edit Farm and Farmer\'s Information</string>
   <string name="service_related_information">Service Related Information</string>
   <string name="service_receiving_form">Service Receiving Form</string>
+  <string name="one_time_service">One Time Service</string>
   <string name="payment_form">Payment Form</string>
   <string name="farm_registration">Farm Registration</string>
+  <string name="monthly_service_registration">Monthly Service Registration</string>
   <string name="registered_farm_related_information">Registered Farm Related Information</string>
+  <string name="monthly_service_related_information">Monthly Service Related Information</string>
   <string name="agent_registration">Agent Registration</string>
   <string name="farm_management_information">Farm Management Information</string>
   <string name="weight_measurement">Weight Measurement</string>
