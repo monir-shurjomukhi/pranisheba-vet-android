@@ -21,11 +21,12 @@ class VetPreference(context: Context) {
     return preferences.getBoolean(Constants.FIRST_TIME, true)
   }
 
-  fun getSelectedLanguage(): String {
-    return ""
+  fun getSelectedLanguage(): String? {
+    return preferences.getString(Constants.LANGUAGE, "")
   }
 
   fun putSelectedLanguage(language: String) {
-
+    editor.putString(Constants.LANGUAGE, language)
+    editor.apply()
   }
 }

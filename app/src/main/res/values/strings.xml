@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">praniSheba Vet</string>
+  <string name="app_name">প্রানিসেবা ভেট</string>
   <string name="enter_your_mobile_number">Enter your mobile number</string>
   <string name="next">Next</string>
   <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
@@ -114,4 +114,7 @@
   <string name="problem_description_in_100_words">Problem description (In 100 words)*</string>
   <string name="are_any_other_animals_affected_by_the_same_disease">Are any other animals affected by the same disease?*</string>
   <string name="select_type_of_emergency">Select type of emergency*</string>
+  <string name="bangla">বাংলা</string>
+  <string name="english">English</string>
+  <string name="website">www.pranishebavet.com.bd</string>
 </resources>
