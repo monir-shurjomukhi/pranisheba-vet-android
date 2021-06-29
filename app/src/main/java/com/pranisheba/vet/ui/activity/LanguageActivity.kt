@@ -14,6 +14,14 @@ class LanguageActivity : AppCompatActivity() {
     setContentView(R.layout.activity_language)
   }
 
+  fun setBangla(view: View) {
+    
+  }
+
+  fun setEnglish(view: View) {
+
+  }
+
   fun launchWebsite(view: View) {
     val webpage: Uri = Uri.parse("https://www.pranishebavet.com.bd/")
     val intent = Intent(Intent.ACTION_VIEW, webpage)
