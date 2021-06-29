@@ -12,7 +12,7 @@ class VetPreference(context: Context) {
     context.getSharedPreferences(PREFERENCE_TITLE, Context.MODE_PRIVATE)
   private val editor: SharedPreferences.Editor = preferences.edit()
 
-  fun setFirstTimeLaunch(isFirstTime: Boolean) {
+  fun putFirstTimeLaunch(isFirstTime: Boolean) {
     editor.putBoolean(Constants.FIRST_TIME, isFirstTime)
     editor.apply()
   }

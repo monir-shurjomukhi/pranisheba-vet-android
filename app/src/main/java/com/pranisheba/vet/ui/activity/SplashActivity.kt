@@ -6,6 +6,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
 import com.pranisheba.vet.preference.VetPreference
+import com.pranisheba.vet.util.setLocale
 
 class SplashActivity : AppCompatActivity() {
 
@@ -18,9 +19,10 @@ class SplashActivity : AppCompatActivity() {
 
     preference = VetPreference(this)
 
-    launchIntent = if (preference.getSelectedLanguage().isNullOrBlank()) {
+    var launchIntent = if (preference.getSelectedLanguage().isNullOrBlank()) {
       Intent(this, LanguageActivity::class.java)
     } else {
+      setLocale(this, preference.getSelectedLanguage().toString())
       Intent(this, MainActivity2::class.java)
     }
 

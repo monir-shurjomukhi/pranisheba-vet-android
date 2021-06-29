@@ -1,0 +1,119 @@
+<resources>
+  <string name="enter_your_mobile_number">Enter your mobile number</string>
+  <string name="next">Next</string>
+  <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
+  <string name="already_registered_login">Already registered? Login</string>
+  <string name="submit">Submit</string>
+  <string name="name">Name</string>
+  <string name="farmer_name">Farmer Name</string>
+  <string name="mobile_number">Mobile Number</string>
+  <string name="email">Email</string>
+  <string name="farm_name">Farm Name</string>
+  <string name="farm_type">Farm Type</string>
+  <string name="number_of_animal">Number of Animal</string>
+  <string name="address">Address</string>
+  <string name="title_activity_main2">MainActivity2</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="nav_header_title">Android Studio</string>
+  <string name="nav_header_subtitle">android.studio@android.com</string>
+  <string name="nav_header_desc">Navigation header</string>
+  <string name="action_settings">Settings</string>
+  <string name="action_edit">Edit</string>
+
+  <string name="menu_home">Home</string>
+  <string name="menu_gallery">Gallery</string>
+  <string name="menu_slideshow">Slideshow</string>
+  <string name="farmer_s_information">খামারির তথ্য</string>
+  <string name="treatment_service">চিকিৎসা সেবা</string>
+  <string name="treatment_service_details">You can call the hotline number (09643207003) to get
+    medical treatment for your animal through the customer service officer or by filling out the
+    initial patient information form by yourself. Then you can make payment from your own bKash
+    account with the counter number received on your mobile or by clicking on the link received.
+    You can pay with the counter number from the personal number of any bKash agent. Our service
+    price is Tk.200 per cow / buffalo, Tk.100 per goat / sheep; The service price for each batch of
+    chicken, duck, turkey, quail etc. is Tk. 500, dog, cat, rabbit Tk.500 each, birds Tk.100 each
+    and other animals Tk.500 each. You can also find out the information of the service from our
+    Facebook or website.</string>
+  <string name="consultancy_service">পরামর্শ সেবা</string>
+  <string name="consultancy_service_details">You can fill and submit the consultancy information
+    form yourself from the service receiving form to take the consultancy service of your animal or
+    you can fill and submit it through the customer service officer by calling hotline
+    (09643207003).Then you can make payment from your bKash / Rocket / Cash or by clicking on the
+    link received with the counter number received on your mobile. Or you can make payment with the
+    counter number from the personal number of any bKash / rocket / cash agent. Our consultancy
+    service prices are divided into two categories, one-time and yearly.</string>
+  <string name="registered_farm_service">নিবন্ধিত খামার সেবা</string>
+  <string name="registered_farm_service_details">The country\'s first government-approved online
+    veterinary hospital has launched a special service called \'Registered Farm Service\'.
+    The service will specifically help a farmer to build a profitable farm through proper farm
+    management. A farm needs scientific accommodation, quality rations, breeding
+    decisions / planning, production and storage of green grass, routine wise vaccination and
+    deworming, proper daily care, cure, disease prevention and treatment and production and
+    marketing of quality products etc. You can ensure all these things through the farm registration
+    service. Proper management is the main controller of the implementation of the goals and
+    objectives of the farm. Management is an art or technique that combines farm resources,
+    decisions, opportunities and time to make it profitable. We do farm mainly for production.
+    Production refers to milk, meat, eggs, chicks, and fur. Farm registration to ensure this
+    production!</string>
+  <string name="mobile_number_">Mobile Number:</string>
+  <string name="name_of_farmer_">Name of Farmer:</string>
+  <string name="name_of_farm_">Name of Farm:</string>
+  <string name="address_">Address:</string>
+  <string name="email_">Email:</string>
+  <string name="farm_s_information">Farm\'s Information</string>
+  <string name="type_of_farm_">Type of Farm:</string>
+  <string name="number_of_animal_">Number of Animal:</string>
+  <string name="address_of_farm_">Address of Farm:</string>
+  <string name="farm_and_farmer_s_information">Farm and Farmer\'s Information</string>
+  <string name="edit_farm_and_farmer_s_information">Edit Farm and Farmer\'s Information</string>
+  <string name="service_related_information">সেবা সম্পর্কিত তথ্য</string>
+  <string name="service_receiving_form">Service Receiving Form</string>
+  <string name="one_time_service">এক কালীন সেবা</string>
+  <string name="payment_form">পেমেন্ট ফর্ম</string>
+  <string name="farm_registration">খামার নিবন্ধন</string>
+  <string name="monthly_service_registration">মাসিক সেবা নিবন্ধন</string>
+  <string name="registered_farm_related_information">নিবন্ধিত খামার সম্পর্কিত তথ্য</string>
+  <string name="monthly_service_related_information">মাসিক সেবা সম্পর্কিত তথ্য</string>
+  <string name="agent_registration">এজেন্ট নিবন্ধন</string>
+  <string name="farm_management_information">খামার ব্যাবস্থাপনা তথ্য</string>
+  <string name="weight_measurement">ওজন পরিমাপ</string>
+  <string name="hotline_number">হটলাইন নাম্বার</string>
+  <string name="treatment">চিকিৎসা</string>
+  <string name="consultancy">পরামর্শ</string>
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="has_this_animal_been_treated_before_at_ps_vet">Has this animal been treated before at pS Vet?*</string>
+  <string name="previous_prescription_number">Previous prescription number</string>
+  <string name="animal_name_or_id_number">Animal name or ID number</string>
+  <string name="select_animal_group">Select animal group*</string>
+  <string name="select_animal_type">Select animal type*</string>
+  <string name="select_animal_breed">Select animal breed</string>
+  <string name="select_animal_gender">Select animal gender</string>
+  <string name="is_this_animal_part_of_ps_iot_network">Is this animal part of pS IoT network?*</string>
+  <string name="bolus_id">Bolus ID</string>
+  <string name="age_of_the_animal">Age of the animal*</string>
+  <string name="unit">Unit*</string>
+  <string name="age_of_the_animal_in_kg">Age of the animal in KG*</string>
+  <string name="select_deworming_status_within_the_last">Select deworming status within the last*</string>
+  <string name="select_vaccination_status_within_the_last">Select vaccination status within the last*</string>
+  <string name="select_the_level_of_temperature">Select the level of temperature*</string>
+  <string name="temperature_f">Temperature (F)</string>
+  <string name="select_the_feed_water_intake_status"><![CDATA[Select the feed & water intake status]]></string>
+  <string name="select_the_defecation_status">Select the defecation status*</string>
+  <string name="select_the_urination_status">Select the urination status</string>
+  <string name="select_hair_of_the_animal_s_body_status">Select hair of the animal\'s body status</string>
+  <string name="select_the_salivation_status">Select the salivation status</string>
+  <string name="select_animal_static_posture_status">Select animal static posture status*</string>
+  <string name="select_the_muzzle_status">Select the muzzle status</string>
+  <string name="select_the_sneezing_coughing_status"><![CDATA[Select the sneezing & coughing status]]></string>
+  <string name="select_the_posture_and_gesture_status">Select the posture and gesture status</string>
+  <string name="is_the_illness_happening_for_the_first_time">Is the illness happening for the first time?*</string>
+  <string name="was_treatment_sought_elsewhere">Was treatment sought elsewhere?</string>
+  <string name="problem_description_in_100_words">Problem description (In 100 words)*</string>
+  <string name="are_any_other_animals_affected_by_the_same_disease">Are any other animals affected by the same disease?*</string>
+  <string name="select_type_of_emergency">Select type of emergency*</string>
+  <string name="bangla">বাংলা</string>
+  <string name="english">English</string>
+  <string name="website">www.pranishebavet.com.bd</string>
+</resources>
