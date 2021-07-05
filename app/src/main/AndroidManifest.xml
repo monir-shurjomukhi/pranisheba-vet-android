@@ -13,11 +13,12 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.PranishebaVet"
     android:usesCleartextTraffic="true">
-    <activity android:name=".ui.activity.LanguageActivity"></activity>
+    <activity android:name=".ui.activity.LanguageActivity" />
     <activity android:name=".ui.activity.ServiceReceivingFormActivity" />
     <activity android:name=".ui.activity.ServiceRelatedInfoActivity" />
     <activity android:name=".ui.activity.EditFarmAndFarmerInfoActivity" />
     <activity android:name=".ui.activity.FarmAndFarmerInfoActivity" />
+    <activity android:name=".ui.activity.ServiceDetailsActivity" />
     <activity
       android:name=".ui.activity.MainActivity2"
       android:label="@string/title_activity_main2"
@@ -33,5 +34,4 @@
     <activity android:name=".ui.activity.SignUpActivity" />
     <activity android:name=".ui.activity.LoginActivity" />
   </application>
-
 </manifest>
