@@ -44,7 +44,7 @@
     link received with the counter number received on your mobile. Or you can make payment with the
     counter number from the personal number of any bKash / rocket / cash agent. Our consultancy
     service prices are divided into two categories, one-time and yearly.</string>
-  <string name="registered_farm_service">Treatment Service</string>
+  <string name="registered_farm_service">Registered Farm Service</string>
   <string name="registered_farm_service_details">The country\'s first government-approved online
     veterinary hospital has launched a special service called \'Registered Farm Service\'.
     The service will specifically help a farmer to build a profitable farm through proper farm
@@ -95,7 +95,7 @@
   <string name="bolus_id">Bolus ID</string>
   <string name="age_of_the_animal">Age of the animal*</string>
   <string name="unit">Unit*</string>
-  <string name="age_of_the_animal_in_kg">Age of the animal in KG*</string>
+  <string name="weight_of_the_animal_in_kg">Weight of the animal in KG*</string>
   <string name="select_deworming_status_within_the_last">Select deworming status within the last*</string>
   <string name="select_vaccination_status_within_the_last">Select vaccination status within the last*</string>
   <string name="select_the_level_of_temperature">Select the level of temperature*</string>
