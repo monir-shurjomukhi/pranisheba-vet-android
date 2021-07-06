@@ -118,4 +118,8 @@
   <string name="english">English</string>
   <string name="website">www.pranishebavet.com.bd</string>
   <string name="service_details">Service Details</string>
+  <string name="pregnant_cow_care_and_management">Pregnant Cow Care and Management</string>
+  <string name="calf_care_and_management">Calf Care and Management</string>
+  <string name="daily_activities_of_farm">Daily Activities of Farm</string>
+  <string name="importance_of_public_health">Importance of Public Health</string>
 </resources>

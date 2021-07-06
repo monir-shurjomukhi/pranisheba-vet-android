@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
 import com.pranisheba.vet.util.Constants
 import kotlinx.android.synthetic.main.activity_farm_and_farmer_info.toolbar
-import kotlinx.android.synthetic.main.activity_service_details2.*
+import kotlinx.android.synthetic.main.activity_service_details.*
 
 class ServiceDetailsActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_service_details2)
+    setContentView(R.layout.activity_service_details)
 
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)

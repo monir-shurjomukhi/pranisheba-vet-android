@@ -117,4 +117,8 @@
   <string name="english">English</string>
   <string name="website">www.pranishebavet.com.bd</string>
   <string name="service_details">Service Details</string>
+  <string name="pregnant_cow_care_and_management">গর্ভবতী গাভীর যত্ন ও ব্যাবস্থাপনা</string>
+  <string name="calf_care_and_management">বাছুরের যত্ন ও ব্যাবস্থাপনা</string>
+  <string name="daily_activities_of_farm">খামারের প্রতিদিনের কাজ</string>
+  <string name="importance_of_public_health">পাবলিক হেল্‌থ এর গুরুত্ব</string>
 </resources>

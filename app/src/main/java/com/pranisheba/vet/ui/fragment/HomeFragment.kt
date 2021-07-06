@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
+import com.pranisheba.vet.ui.activity.FarmManagementInfoActivity
 import com.pranisheba.vet.ui.activity.ServiceReceivingFormActivity
 import com.pranisheba.vet.ui.activity.ServiceRelatedInfoActivity
 import com.pranisheba.vet.ui.viewmodel.HomeViewModel
@@ -42,7 +43,7 @@ class HomeFragment : Fragment() {
     }
 
     farmManagementInfoCardView.setOnClickListener {
-      //startActivity(Intent(context, ServiceRelatedInfoActivity::class.java))
+      startActivity(Intent(context, FarmManagementInfoActivity::class.java))
     }
 
     weightMeasurementCardView.setOnClickListener {

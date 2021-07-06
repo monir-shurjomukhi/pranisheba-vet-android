@@ -19,6 +19,7 @@
     <activity android:name=".ui.activity.EditFarmAndFarmerInfoActivity" />
     <activity android:name=".ui.activity.FarmAndFarmerInfoActivity" />
     <activity android:name=".ui.activity.ServiceDetailsActivity" />
+    <activity android:name=".ui.activity.FarmManagementInfoActivity" />
     <activity
       android:name=".ui.activity.MainActivity2"
       android:label="@string/title_activity_main2"
