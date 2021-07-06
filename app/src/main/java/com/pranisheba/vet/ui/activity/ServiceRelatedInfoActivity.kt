@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
+import com.pranisheba.vet.util.Constants
 import kotlinx.android.synthetic.main.activity_farm_and_farmer_info.toolbar
 import kotlinx.android.synthetic.main.activity_service_related_info.*
 
@@ -18,7 +19,39 @@ class ServiceRelatedInfoActivity : AppCompatActivity() {
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
     treatmentServiceCard.setOnClickListener {
-      startActivity(Intent(this, ServiceDetailsActivity::class.java))
+      val intent = Intent(this, ServiceDetailsActivity::class.java)
+      val bundle = Bundle()
+      bundle.putString(Constants.SERVICE_TYPE, getString(R.string.treatment_service))
+      bundle.putString(
+        Constants.SERVICE_TYPE_DETAILS,
+        getString(R.string.treatment_service_details)
+      )
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
+
+    consultancyServiceCard.setOnClickListener {
+      val intent = Intent(this, ServiceDetailsActivity::class.java)
+      val bundle = Bundle()
+      bundle.putString(Constants.SERVICE_TYPE, getString(R.string.consultancy_service))
+      bundle.putString(
+        Constants.SERVICE_TYPE_DETAILS,
+        getString(R.string.consultancy_service_details)
+      )
+      intent.putExtras(bundle)
+      startActivity(intent)
+    }
+
+    registeredFarmServiceCard.setOnClickListener {
+      val intent = Intent(this, ServiceDetailsActivity::class.java)
+      val bundle = Bundle()
+      bundle.putString(Constants.SERVICE_TYPE, getString(R.string.registered_farm_service))
+      bundle.putString(
+        Constants.SERVICE_TYPE_DETAILS,
+        getString(R.string.registered_farm_service_details)
+      )
+      intent.putExtras(bundle)
+      startActivity(intent)
     }
   }
 
