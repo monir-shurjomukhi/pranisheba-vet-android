@@ -55,9 +55,10 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:gravity="center"
+          android:padding="16dp"
           android:text="@string/pregnant_cow_care_and_management"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
@@ -81,7 +82,7 @@
           android:padding="16dp"
           android:text="@string/calf_care_and_management"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
@@ -105,7 +106,7 @@
           android:padding="16dp"
           android:text="@string/daily_activities_of_farm"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
@@ -130,7 +131,7 @@
           android:padding="16dp"
           android:text="@string/importance_of_public_health"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>

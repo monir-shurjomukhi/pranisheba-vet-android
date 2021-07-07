@@ -57,7 +57,7 @@
           android:gravity="center"
           android:text="@string/treatment_service"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
@@ -81,7 +81,7 @@
           android:padding="16dp"
           android:text="@string/consultancy_service"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
@@ -106,7 +106,7 @@
           android:padding="16dp"
           android:text="@string/registered_farm_service"
           android:textColor="@color/white"
-          android:textSize="32sp"
+          android:textSize="28sp"
           android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
