@@ -84,7 +84,8 @@
   <string name="consultancy">Consultancy</string>
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
-  <string name="has_this_animal_been_treated_before_at_ps_vet">Has this animal been treated before at pS Vet?*</string>
+  <string name="has_this_animal_been_treated_before_at_ps_vet">Has this animal been treated before
+    at pS Vet?*</string>
   <string name="previous_prescription_number">Previous prescription number</string>
   <string name="animal_name_or_id_number">Animal name or ID number</string>
   <string name="select_animal_group">Select animal group*</string>
@@ -112,7 +113,8 @@
   <string name="is_the_illness_happening_for_the_first_time">Is the illness happening for the first time?*</string>
   <string name="was_treatment_sought_elsewhere">Was treatment sought elsewhere?</string>
   <string name="problem_description_in_100_words">Problem description (In 100 words)*</string>
-  <string name="are_any_other_animals_affected_by_the_same_disease">Are any other animals affected by the same disease?*</string>
+  <string name="are_any_other_animals_affected_by_the_same_disease">Are any other animals affected
+    by the same disease?*</string>
   <string name="select_type_of_emergency">Select type of emergency*</string>
   <string name="bangla">বাংলা</string>
   <string name="english">English</string>
@@ -122,70 +124,184 @@
   <string name="calf_care_and_management">Calf Care and Management</string>
   <string name="daily_activities_of_farm">Daily Activities of Farm</string>
   <string name="importance_of_public_health">Importance of Public Health</string>
-  <string name="pregnant_cow_care_and_management_details">The care of a cow during pregnancy will depend on the well-being of the calf, milk production, well-being of the cow and immunity to postpartum disease. Basically, the care of a pregnant cow needs to be taken specially from three months before giving birth, such as a balanced concentration supply, raw grass and adequate supply of hay, vitamins and minerals. A healthy mother can give birth to a healthy baby. Therefore, pregnant cows need special care to get a healthy calf. The special care of pregnant cows is mentioned below:
-
-In addition to ensuring adequate and regular balanced concentration feeding for pregnant cows and unborn calves, fiber food, vitamins and minerals should be provided.
-Milking should be stopped as per proper plan two to three months before the birth of the calf.
-Separate accommodation should be provided for pregnant cows, the accommodation must be clean and dry. Moreover, dry hay should be spread for sleeping and cows should not be kept in high and low places.
-Take regular baths but need to be careful that not to feel extra cold or hot to cows. If there is lice or  on the cow, it should be cleaned.
-Necessary measures should be taken to be aware of the time of delivery. In this case, if the cow gives birth at night, the farm worker must keep a watchful eye, otherwise the cow may eat the uterus.
-After the onset of calving symptoms, all kinds of preparations need to be done such as disinfection of the maternity ward and comfortable environment for the cow.
-After giving birth to the baby, mix Dettol in a little hot water and wash the placenta well with that water.
-The cow should be provided with lukewarm water so that the placenta falls easily to the ground and should be buried in the ground as soon as possible as soon as the placenta falls as milk production is severely reduced if the cow eats the placenta.
-If the uterus does not fall within 24 hours of giving birth, you should seek the help of a veterinarian
-</string>
-  <string name="calf_care_and_management_details">Gestational care of calves usually refers to the care of pregnant cows. Milking of pregnant cows should be stopped from 3 months before the birth of the calf and at this time the cows should be provided an adequate amount of nutritious food. If the delivery is near, the pregnant cow should be kept separate from other cows.
-
-Before the calf is delivered, the calf placement area must be kept clean so that no germs can be transmitted.
-The calf should be placed on dry straw or sack immediately after delivery to remove lubricants and blood from the nose and mouth.
-Arrangements should be made so that the cow can lick and clean the body of the calf. This will not cause pneumonia in the calf as well as increase the blood circulation in the body of the calf.
-The calf\'s navel should be cut two inches with a sharp blade or scissors at the time of delivery and then apply povicep to that area.
-The udder of the cow should be cleaned with lukewarm water and colostrum should be given to the calf as soon as possible after birth. However, the calf must be fed colostrum within 6 hours of birth.
-If the calf has difficulty in breathing then hold the back two legs and shake them gently. If necessary, artificial respiration should be started by blowing through the nostrils. Otherwise the calf will die.
-The calf should be fed concentrated food, hay and green grass from 3 weeks after birth. Milk replacer and cuff starter can be fed if required
-Always keep the calf close to the cow. The calf bed should be made by spreading dry straw or sack in the barn.
-Occasionally straw / sack should be changed and dried in the sun
-The calf should be kept in a warm, soft and dry place
-During the winter, the body of the calf should be covered with cloth or sack
-The calf should be bathed regularly
-The calf should be weighed regularly to help determine the calf\'s feed intake and growth rate.
-From the age of one month, calves should be given deworming drugs
-When the calf is 4 months old, it is necessary to stop milk feeding
-In case of calf disease, a skilled and experienced veterinarian should be consulted
-</string>
+  <string name="pregnant_cow_care_and_management_details">
+    <![CDATA[
+    <p>The care of a cow during pregnancy will depend on the well-being of the calf, milk production, well-being of the
+        cow and immunity to postpartum disease. Basically, the care of a pregnant cow needs to be taken specially from
+        three months before giving birth, such as a balanced concentration supply, raw grass and adequate supply of hay,
+        vitamins and minerals. A healthy mother can give birth to a healthy baby. Therefore, pregnant cows need special
+        care to get a healthy calf. The special care of pregnant cows is mentioned below:</p> <br>
+    <ol>
+        <li>
+            In addition to ensuring adequate and regular balanced concentration feeding for pregnant cows and unborn
+            calves, fiber food, vitamins and minerals should be provided.
+        </li>
+        <br>
+        <li>
+            Milking should be stopped as per proper plan two to three months before the birth of the calf.
+        </li>
+        <br>
+        <li>
+            Separate accommodation should be provided for pregnant cows, the accommodation must be clean and dry.
+            Moreover, dry hay should be spread for sleeping and cows should not be kept in high and low places.
+        </li>
+        <br>
+        <li>
+            Take regular baths but need to be careful not to feel extra cold or hot to cows. If there is lice or on the
+            cow, it should be cleaned.
+        </li>
+        <br>
+        <li>
+            Necessary measures should be taken to be aware of the time of delivery. In this case, if the cow gives birth
+            at night, the farm worker must keep a watchful eye, otherwise the cow may eat the uterus.
+        </li>
+        <br>
+        <li>
+            After the onset of calving symptoms, all kinds of preparations need to be done such as disinfection of the
+            maternity ward and comfortable environment for the cow.
+        </li>
+        <br>
+        <li>
+            After giving birth to the baby, mix Dettol in a little hot water and wash the placenta well with that water.
+        </li>
+        <br>
+        <li>
+            The cow should be provided with lukewarm water so that the placenta falls easily to the ground and should be
+            buried in the ground as soon as possible as soon as the placenta falls as milk production is severely
+            reduced if the cow eats the placenta.
+        </li>
+        <br>
+        <li>
+            If the uterus does not fall within 24 hours of giving birth, you should seek the help of a veterinarian.
+        </li>
+    </ol>
+    ]]>
+  </string>
+  <string name="calf_care_and_management_details">
+    <![CDATA[
+    <p>Gestational care of calves usually refers to the care of pregnant cows. Milking of pregnant cows should be
+        stopped from 3 months before the birth of the calf and at this time the cows should be provided an adequate
+        amount of nutritious food. If the delivery is near, the pregnant cow should be kept separate from other cows.
+    </p> <br>
+    <ol>
+        <li>
+            Before the calf is delivered, the calf placement area must be kept clean so that no germs can be
+            transmitted.
+        </li>
+        <br>
+        <li>
+            The calf should be placed on dry straw or sack immediately after delivery to remove lubricants and blood
+            from the nose and mouth.
+        </li>
+        <br>
+        <li>
+            Arrangements should be made so that the cow can lick and clean the body of the calf. This will not cause
+            pneumonia in the calf as well as increase the blood circulation in the body of the calf.
+        </li>
+        <br>
+        <li>
+            The calf\'s navel should be cut two inches with a sharp blade or scissors at the time of delivery and then
+            apply povicep to that area.
+        </li>
+        <br>
+        <li>
+            The udder of the cow should be cleaned with lukewarm water and colostrum should be given to the calf as soon
+            as possible after birth. However, the calf must be fed colostrum within 6 hours of birth.
+        </li>
+        <br>
+        <li>
+            If the calf has difficulty in breathing then hold the back two legs and shake them gently. If necessary,
+            artificial respiration should be started by blowing through the nostrils. Otherwise the calf will die.
+        </li>
+        <br>
+        <li>
+            The calf should be fed concentrated food, hay and green grass from 3 weeks after birth. Milk replacer and
+            cuff starter can be fed if required.
+        </li>
+        <br>
+        <li>
+            Always keep the calf close to the cow. The calf bed should be made by spreading dry straw or sack in the
+            barn.
+        </li>
+        <br>
+        <li>
+            Occasionally straw / sack should be changed and dried in the sun.
+        </li>
+        <br>
+        <li>
+            The calf should be kept in a warm, soft and dry place.
+        </li>
+        <br>
+        <li>
+            During the winter, the body of the calf should be covered with cloth or sack.
+        </li>
+        <br>
+        <li>
+            The calf should be bathed regularly
+        </li>
+        <br>
+        <li>
+            The calf should be weighed regularly to help determine the calf\'s feed intake and growth rate.
+        </li>
+        <br>
+        <li>
+            From the age of one month, calves should be given deworming drugs.
+        </li>
+        <br>
+        <li>
+            When the calf is 4 months old, it is necessary to stop milk feeding.
+        </li>
+        <br>
+        <li>
+            In case of calf disease, a skilled and experienced veterinarian should be consulted
+        </li>
+    </ol>
+    ]]>
+  </string>
   <string name="daily_activities_of_farm_details">Farm Cleanliness
 
- Need to provide  right amount of food at the right time and according to the animal\'s weight every day
-Farm floor, food and water containers, dung and urine and drains adjacent to the farm house should be kept clean and dry regularly.
-The cow should be bathed regularly
-The farm needs to be cleaned twice a day in the morning and in the afternoon
-Regularly change the water in the footbath mixed with potash
+    Need to provide  right amount of food at the right time and according to the animal\'s weight
+    every day
+    Farm floor, food and water containers, dung and urine and drains adjacent to the farm house
+    should be kept clean and dry regularly.
+    The cow should be bathed regularly
+    The farm needs to be cleaned twice a day in the morning and in the afternoon
+    Regularly change the water in the footbath mixed with potash
 
-Milking
+    Milking
 
-Cow\'s milk should be milked once daily in the morning and afternoon at fixed times. Before milking, the udder of the cow and the hands of the milker should be washed thoroughly with clean water mixed with potash.
-The milking process of the cow should be completed quickly and after milking the cow should be fed dried straw or green grass.
-Adequate rest should be given to the cows to increase the milk production of dairy cows by 15 to 20%
+    Cow\'s milk should be milked once daily in the morning and afternoon at fixed times. Before
+    milking, the udder of the cow and the hands of the milker should be washed thoroughly with clean
+    water mixed with potash.
+    The milking process of the cow should be completed quickly and after milking the cow should be
+    fed dried straw or green grass.
+    Adequate rest should be given to the cows to increase the milk production of dairy cows by 15 to
+    20%
 
-Food supply
+    Food supply
 
-It is necessary to provide balanced food at specific times every day as a rule
-Water containers should always have a supply of clean and pure water
-Green grass or straw should be chopped into small pieces to make it digestible
-Concentrated food must be mixed in the right proportions and it must be stored in the right way
-Regular deworming and vaccination should be applied
-</string>
-  <string name="importance_of_public_health_details">Veterinary public health is a component of public health activities dedicated to the application of professional veterinary skills, knowledge and resources to protect and improve human health.
+    It is necessary to provide balanced food at specific times every day as a rule
+    Water containers should always have a supply of clean and pure water
+    Green grass or straw should be chopped into small pieces to make it digestible
+    Concentrated food must be mixed in the right proportions and it must be stored in the right way
+    Regular deworming and vaccination should be applied</string>
+  <string name="importance_of_public_health_details">Veterinary public health is a component of
+    public health activities dedicated to the application of professional veterinary skills,
+    knowledge and resources to protect and improve human health.
 
-Veterinary public health issues are:
+    Veterinary public health issues are:
 
-Prevention of zoonotic diseases
-Safe animal food production and protection
-Farm health regulations and biosecurity
-Controlling wildlife and their environment
-Regulation of international trade in animals, animal products, animal wastes and animal foods
-Veterinary drugs ( residues, antimicrobial resistance )
+    Prevention of zoonotic diseases
+    Safe animal food production and protection
+    Farm health regulations and biosecurity
+    Controlling wildlife and their environment
+    Regulation of international trade in animals, animal products, animal wastes and animal foods
+    Veterinary drugs ( residues, antimicrobial resistance )
 
-About half of the 16,000 microorganisms are transmitted to humans through various organisms. These microorganisms enter the human body through animal foods- such as eggs, milk, meat and food products produced from them, which cause various kinds of damage. Eggs, milk, meat and products from them are the main food in animal sources, which are used as human food in daily life. If these foods are not produced, processed, handled, transported and stored hygienically, it will pose a threat to public health and economic damage.
-</string>
+    About half of the 16,000 microorganisms are transmitted to humans through various organisms.
+    These microorganisms enter the human body through animal foods- such as eggs, milk, meat and
+    food products produced from them, which cause various kinds of damage. Eggs, milk, meat and
+    products from them are the main food in animal sources, which are used as human food in daily
+    life. If these foods are not produced, processed, handled, transported and stored hygienically,
+    it will pose a threat to public health and economic damage.</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.pranisheba.vet.ui.activity
 
+import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
@@ -18,7 +20,17 @@ class FarmManagementDetailsActivity : AppCompatActivity() {
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
     collapsingToolbarLayout.title = intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE)
-    farmManagementDetailsTextView.text = intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS)
+    farmManagementDetailsTextView.text =
+      intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS)
+
+    farmManagementDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+      Html.fromHtml(
+        intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS),
+        Html.FROM_HTML_MODE_COMPACT
+      )
+    } else {
+      Html.fromHtml(intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS))
+    }
   }
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {

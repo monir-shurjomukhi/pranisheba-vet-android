@@ -50,7 +50,7 @@
       android:layout_height="match_parent"
       android:layout_margin="16dp"
       android:justificationMode="inter_word"
-      android:text="@string/treatment_service_details"
+      android:text="@string/pregnant_cow_care_and_management_details"
       android:textSize="20sp" />
   </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
