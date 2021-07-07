@@ -24,7 +24,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.pregnant_cow_care_and_management))
       bundle.putString(
         Constants.FARM_MANAGEMENT_TYPE_DETAILS,
-        getString(R.string.treatment_service_details)
+        getString(R.string.pregnant_cow_care_and_management_details)
       )
       intent.putExtras(bundle)
       startActivity(intent)
@@ -36,7 +36,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.calf_care_and_management))
       bundle.putString(
         Constants.FARM_MANAGEMENT_TYPE_DETAILS,
-        getString(R.string.consultancy_service_details)
+        getString(R.string.calf_care_and_management_details)
       )
       intent.putExtras(bundle)
       startActivity(intent)
@@ -48,7 +48,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.daily_activities_of_farm))
       bundle.putString(
         Constants.FARM_MANAGEMENT_TYPE_DETAILS,
-        getString(R.string.registered_farm_service_details)
+        getString(R.string.daily_activities_of_farm_details)
       )
       intent.putExtras(bundle)
       startActivity(intent)
@@ -60,7 +60,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.importance_of_public_health))
       bundle.putString(
         Constants.FARM_MANAGEMENT_TYPE_DETAILS,
-        getString(R.string.registered_farm_service_details)
+        getString(R.string.importance_of_public_health_details)
       )
       intent.putExtras(bundle)
       startActivity(intent)
