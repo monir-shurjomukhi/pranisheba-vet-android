@@ -1,11 +1,12 @@
 package com.pranisheba.vet.ui.activity
 
+import android.os.Build
 import android.os.Bundle
+import android.text.Html
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
 import com.pranisheba.vet.util.Constants
-import kotlinx.android.synthetic.main.activity_farm_and_farmer_info.toolbar
 import kotlinx.android.synthetic.main.activity_service_details.*
 
 class ServiceDetailsActivity : AppCompatActivity() {
@@ -18,7 +19,14 @@ class ServiceDetailsActivity : AppCompatActivity() {
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
     collapsingToolbarLayout.title = intent.extras?.getString(Constants.SERVICE_TYPE)
-    serviceDetailsTextView.text = intent.extras?.getString(Constants.SERVICE_TYPE_DETAILS)
+    serviceDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+      Html.fromHtml(
+        intent.extras?.getString(Constants.SERVICE_TYPE_DETAILS),
+        Html.FROM_HTML_MODE_COMPACT
+      )
+    } else {
+      Html.fromHtml(intent.extras?.getString(Constants.SERVICE_TYPE_DETAILS))
+    }
   }
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {

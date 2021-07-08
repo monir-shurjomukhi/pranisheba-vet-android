@@ -20,9 +20,6 @@ class FarmManagementDetailsActivity : AppCompatActivity() {
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
     collapsingToolbarLayout.title = intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE)
-    farmManagementDetailsTextView.text =
-      intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS)
-
     farmManagementDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
       Html.fromHtml(
         intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS),
