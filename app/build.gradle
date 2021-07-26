@@ -5,9 +5,22 @@ plugins {
   id 'kotlin-kapt'
 }
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
 android {
   compileSdkVersion 30
   buildToolsVersion "30.0.3"
+
+  signingConfigs {
+    release {
+      keyAlias keystoreProperties['keyAlias']
+      keyPassword keystoreProperties['keyPassword']
+      storeFile file(keystoreProperties['storeFile'])
+      storePassword keystoreProperties['storePassword']
+    }
+  }
 
   defaultConfig {
     applicationId "com.pranisheba.vet"
@@ -15,23 +28,13 @@ android {
     targetSdkVersion 30
     versionCode 1
     versionName "1.0"
-
+    signingConfig signingConfigs.release
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-  }
-
-  signingConfigs {
-    config {
-      storeFile file('../app/keystore/psvet_key.jks')
-      keyAlias = 'psVet'
-      storePassword 'psVet1123'
-      keyPassword 'psVet1123'
-    }
   }
 
   buildTypes {
     release {
       minifyEnabled false
-      signingConfig signingConfigs.config
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
       buildConfigField("String", "BASE_URL", "\"http://182.16.159.22:8682/FFMSAPI/api/\"")
 

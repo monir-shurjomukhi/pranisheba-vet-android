@@ -1,3 +1,0 @@
-alias: psVet
-name: pS Vet
-password: psVet1123
