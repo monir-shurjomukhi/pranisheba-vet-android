@@ -38,29 +38,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
-          android:layout_width="match_parent"
+        <TextView
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/service_related_information"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/service_related_information"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_service_related_info" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 1 -->
@@ -78,29 +68,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
+        <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/farm_management_information"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/farm_management_information"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_farm_management_info" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 2 -->
@@ -118,30 +98,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
-          android:layout_width="match_parent"
+        <TextView
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/weight_measurement"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/weight_measurement"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_weight_measurement" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 2 -->
@@ -159,29 +128,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
+        <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/one_time_service"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/one_time_service"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_one_time_service" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 3 -->
@@ -199,29 +158,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
+        <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/monthly_service_registration"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/monthly_service_registration"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_monthly_service_reg" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 3 -->
@@ -239,29 +188,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
+        <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/monthly_service_related_information"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/monthly_service_related_information"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_monthly_service_info" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 4 -->
@@ -280,29 +219,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
+        <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/agent_registration"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/agent_registration"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_agent_reg" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 4 -->
@@ -321,29 +250,19 @@
         app:cardCornerRadius="32dp"
         app:cardElevation="8dp">
 
-        <LinearLayout
+        <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
-          android:layout_margin="16dp"
-          android:orientation="vertical">
-
-          <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-          <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/payment_form"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-        </LinearLayout>
+          android:layout_margin="4dp"
+          android:drawablePadding="8dp"
+          android:gravity="center"
+          android:text="@string/payment_form"
+          android:textColor="@android:color/white"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:drawableTint="@color/white"
+          app:drawableTopCompat="@drawable/ic_payment_form" />
       </androidx.cardview.widget.CardView>
     </GridLayout>
   </ScrollView>
