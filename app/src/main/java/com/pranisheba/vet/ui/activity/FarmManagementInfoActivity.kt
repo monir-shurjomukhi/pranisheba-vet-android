@@ -4,15 +4,28 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import com.pranisheba.vet.R
 import com.pranisheba.vet.util.Constants
-import kotlinx.android.synthetic.main.activity_farm_and_farmer_info.toolbar
-import kotlinx.android.synthetic.main.activity_farm_management_info.*
 
 class FarmManagementInfoActivity : AppCompatActivity() {
+
+  private lateinit var toolbar: Toolbar
+  private lateinit var pregnantCowCareCard: CardView
+  private lateinit var calfCareCard: CardView
+  private lateinit var dailyActivitiesCard: CardView
+  private lateinit var publicHealthCard: CardView
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_farm_management_info)
+
+    toolbar = findViewById(R.id.toolbar)
+    pregnantCowCareCard = findViewById(R.id.pregnantCowCareCard)
+    calfCareCard = findViewById(R.id.calfCareCard)
+    dailyActivitiesCard = findViewById(R.id.dailyActivitiesCard)
+    publicHealthCard = findViewById(R.id.publicHealthCard)
 
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)

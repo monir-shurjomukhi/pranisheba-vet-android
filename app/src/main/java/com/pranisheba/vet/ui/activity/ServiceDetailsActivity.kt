@@ -4,15 +4,26 @@ import android.os.Build
 import android.os.Bundle
 import android.text.Html
 import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.pranisheba.vet.R
 import com.pranisheba.vet.util.Constants
-import kotlinx.android.synthetic.main.activity_service_details.*
 
 class ServiceDetailsActivity : AppCompatActivity() {
+
+  private lateinit var toolbar: Toolbar
+  private lateinit var collapsingToolbarLayout: CollapsingToolbarLayout
+  private lateinit var serviceDetailsTextView: TextView
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_service_details)
+
+    toolbar = findViewById(R.id.toolbar)
+    collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout)
+    serviceDetailsTextView = findViewById(R.id.farmManagementDetailsTextView)
 
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
