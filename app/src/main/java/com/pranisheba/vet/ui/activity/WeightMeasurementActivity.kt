@@ -33,7 +33,7 @@ class WeightMeasurementActivity : AppCompatActivity() {
         return@setOnClickListener
       }
       if (TextUtils.isEmpty(circumference)) {
-        binding.lengthLayout.error = getString(R.string.body_circumference_c_inch_is_required)
+        binding.circumferenceLayout.error = getString(R.string.body_circumference_c_inch_is_required)
         return@setOnClickListener
       }
 
