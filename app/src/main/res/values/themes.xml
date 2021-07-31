@@ -27,7 +27,7 @@
   <style name="CategoryTab" parent="Widget.Design.TabLayout">
     <item name="tabIndicatorColor">@android:color/white</item>
     <item name="tabSelectedTextColor">@android:color/white</item>
-    <item name="android:background">@color/purple_200</item>
+    <item name="android:background">@color/green</item>
     <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
   </style>
 
