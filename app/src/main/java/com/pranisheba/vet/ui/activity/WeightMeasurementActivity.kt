@@ -1,5 +1,8 @@
 package com.pranisheba.vet.ui.activity
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.MenuItem
@@ -7,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityWeightMeasurementBinding
+
 
 class WeightMeasurementActivity : AppCompatActivity() {
 
@@ -48,6 +52,19 @@ class WeightMeasurementActivity : AppCompatActivity() {
         dialog.dismiss()
       }
       builder.show()
+    }
+
+    binding.instructionTextView.setOnClickListener {
+      val appIntent = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:lvjrH6ng2Lk"))
+      val webIntent = Intent(
+        Intent.ACTION_VIEW,
+        Uri.parse("http://www.youtube.com/watch?v=lvjrH6ng2Lk")
+      )
+      try {
+        startActivity(appIntent)
+      } catch (ex: ActivityNotFoundException) {
+        startActivity(webIntent)
+      }
     }
   }
 
