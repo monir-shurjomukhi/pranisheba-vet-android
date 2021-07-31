@@ -423,4 +423,7 @@
     </ol>
     ]]>
   </string>
+  <string name="body_length_a_to_b_inch">Body length A to B (Inch)</string>
+  <string name="body_circumference_c_inch">Body circumference C (Inch)</string>
+  <string name="click_here_for_measurement_instruction">Click here for measurement instruction</string>
 </resources>

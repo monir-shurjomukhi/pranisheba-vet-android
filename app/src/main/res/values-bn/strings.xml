@@ -394,4 +394,7 @@
     </ol>
     ]]>
   </string>
+  <string name="body_length_a_to_b_inch">দেহের দৈর্ঘ্য A থেকে B (ইঞ্চি)</string>
+  <string name="body_circumference_c_inch">দেহের পরিধি C (ইঞ্চি)</string>
+  <string name="click_here_for_measurement_instruction">পরিমাপ নির্দেশাবলীর জন্য এখানে ক্লিক করুন</string>
 </resources>

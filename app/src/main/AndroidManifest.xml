@@ -13,6 +13,7 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.PranishebaVet"
     android:usesCleartextTraffic="true">
+    <activity android:name=".ui.activity.WeightMeasurementActivity"></activity>
     <activity android:name=".ui.activity.LanguageActivity" />
     <activity android:name=".ui.activity.ServiceReceivingFormActivity" />
     <activity android:name=".ui.activity.ServiceRelatedInfoActivity" />
@@ -36,4 +37,5 @@
     <activity android:name=".ui.activity.SignUpActivity" />
     <activity android:name=".ui.activity.LoginActivity" />
   </application>
+
 </manifest>
