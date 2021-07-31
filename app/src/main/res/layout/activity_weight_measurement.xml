@@ -44,7 +44,8 @@
         android:src="@drawable/cow_weight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/weight_measurement" />
 
       <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lengthLayout"
@@ -61,7 +62,7 @@
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:inputType="numberDecimal"
+          android:inputType="number"
           android:textSize="20sp" />
       </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,7 +81,7 @@
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:inputType="numberDecimal"
+          android:inputType="number"
           android:textSize="20sp" />
       </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +110,7 @@
     android:padding="8dp"
     android:text="@string/click_here_for_measurement_instruction"
     android:textColor="@color/white"
-    android:textSize="20sp"
+    android:textSize="16sp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent" />

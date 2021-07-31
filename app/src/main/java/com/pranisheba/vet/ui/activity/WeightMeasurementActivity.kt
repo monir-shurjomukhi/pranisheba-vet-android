@@ -1,8 +1,11 @@
 package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityWeightMeasurementBinding
 
 class WeightMeasurementActivity : AppCompatActivity() {
@@ -17,6 +20,35 @@ class WeightMeasurementActivity : AppCompatActivity() {
     setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
+
+    binding.submitButton.setOnClickListener {
+      val length = binding.lengthLayout.editText?.text.toString()
+      val circumference = binding.circumferenceLayout.editText?.text.toString()
+      if (TextUtils.isEmpty(length)) {
+        binding.lengthLayout.error = getString(R.string.body_length_a_to_b_inch_is_required)
+        return@setOnClickListener
+      }
+      if (TextUtils.isEmpty(circumference)) {
+        binding.lengthLayout.error = getString(R.string.body_circumference_c_inch_is_required)
+        return@setOnClickListener
+      }
+
+      val weight1 =
+        (circumference.toDouble() * circumference.toDouble() * length.toDouble()) / 660.0
+      val percent5 = (weight1 * 5) / 100.0
+      val netWeight = weight1 - percent5
+
+      val builder = AlertDialog.Builder(this)
+      builder.setTitle("Total Weight")
+      builder.setMessage(String.format("%.2f KG", netWeight))
+      builder.setPositiveButton(android.R.string.yes) { dialog, _ ->
+        dialog.dismiss()
+      }
+      builder.setNegativeButton(android.R.string.no) { dialog, _ ->
+        dialog.dismiss()
+      }
+      builder.show()
+    }
   }
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {

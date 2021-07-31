@@ -5,8 +5,6 @@ import android.content.SharedPreferences
 import com.pranisheba.vet.util.Constants
 
 
-const val PREFERENCE_TITLE = "VetPreference"
-
 class VetPreference(context: Context) {
   private val preferences: SharedPreferences =
     context.getSharedPreferences(PREFERENCE_TITLE, Context.MODE_PRIVATE)
@@ -28,5 +26,9 @@ class VetPreference(context: Context) {
   fun putSelectedLanguage(language: String) {
     editor.putString(Constants.LANGUAGE, language)
     editor.apply()
+  }
+
+  companion object {
+    private const val PREFERENCE_TITLE = "VetPreference"
   }
 }
