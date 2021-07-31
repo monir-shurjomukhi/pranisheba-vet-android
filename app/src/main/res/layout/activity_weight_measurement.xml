@@ -28,7 +28,7 @@
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:padding="16dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/instructionTextView"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/appBarLayout">
@@ -101,7 +101,7 @@
   </ScrollView>
 
   <TextView
-    android:id="@+id/websiteTextView"
+    android:id="@+id/instructionTextView"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:background="@color/green"
@@ -109,7 +109,7 @@
     android:padding="8dp"
     android:text="@string/click_here_for_measurement_instruction"
     android:textColor="@color/white"
-    android:textSize="24sp"
+    android:textSize="20sp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent" />

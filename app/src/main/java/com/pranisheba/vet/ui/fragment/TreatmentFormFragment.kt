@@ -7,133 +7,135 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
-import com.pranisheba.vet.R
-import kotlinx.android.synthetic.main.fragment_treatment_form.*
+import com.pranisheba.vet.databinding.FragmentTreatmentFormBinding
 
 
 class TreatmentFormFragment : Fragment() {
 
+  private lateinit var binding: FragmentTreatmentFormBinding
+
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
-  ): View? {
+  ): View {
     // Inflate the layout for this fragment
-    return inflater.inflate(R.layout.fragment_treatment_form, container, false)
+    binding = FragmentTreatmentFormBinding.inflate(inflater, container, false)
+    return binding.root
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    treatedBeforeLayout.setOnKeyListener(null)
+    binding.treatedBeforeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
         .also { adapter ->
-          treatedBeforeTextView.setAdapter(adapter)
-          treatedBeforeTextView.inputType = InputType.TYPE_NULL
+          binding.treatedBeforeTextView.setAdapter(adapter)
+          binding.treatedBeforeTextView.inputType = InputType.TYPE_NULL
         }
     }
 
-    animalGroupLayout.setOnKeyListener(null)
+    binding.animalGroupLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it, android.R.layout.simple_list_item_1,
         listOf("Ruminants", "Poultry", "Bird", "Pet", "Elephant", "Horse", "Monkey")
       ).also { adapter ->
-        animalGroupTextView.setAdapter(adapter)
-        animalGroupTextView.inputType = InputType.TYPE_NULL
+        binding.animalGroupTextView.setAdapter(adapter)
+        binding.animalGroupTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    animalTypeLayout.setOnKeyListener(null)
+    binding.animalTypeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it, android.R.layout.simple_list_item_1,
         listOf("Cattle", "Sheep", "Goat", "Buffalo")
       ).also { adapter ->
-        animalTypeTextView.setAdapter(adapter)
-        animalTypeTextView.inputType = InputType.TYPE_NULL
+        binding.animalTypeTextView.setAdapter(adapter)
+        binding.animalTypeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    partOfIotLayout.setOnKeyListener(null)
+    binding.partOfIotLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
         .also { adapter ->
-          partOfIotTextView.setAdapter(adapter)
-          partOfIotTextView.inputType = InputType.TYPE_NULL
+          binding.partOfIotTextView.setAdapter(adapter)
+          binding.partOfIotTextView.inputType = InputType.TYPE_NULL
         }
     }
 
-    ageUnitLayout.setOnKeyListener(null)
+    binding.ageUnitLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Years", "Months", "Weeks", "Days")
       ).also { adapter ->
-        ageUnitTextView.setAdapter(adapter)
-        ageUnitTextView.inputType = InputType.TYPE_NULL
+        binding.ageUnitTextView.setAdapter(adapter)
+        binding.ageUnitTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    animalGenderLayout.setOnKeyListener(null)
+    binding.animalGenderLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Male", "Female"))
         .also { adapter ->
-          animalGenderTextView.setAdapter(adapter)
-          animalGenderTextView.inputType = InputType.TYPE_NULL
+          binding.animalGenderTextView.setAdapter(adapter)
+          binding.animalGenderTextView.inputType = InputType.TYPE_NULL
         }
     }
 
-    dewormingStatusLayout.setOnKeyListener(null)
+    binding.dewormingStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("3 months", "2 months", "1 month", "No")
       ).also { adapter ->
-        dewormingStatusTextView.setAdapter(adapter)
-        dewormingStatusTextView.inputType = InputType.TYPE_NULL
+        binding.dewormingStatusTextView.setAdapter(adapter)
+        binding.dewormingStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    vaccinationStatusLayout.setOnKeyListener(null)
+    binding.vaccinationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("3 months", "2 months", "1 month", "No")
       ).also { adapter ->
-        vaccinationStatusTextView.setAdapter(adapter)
-        vaccinationStatusTextView.inputType = InputType.TYPE_NULL
+        binding.vaccinationStatusTextView.setAdapter(adapter)
+        binding.vaccinationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    temperatureLevelLayout.setOnKeyListener(null)
+    binding.temperatureLevelLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("High", "Low", "Normal")
       ).also { adapter ->
-        temperatureLevelTextView.setAdapter(adapter)
-        temperatureLevelTextView.inputType = InputType.TYPE_NULL
+        binding.temperatureLevelTextView.setAdapter(adapter)
+        binding.temperatureLevelTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    feedIntakeLayout.setOnKeyListener(null)
+    binding.feedIntakeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Normal", "Low", "No")
       ).also { adapter ->
-        feedIntakeTextView.setAdapter(adapter)
-        feedIntakeTextView.inputType = InputType.TYPE_NULL
+        binding.feedIntakeTextView.setAdapter(adapter)
+        binding.feedIntakeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    defecationStatusLayout.setOnKeyListener(null)
+    binding.defecationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -149,140 +151,140 @@ class TreatmentFormFragment : Fragment() {
           "Greenish"
         )
       ).also { adapter ->
-        defecationStatusTextView.setAdapter(adapter)
-        defecationStatusTextView.inputType = InputType.TYPE_NULL
+        binding.defecationStatusTextView.setAdapter(adapter)
+        binding.defecationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    urinationStatusLayout.setOnKeyListener(null)
+    binding.urinationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("No", "Normal color", "Red color")
       ).also { adapter ->
-        urinationStatusTextView.setAdapter(adapter)
-        urinationStatusTextView.inputType = InputType.TYPE_NULL
+        binding.urinationStatusTextView.setAdapter(adapter)
+        binding.urinationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    hairStatusLayout.setOnKeyListener(null)
+    binding.hairStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Normal", "Erected")
       ).also { adapter ->
-        hairStatusTextView.setAdapter(adapter)
-        hairStatusTextView.inputType = InputType.TYPE_NULL
+        binding.hairStatusTextView.setAdapter(adapter)
+        binding.hairStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    salivationStatusLayout.setOnKeyListener(null)
+    binding.salivationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("No", "Only salivation", "Salivation with foam")
       ).also { adapter ->
-        salivationStatusTextView.setAdapter(adapter)
-        salivationStatusTextView.inputType = InputType.TYPE_NULL
+        binding.salivationStatusTextView.setAdapter(adapter)
+        binding.salivationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    postureStatusLayout.setOnKeyListener(null)
+    binding.postureStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Standing", "Sitting", "Lying on head up", "Lying on the ground")
       ).also { adapter ->
-        postureStatusTextView.setAdapter(adapter)
-        postureStatusTextView.inputType = InputType.TYPE_NULL
+        binding.postureStatusTextView.setAdapter(adapter)
+        binding.postureStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    muzzleStatusLayout.setOnKeyListener(null)
+    binding.muzzleStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Wet", "Dry")
       ).also { adapter ->
-        muzzleStatusTextView.setAdapter(adapter)
-        muzzleStatusTextView.inputType = InputType.TYPE_NULL
+        binding.muzzleStatusTextView.setAdapter(adapter)
+        binding.muzzleStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    sneezingStatusLayout.setOnKeyListener(null)
+    binding.sneezingStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Yes", "No", "With mucus")
       ).also { adapter ->
-        sneezingStatusTextView.setAdapter(adapter)
-        sneezingStatusTextView.inputType = InputType.TYPE_NULL
+        binding.sneezingStatusTextView.setAdapter(adapter)
+        binding.sneezingStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    gestureStatusLayout.setOnKeyListener(null)
+    binding.gestureStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Normal", "Abnormal")
       ).also { adapter ->
-        gestureStatusTextView.setAdapter(adapter)
-        gestureStatusTextView.inputType = InputType.TYPE_NULL
+        binding.gestureStatusTextView.setAdapter(adapter)
+        binding.gestureStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    firstTimeLayout.setOnKeyListener(null)
+    binding.firstTimeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Yes", "No")
       ).also { adapter ->
-        firstTimeTextView.setAdapter(adapter)
-        firstTimeTextView.inputType = InputType.TYPE_NULL
+        binding.firstTimeTextView.setAdapter(adapter)
+        binding.firstTimeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    soughtElsewhereLayout.setOnKeyListener(null)
+    binding.soughtElsewhereLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Yes", "No")
       ).also { adapter ->
-        soughtElsewhereTextView.setAdapter(adapter)
-        soughtElsewhereTextView.inputType = InputType.TYPE_NULL
+        binding.soughtElsewhereTextView.setAdapter(adapter)
+        binding.soughtElsewhereTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    otherAnimalsLayout.setOnKeyListener(null)
+    binding.otherAnimalsLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Yes", "No")
       ).also { adapter ->
-        otherAnimalsTextView.setAdapter(adapter)
-        otherAnimalsTextView.inputType = InputType.TYPE_NULL
+        binding.otherAnimalsTextView.setAdapter(adapter)
+        binding.otherAnimalsTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    emergencyTypeLayout.setOnKeyListener(null)
+    binding.emergencyTypeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("Normal", "Emergency")
       ).also { adapter ->
-        emergencyTypeTextView.setAdapter(adapter)
-        emergencyTypeTextView.inputType = InputType.TYPE_NULL
+        binding.emergencyTypeTextView.setAdapter(adapter)
+        binding.emergencyTypeTextView.inputType = InputType.TYPE_NULL
       }
     }
   }

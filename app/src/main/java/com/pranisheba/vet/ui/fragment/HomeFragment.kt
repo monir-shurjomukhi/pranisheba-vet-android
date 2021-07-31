@@ -13,6 +13,7 @@ import com.pranisheba.vet.R
 import com.pranisheba.vet.ui.activity.FarmManagementInfoActivity
 import com.pranisheba.vet.ui.activity.ServiceReceivingFormActivity
 import com.pranisheba.vet.ui.activity.ServiceRelatedInfoActivity
+import com.pranisheba.vet.ui.activity.WeightMeasurementActivity
 import com.pranisheba.vet.ui.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
@@ -65,7 +66,7 @@ class HomeFragment : Fragment() {
     }
 
     weightMeasurementCardView.setOnClickListener {
-      //startActivity(Intent(context, ServiceRelatedInfoActivity::class.java))
+      startActivity(Intent(context, WeightMeasurementActivity::class.java))
     }
 
     oneTimeServiceCardView.setOnClickListener {
