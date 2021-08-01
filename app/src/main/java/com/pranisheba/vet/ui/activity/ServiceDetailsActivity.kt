@@ -23,7 +23,7 @@ class ServiceDetailsActivity : AppCompatActivity() {
 
     toolbar = findViewById(R.id.toolbar)
     collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout)
-    serviceDetailsTextView = findViewById(R.id.farmManagementDetailsTextView)
+    serviceDetailsTextView = findViewById(R.id.serviceDetailsTextView)
 
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
