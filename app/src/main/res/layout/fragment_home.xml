@@ -1,269 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".ui.fragment.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.HomeFragment">
 
   <ScrollView
-    android:id="@+id/scrollView"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:fillViewport="true"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+      android:id="@+id/scrollView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:fillViewport="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
 
     <GridLayout
-      android:id="@+id/mainGrid"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:alignmentMode="alignMargins"
-      android:columnCount="2"
-      android:columnOrderPreserved="false">
+        android:id="@+id/mainGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false">
 
       <!-- Row 1 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/serviceRelatedInfoCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/serviceRelatedInfoCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="24dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="12dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/service_related_information"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_service_related_info" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/service_related_information"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_service_related_info" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 1 -->
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/farmManagementInfoCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/farmManagementInfoCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="12dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="24dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/farm_management_information"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_farm_management_info" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/farm_management_information"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_farm_management_info" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 2 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/weightMeasurementCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/weightMeasurementCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="24dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="12dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/weight_measurement"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_weight_measurement" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/weight_measurement"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_weight_measurement" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 2 -->
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/oneTimeServiceCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/oneTimeServiceCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="12dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="24dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/one_time_service"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_one_time_service" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/one_time_service"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_one_time_service" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 3 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/monthlyServiceRegistrationCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/monthlyServiceRegistrationCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="24dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="12dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/monthly_service_registration"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_monthly_service_reg" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/monthly_service_registration"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_monthly_service_reg" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 3 -->
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/monthlyServiceRelatedInfoCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/monthlyServiceRelatedInfoCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="12dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="24dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/monthly_service_related_information"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_monthly_service_info" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/monthly_service_related_information"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_monthly_service_info" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 4 -->
       <!-- Column 1 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/agentRegistrationCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/agentRegistrationCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="24dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="12dp"
+          android:layout_marginBottom="24dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/agent_registration"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_agent_reg" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/agent_registration"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_agent_reg" />
       </androidx.cardview.widget.CardView>
 
       <!-- Row 4 -->
       <!-- Column 2 -->
       <androidx.cardview.widget.CardView
-        android:id="@+id/paymentFormCardView"
-        android:layout_width="0dp"
-        android:layout_height="180dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="32dp"
-        app:cardElevation="8dp">
+          android:id="@+id/paymentFormCardView"
+          android:layout_width="0dp"
+          android:layout_height="180dp"
+          android:layout_rowWeight="1"
+          android:layout_columnWeight="1"
+          android:layout_marginStart="12dp"
+          android:layout_marginTop="24dp"
+          android:layout_marginEnd="24dp"
+          android:layout_marginBottom="24dp"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="32dp"
+          app:cardElevation="8dp">
 
         <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_margin="4dp"
-          android:drawablePadding="8dp"
-          android:gravity="center"
-          android:text="@string/payment_form"
-          android:textColor="@android:color/white"
-          android:textSize="16sp"
-          android:textStyle="bold"
-          app:drawableTint="@color/white"
-          app:drawableTopCompat="@drawable/ic_payment_form" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/payment_form"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:drawableTint="@color/white"
+            app:drawableTopCompat="@drawable/ic_payment_form" />
       </androidx.cardview.widget.CardView>
     </GridLayout>
   </ScrollView>
