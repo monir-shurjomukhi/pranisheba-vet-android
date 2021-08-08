@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.pranisheba.vet.R
-import com.pranisheba.vet.util.Constants
+import com.pranisheba.vet.util.SERVICE_TYPE
+import com.pranisheba.vet.util.SERVICE_TYPE_DETAILS
 
 class ServiceDetailsActivity : AppCompatActivity() {
 
@@ -29,14 +30,14 @@ class ServiceDetailsActivity : AppCompatActivity() {
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
-    collapsingToolbarLayout.title = intent.extras?.getString(Constants.SERVICE_TYPE)
+    collapsingToolbarLayout.title = intent.extras?.getString(SERVICE_TYPE)
     serviceDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
       Html.fromHtml(
-        intent.extras?.getString(Constants.SERVICE_TYPE_DETAILS),
+        intent.extras?.getString(SERVICE_TYPE_DETAILS),
         Html.FROM_HTML_MODE_COMPACT
       )
     } else {
-      Html.fromHtml(intent.extras?.getString(Constants.SERVICE_TYPE_DETAILS))
+      Html.fromHtml(intent.extras?.getString(SERVICE_TYPE_DETAILS))
     }
   }
 

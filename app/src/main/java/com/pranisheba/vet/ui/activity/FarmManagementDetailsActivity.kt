@@ -9,7 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.pranisheba.vet.R
-import com.pranisheba.vet.util.Constants
+import com.pranisheba.vet.util.FARM_MANAGEMENT_TYPE
+import com.pranisheba.vet.util.FARM_MANAGEMENT_TYPE_DETAILS
 
 class FarmManagementDetailsActivity : AppCompatActivity() {
 
@@ -29,14 +30,14 @@ class FarmManagementDetailsActivity : AppCompatActivity() {
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
-    collapsingToolbarLayout.title = intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE)
+    collapsingToolbarLayout.title = intent.extras?.getString(FARM_MANAGEMENT_TYPE)
     farmManagementDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
       Html.fromHtml(
-        intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS),
+        intent.extras?.getString(FARM_MANAGEMENT_TYPE_DETAILS),
         Html.FROM_HTML_MODE_COMPACT
       )
     } else {
-      Html.fromHtml(intent.extras?.getString(Constants.FARM_MANAGEMENT_TYPE_DETAILS))
+      Html.fromHtml(intent.extras?.getString(FARM_MANAGEMENT_TYPE_DETAILS))
     }
   }
 

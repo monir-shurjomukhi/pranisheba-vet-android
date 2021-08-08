@@ -10,15 +10,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
-import com.pranisheba.vet.ui.activity.FarmManagementInfoActivity
-import com.pranisheba.vet.ui.activity.ServiceReceivingFormActivity
-import com.pranisheba.vet.ui.activity.ServiceRelatedInfoActivity
-import com.pranisheba.vet.ui.activity.WeightMeasurementActivity
+import com.pranisheba.vet.preference.VetPreference
+import com.pranisheba.vet.ui.activity.*
 import com.pranisheba.vet.ui.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
 
   private lateinit var homeViewModel: HomeViewModel
+  private lateinit var preference: VetPreference
 
   private lateinit var serviceRelatedInfoCardView: CardView
   private lateinit var farmManagementInfoCardView: CardView
@@ -37,6 +36,8 @@ class HomeFragment : Fragment() {
     homeViewModel =
       ViewModelProvider(this).get(HomeViewModel::class.java)
     val root = inflater.inflate(R.layout.fragment_home, container, false)
+
+    preference = VetPreference(requireContext())
 
     serviceRelatedInfoCardView = root.findViewById(R.id.serviceRelatedInfoCardView)
     farmManagementInfoCardView = root.findViewById(R.id.farmManagementInfoCardView)
@@ -66,11 +67,15 @@ class HomeFragment : Fragment() {
     }
 
     weightMeasurementCardView.setOnClickListener {
-      startActivity(Intent(context, WeightMeasurementActivity::class.java))
+        startActivity(Intent(context, WeightMeasurementActivity::class.java))
     }
 
     oneTimeServiceCardView.setOnClickListener {
-      startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+      if (preference.getAuthToken()?.isEmpty() == true) {
+        startActivity(Intent(context, LoginActivity::class.java))
+      } else {
+        startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+      }
     }
 
     monthlyServiceRegistrationCardView.setOnClickListener {

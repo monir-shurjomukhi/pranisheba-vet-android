@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import com.pranisheba.vet.R
-import com.pranisheba.vet.util.Constants
+import com.pranisheba.vet.util.SERVICE_TYPE
+import com.pranisheba.vet.util.SERVICE_TYPE_DETAILS
 
 class ServiceRelatedInfoActivity : AppCompatActivity() {
 
@@ -32,9 +33,9 @@ class ServiceRelatedInfoActivity : AppCompatActivity() {
     treatmentServiceCard.setOnClickListener {
       val intent = Intent(this, ServiceDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.SERVICE_TYPE, getString(R.string.treatment_service))
+      bundle.putString(SERVICE_TYPE, getString(R.string.treatment_service))
       bundle.putString(
-        Constants.SERVICE_TYPE_DETAILS,
+        SERVICE_TYPE_DETAILS,
         getString(R.string.treatment_service_details)
       )
       intent.putExtras(bundle)
@@ -44,9 +45,9 @@ class ServiceRelatedInfoActivity : AppCompatActivity() {
     consultancyServiceCard.setOnClickListener {
       val intent = Intent(this, ServiceDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.SERVICE_TYPE, getString(R.string.consultancy_service))
+      bundle.putString(SERVICE_TYPE, getString(R.string.consultancy_service))
       bundle.putString(
-        Constants.SERVICE_TYPE_DETAILS,
+        SERVICE_TYPE_DETAILS,
         getString(R.string.consultancy_service_details)
       )
       intent.putExtras(bundle)
@@ -56,9 +57,9 @@ class ServiceRelatedInfoActivity : AppCompatActivity() {
     registeredFarmServiceCard.setOnClickListener {
       val intent = Intent(this, ServiceDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.SERVICE_TYPE, getString(R.string.registered_farm_service))
+      bundle.putString(SERVICE_TYPE, getString(R.string.registered_farm_service))
       bundle.putString(
-        Constants.SERVICE_TYPE_DETAILS,
+        SERVICE_TYPE_DETAILS,
         getString(R.string.registered_farm_service_details)
       )
       intent.putExtras(bundle)

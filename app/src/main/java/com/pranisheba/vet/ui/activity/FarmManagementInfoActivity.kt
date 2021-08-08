@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import com.pranisheba.vet.R
-import com.pranisheba.vet.util.Constants
+import com.pranisheba.vet.util.FARM_MANAGEMENT_TYPE
+import com.pranisheba.vet.util.FARM_MANAGEMENT_TYPE_DETAILS
 
 class FarmManagementInfoActivity : AppCompatActivity() {
 
@@ -34,9 +35,9 @@ class FarmManagementInfoActivity : AppCompatActivity() {
     pregnantCowCareCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.pregnant_cow_care_and_management))
+      bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.pregnant_cow_care_and_management))
       bundle.putString(
-        Constants.FARM_MANAGEMENT_TYPE_DETAILS,
+        FARM_MANAGEMENT_TYPE_DETAILS,
         getString(R.string.pregnant_cow_care_and_management_details)
       )
       intent.putExtras(bundle)
@@ -46,9 +47,9 @@ class FarmManagementInfoActivity : AppCompatActivity() {
     calfCareCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.calf_care_and_management))
+      bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.calf_care_and_management))
       bundle.putString(
-        Constants.FARM_MANAGEMENT_TYPE_DETAILS,
+        FARM_MANAGEMENT_TYPE_DETAILS,
         getString(R.string.calf_care_and_management_details)
       )
       intent.putExtras(bundle)
@@ -58,9 +59,9 @@ class FarmManagementInfoActivity : AppCompatActivity() {
     dailyActivitiesCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.daily_activities_of_farm))
+      bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.daily_activities_of_farm))
       bundle.putString(
-        Constants.FARM_MANAGEMENT_TYPE_DETAILS,
+        FARM_MANAGEMENT_TYPE_DETAILS,
         getString(R.string.daily_activities_of_farm_details)
       )
       intent.putExtras(bundle)
@@ -70,9 +71,9 @@ class FarmManagementInfoActivity : AppCompatActivity() {
     publicHealthCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
-      bundle.putString(Constants.FARM_MANAGEMENT_TYPE, getString(R.string.importance_of_public_health))
+      bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.importance_of_public_health))
       bundle.putString(
-        Constants.FARM_MANAGEMENT_TYPE_DETAILS,
+        FARM_MANAGEMENT_TYPE_DETAILS,
         getString(R.string.importance_of_public_health_details)
       )
       intent.putExtras(bundle)

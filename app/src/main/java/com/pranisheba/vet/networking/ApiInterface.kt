@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface ApiInterface {
 
-  @POST("auth/customers/")
+  @POST("customers/")
   fun signUp(
     @Body signUp: SignUpData
   ): Call<SignUp>
