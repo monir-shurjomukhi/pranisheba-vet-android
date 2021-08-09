@@ -431,4 +431,6 @@
   <string name="body_circumference_c_inch">Body circumference C (Inch)</string>
   <string name="body_circumference_c_inch_is_required">Body circumference C (Inch) is required</string>
   <string name="click_here_for_measurement_instruction">Click here for measurement instruction</string>
+  <string name="otp">OTP</string>
+  <string name="otp_required">OTP is required</string>
 </resources>

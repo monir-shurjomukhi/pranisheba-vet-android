@@ -402,4 +402,6 @@
   <string name="body_circumference_c_inch">দেহের পরিধি C (ইঞ্চি)</string>
   <string name="body_circumference_c_inch_is_required">দেহের পরিধি C (ইঞ্চি) দিন</string>
   <string name="click_here_for_measurement_instruction">পরিমাপ নির্দেশাবলীর জন্য এখানে ক্লিক করুন</string>
+  <string name="otp">OTP</string>
+  <string name="otp_required">OTP আবশ্যক</string>
 </resources>

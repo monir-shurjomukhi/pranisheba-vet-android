@@ -18,8 +18,15 @@ interface ApiInterface {
     @Query("mobile_number") mobileNumber: String
   ): Call<LoginResponse>
 
-  @POST("customers/")
+  //////////////////// POST ///////////////////
+
+  @POST("customers")
   fun signUp(
     @Body signUp: SignUpData
   ): Call<SignUp>
+
+  @POST("verify_input_code")
+  fun verifyOtp(
+
+  )
 }
