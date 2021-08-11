@@ -1,6 +1,7 @@
 package com.pranisheba.vet.networking
 
 import com.pranisheba.vet.model.LoginResponse
+import com.pranisheba.vet.model.Otp
 import com.pranisheba.vet.model.SignUp
 import com.pranisheba.vet.model.SignUpData
 import retrofit2.Call
@@ -27,6 +28,6 @@ interface ApiInterface {
 
   @POST("verify_input_code")
   fun verifyOtp(
-
-  )
+    @Body otp: Otp
+  ): Call<String>
 }
