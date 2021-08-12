@@ -32,4 +32,9 @@ interface ApiInterface {
   fun updateLogin(
     @Body updateLogin: UpdateLogin
   ): Call<UpdateLogin>
+
+  @POST("auth/login")
+  fun login(
+    @Body login: Login
+  ): Call<String>
 }
