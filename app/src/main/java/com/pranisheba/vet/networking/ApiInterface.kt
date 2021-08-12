@@ -1,9 +1,6 @@
 package com.pranisheba.vet.networking
 
-import com.pranisheba.vet.model.LoginResponse
-import com.pranisheba.vet.model.Otp
-import com.pranisheba.vet.model.SignUp
-import com.pranisheba.vet.model.SignUpData
+import com.pranisheba.vet.model.*
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -15,9 +12,9 @@ interface ApiInterface {
   ///////////////////// GET ///////////////////
 
   @GET("insertcheck/{mobile_number}")
-  fun login(
+  fun insertCheck(
     @Path("mobile_number") mobileNumber: String
-  ): Call<LoginResponse>
+  ): Call<InsertCheck>
 
   //////////////////// POST ///////////////////
 
@@ -30,4 +27,9 @@ interface ApiInterface {
   fun verifyOtp(
     @Body otp: Otp
   ): Call<String>
+
+  @POST("update_customer_logins")
+  fun updateLogin(
+    @Body updateLogin: UpdateLogin
+  ): Call<UpdateLogin>
 }

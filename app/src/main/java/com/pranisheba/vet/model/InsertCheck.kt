@@ -2,7 +2,7 @@ package com.pranisheba.vet.model
 
 import com.google.gson.annotations.SerializedName
 
-data class LoginResponse(
+data class InsertCheck(
   @SerializedName("success") val success: Boolean?,
   @SerializedName("key") val key: String?,
   @SerializedName("id") val id: Int?,

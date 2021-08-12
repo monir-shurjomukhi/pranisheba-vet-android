@@ -4,8 +4,9 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.pranisheba.vet.model.LoginResponse
+import com.pranisheba.vet.model.InsertCheck
 import com.pranisheba.vet.model.Otp
+import com.pranisheba.vet.model.UpdateLogin
 import com.pranisheba.vet.networking.ApiClient
 import com.pranisheba.vet.networking.ApiInterface
 import retrofit2.Call
@@ -13,27 +14,27 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginViewModel(application: Application) : BaseViewModel(application) {
-  private val _loginResponse = MutableLiveData<LoginResponse>()
-  val loginResponse: LiveData<LoginResponse>
-    get() = _loginResponse
+  private val _insertCheck = MutableLiveData<InsertCheck>()
+  val insertCheck: LiveData<InsertCheck>
+    get() = _insertCheck
 
   private val _verifyOtp = MutableLiveData<String>()
   val verifyOtp: LiveData<String>
     get() = _verifyOtp
 
-  fun login(mobileNumber: String) {
+  fun insertCheck(mobileNumber: String) {
     progress.value = true
     val apiClient = ApiClient().getApiClient()?.create(ApiInterface::class.java)
-    apiClient?.login(mobileNumber)?.enqueue(object : Callback<LoginResponse> {
-      override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+    apiClient?.insertCheck(mobileNumber)?.enqueue(object : Callback<InsertCheck> {
+      override fun onResponse(call: Call<InsertCheck>, response: Response<InsertCheck>) {
         if (response.isSuccessful) {
-          _loginResponse.value = response.body()
+          _insertCheck.value = response.body()
         }
 
         progress.value = false
       }
 
-      override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+      override fun onFailure(call: Call<InsertCheck>, t: Throwable) {
         Log.e(TAG, "onFailure: ${t.message}", t)
         progress.value = false
       }
@@ -46,13 +47,35 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
     apiClient?.verifyOtp(otpData)?.enqueue(object : Callback<String> {
       override fun onResponse(call: Call<String>, response: Response<String>) {
         if (response.isSuccessful) {
-          _verifyOtp.value = response.body()
+          if (response.body().equals("1")) {
+            val updateLogin = UpdateLogin(insertCheck.value?.id!!,
+              insertCheck.value?.mobileNumber!!, otpData.otp.toString())
+            updateLogin(updateLogin)
+          }
         }
 
         progress.value = false
       }
 
       override fun onFailure(call: Call<String>, t: Throwable) {
+        Log.e(TAG, "onFailure: ${t.message}", t)
+        progress.value = false
+      }
+    })
+  }
+
+  fun updateLogin(updateLogin: UpdateLogin) {
+    progress.value = true
+
+    val apiClient = ApiClient().getApiClient()?.create(ApiInterface::class.java)
+    apiClient?.updateLogin(updateLogin)?.enqueue(object: Callback<UpdateLogin> {
+      override fun onResponse(call: Call<UpdateLogin>, response: Response<UpdateLogin>) {
+        if (response.isSuccessful) {
+
+        }
+      }
+
+      override fun onFailure(call: Call<UpdateLogin>, t: Throwable) {
         Log.e(TAG, "onFailure: ${t.message}", t)
         progress.value = false
       }
