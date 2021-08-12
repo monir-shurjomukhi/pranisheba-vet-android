@@ -436,4 +436,8 @@
   <string name="send">Send</string>
   <string name="login">Login</string>
   <string name="resend">Resend</string>
+  <string name="could_not_send_otp">Could Not Send OTP</string>
+  <string name="could_not_verify_otp">Could Not Verify OTP</string>
+  <string name="could_not_login">Could Not Login</string>
+  <string name="otp_sent_to_your_mobile_number">OTP Sent To Your Mobile Number</string>
 </resources>

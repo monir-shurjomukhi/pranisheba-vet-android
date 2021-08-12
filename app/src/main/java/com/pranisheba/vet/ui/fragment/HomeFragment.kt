@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
     }
 
     oneTimeServiceCardView.setOnClickListener {
-      if (preference.getAuthToken()?.isEmpty() == false) {
+      if (preference.getAuthToken()?.isEmpty() == true) {
         startActivity(Intent(context, LoginActivity::class.java))
       } else {
         startActivity(Intent(context, ServiceReceivingFormActivity::class.java))

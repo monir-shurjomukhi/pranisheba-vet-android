@@ -9,7 +9,7 @@ import com.pranisheba.vet.preference.VetPreference
 
 open class BaseViewModel(application: Application) : AndroidViewModel(application) {
   val progress = MutableLiveData<Boolean>()
-  val message = MutableLiveData<String>()
+  val message = MutableLiveData<Int>()
   val preference = VetPreference(application)
   val apiClient = ApiClient().getApiClient()?.create(ApiInterface::class.java)
 }

@@ -407,4 +407,8 @@
   <string name="send">পাঠান</string>
   <string name="login">প্রবেশ করুন</string>
   <string name="resend">পুনরায় পাঠান</string>
+  <string name="could_not_send_otp">OTP পাঠাতে পারেনি</string>
+  <string name="could_not_verify_otp">OTP যাচাই করতে পারেনি</string>
+  <string name="could_not_login">লগইন ব্যর্থ হয়েছে</string>
+  <string name="otp_sent_to_your_mobile_number">আপনার মোবাইল নম্বরে OTP পাঠানো হয়েছে</string>
 </resources>

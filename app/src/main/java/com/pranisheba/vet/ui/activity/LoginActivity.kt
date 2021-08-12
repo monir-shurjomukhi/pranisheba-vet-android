@@ -3,9 +3,9 @@ package com.pranisheba.vet.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityLoginBinding
 import com.pranisheba.vet.model.OtpData
@@ -42,8 +42,8 @@ class LoginActivity : AppCompatActivity() {
     viewModel.insertCheck.observe(this, {
       if (it.success == true) {
         binding.sendButton.text = getString(R.string.resend)
-        binding.otpLayout.visibility = VISIBLE
-        binding.loginButton.visibility = VISIBLE
+        binding.otpLayout.visibility = View.VISIBLE
+        binding.loginButton.visibility = View.VISIBLE
       }
     })
 
@@ -62,6 +62,10 @@ class LoginActivity : AppCompatActivity() {
         binding.animationView.visibility = View.GONE
       }
     })
+
+    viewModel.message.observe(this, {
+      Snackbar.make(binding.parentLayout, getString(it), Snackbar.LENGTH_SHORT).show()
+    })
   }
 
   private fun insertCheck() {
@@ -77,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
   private fun login() {
     val otp = binding.otpLayout.editText?.text.toString()
     if (otp.isEmpty()) {
-      binding.mobileLayout.error = getString(R.string.otp_required)
+      binding.otpLayout.error = getString(R.string.otp_required)
       return
     }
 

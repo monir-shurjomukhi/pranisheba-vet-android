@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
+    android:id="@+id/parentLayout"
     tools:context=".ui.activity.LoginActivity">
 
   <ImageView
@@ -34,6 +35,7 @@
       app:layout_constraintVertical_chainStyle="packed">
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mobileEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLength="11"
@@ -44,12 +46,11 @@
   <com.google.android.material.button.MaterialButton
       android:id="@+id/sendButton"
       android:layout_width="wrap_content"
-      android:layout_height="0dp"
+      android:layout_height="61dp"
       android:insetBottom="0dp"
       android:text="@string/send"
       android:textAllCaps="false"
       android:textSize="16sp"
-      app:layout_constraintBottom_toBottomOf="@id/mobileLayout"
       app:layout_constraintEnd_toEndOf="@id/mobileLayout"
       app:layout_constraintTop_toTopOf="@id/mobileLayout" />
 

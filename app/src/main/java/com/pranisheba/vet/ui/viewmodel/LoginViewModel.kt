@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.pranisheba.vet.R
 import com.pranisheba.vet.model.InsertCheck
 import com.pranisheba.vet.model.Login
 import com.pranisheba.vet.model.OtpData
@@ -27,6 +28,9 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
       override fun onResponse(call: Call<InsertCheck>, response: Response<InsertCheck>) {
         if (response.isSuccessful) {
           _insertCheck.value = response.body()
+          message.value = R.string.otp_sent_to_your_mobile_number
+        } else {
+          message.value = R.string.could_not_send_otp
         }
 
         progress.value = false
@@ -34,6 +38,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
 
       override fun onFailure(call: Call<InsertCheck>, t: Throwable) {
         Log.e(TAG, "onFailure: ${t.message}", t)
+        message.value = R.string.could_not_send_otp
         progress.value = false
       }
     })
@@ -48,12 +53,19 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
             val updateLogin = UpdateLogin(insertCheck.value?.id!!,
               insertCheck.value?.mobileNumber!!, otpData.otp.toString())
             updateLogin(updateLogin)
+          } else {
+            message.value = R.string.could_not_verify_otp
+            progress.value = false
           }
+        } else {
+          message.value = R.string.could_not_verify_otp
+          progress.value = false
         }
       }
 
       override fun onFailure(call: Call<String>, t: Throwable) {
         Log.e(TAG, "onFailure: ${t.message}", t)
+        message.value = R.string.could_not_verify_otp
         progress.value = false
       }
     })
@@ -65,11 +77,14 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
         if (response.isSuccessful) {
           val login = Login(updateLogin.mobileNumber.toString(), updateLogin.otp.toString())
           login(login)
+        } else {
+          message.value = R.string.could_not_login
         }
       }
 
       override fun onFailure(call: Call<UpdateLogin>, t: Throwable) {
         Log.e(TAG, "onFailure: ${t.message}", t)
+        message.value = R.string.could_not_login
         progress.value = false
       }
     })
@@ -81,6 +96,8 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
         if (response.isSuccessful) {
           login.token = response.body()
           _login.value = login
+        } else {
+          message.value = R.string.could_not_login
         }
 
         progress.value = false
@@ -88,6 +105,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
 
       override fun onFailure(call: Call<String>, t: Throwable) {
         Log.e(TAG, "onFailure: ${t.message}", t)
+        message.value = R.string.could_not_login
         progress.value = false
       }
     })
