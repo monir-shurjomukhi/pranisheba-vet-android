@@ -107,4 +107,7 @@ dependencies {
 
   // Webkit
   implementation 'androidx.webkit:webkit:1.4.0'
+
+  // Lottie
+  implementation 'com.airbnb.android:lottie:3.7.2'
 }

@@ -44,14 +44,12 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
     apiClient?.verifyOtp(otpData)?.enqueue(object : Callback<String> {
       override fun onResponse(call: Call<String>, response: Response<String>) {
         if (response.isSuccessful) {
-          if (response.body().equals("1")) {
+          if (response.body().equals(" 1")) {
             val updateLogin = UpdateLogin(insertCheck.value?.id!!,
               insertCheck.value?.mobileNumber!!, otpData.otp.toString())
             updateLogin(updateLogin)
           }
         }
-
-        progress.value = false
       }
 
       override fun onFailure(call: Call<String>, t: Throwable) {
@@ -61,16 +59,13 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
     })
   }
 
-  fun updateLogin(updateLogin: UpdateLogin) {
-    progress.value = true
+  private fun updateLogin(updateLogin: UpdateLogin) {
     apiClient?.updateLogin(updateLogin)?.enqueue(object: Callback<UpdateLogin> {
       override fun onResponse(call: Call<UpdateLogin>, response: Response<UpdateLogin>) {
         if (response.isSuccessful) {
           val login = Login(updateLogin.mobileNumber.toString(), updateLogin.otp.toString())
           login(login)
         }
-
-        progress.value = false
       }
 
       override fun onFailure(call: Call<UpdateLogin>, t: Throwable) {
@@ -80,8 +75,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
     })
   }
 
-  fun login(login: Login) {
-    progress.value = true
+  private fun login(login: Login) {
     apiClient?.login(login)?.enqueue(object : Callback<String> {
       override fun onResponse(call: Call<String>, response: Response<String>) {
         if (response.isSuccessful) {

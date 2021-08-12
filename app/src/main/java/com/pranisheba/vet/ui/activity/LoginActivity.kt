@@ -2,6 +2,7 @@ package com.pranisheba.vet.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -9,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityLoginBinding
 import com.pranisheba.vet.model.Otp
-import com.pranisheba.vet.model.UpdateLogin
 import com.pranisheba.vet.preference.VetPreference
 import com.pranisheba.vet.ui.viewmodel.LoginViewModel
 
@@ -49,6 +49,14 @@ class LoginActivity : AppCompatActivity() {
         finishAffinity()
       }
     })
+
+    viewModel.progress.observe(this, {
+      if (it) {
+        binding.animationView.visibility = View.VISIBLE
+      } else {
+        binding.animationView.visibility = View.GONE
+      }
+    })
   }
 
   private fun insertCheck() {
@@ -70,12 +78,5 @@ class LoginActivity : AppCompatActivity() {
 
       viewModel.insertCheck(mobileNumber)
     }
-  }
-
-  private fun updateLogin() {
-    val updateLogin = UpdateLogin(viewModel.insertCheck.value?.id!!,
-      viewModel.insertCheck.value?.mobileNumber!!, binding.otpLayout.editText?.text.toString())
-
-
   }
 }
