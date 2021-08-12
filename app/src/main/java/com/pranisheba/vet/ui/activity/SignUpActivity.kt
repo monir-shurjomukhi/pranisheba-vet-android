@@ -42,6 +42,10 @@ class SignUpActivity : AppCompatActivity() {
         Toast.makeText(this, "Signup successful! Please Login!", Toast.LENGTH_SHORT).show()
       }
     })
+
+    viewModel.progress.observe(this, {
+
+    })
   }
 
   private fun signUp() {

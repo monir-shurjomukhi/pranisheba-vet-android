@@ -433,4 +433,7 @@
   <string name="click_here_for_measurement_instruction">Click here for measurement instruction</string>
   <string name="otp">OTP</string>
   <string name="otp_required">OTP is required</string>
+  <string name="send">Send</string>
+  <string name="login">Login</string>
+  <string name="resend">Resend</string>
 </resources>

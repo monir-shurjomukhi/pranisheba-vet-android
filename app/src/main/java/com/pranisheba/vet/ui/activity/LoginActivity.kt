@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityLoginBinding
-import com.pranisheba.vet.model.Otp
+import com.pranisheba.vet.model.OtpData
 import com.pranisheba.vet.preference.VetPreference
 import com.pranisheba.vet.ui.viewmodel.LoginViewModel
 
@@ -28,8 +27,12 @@ class LoginActivity : AppCompatActivity() {
     viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
     preference = VetPreference(this)
 
-    binding.nextButton.setOnClickListener {
+    binding.sendButton.setOnClickListener {
       insertCheck()
+    }
+
+    binding.loginButton.setOnClickListener {
+      login()
     }
 
     binding.signUpTextView.setOnClickListener {
@@ -38,7 +41,9 @@ class LoginActivity : AppCompatActivity() {
 
     viewModel.insertCheck.observe(this, {
       if (it.success == true) {
+        binding.sendButton.text = getString(R.string.resend)
         binding.otpLayout.visibility = VISIBLE
+        binding.loginButton.visibility = VISIBLE
       }
     })
 
@@ -60,16 +65,6 @@ class LoginActivity : AppCompatActivity() {
   }
 
   private fun insertCheck() {
-    if (binding.otpLayout.isVisible) {
-      val otp = binding.otpLayout.editText?.text.toString()
-      if (otp.isEmpty()) {
-        binding.mobileLayout.error = getString(R.string.otp_required)
-        return
-      }
-
-      val otpData = Otp(otp, viewModel.insertCheck.value?.key.toString())
-      viewModel.verifyOtp(otpData)
-    } else {
       val mobileNumber = binding.mobileLayout.editText?.text.toString()
       if (mobileNumber.isEmpty()) {
         binding.mobileLayout.error = getString(R.string.mobile_number_required)
@@ -77,6 +72,16 @@ class LoginActivity : AppCompatActivity() {
       }
 
       viewModel.insertCheck(mobileNumber)
+  }
+
+  private fun login() {
+    val otp = binding.otpLayout.editText?.text.toString()
+    if (otp.isEmpty()) {
+      binding.mobileLayout.error = getString(R.string.otp_required)
+      return
     }
+
+    val otpData = OtpData(otp, viewModel.insertCheck.value?.key.toString())
+    viewModel.verifyOtp(otpData)
   }
 }

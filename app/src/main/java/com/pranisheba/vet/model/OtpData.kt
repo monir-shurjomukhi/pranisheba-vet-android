@@ -1,6 +1,6 @@
 package com.pranisheba.vet.model
 
-data class Otp(
+data class OtpData(
   val otp: String?,
   val hidden: String?
 )

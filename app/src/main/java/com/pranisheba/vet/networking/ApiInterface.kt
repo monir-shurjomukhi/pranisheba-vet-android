@@ -25,7 +25,7 @@ interface ApiInterface {
 
   @POST("verify_input_code")
   fun verifyOtp(
-    @Body otp: Otp
+    @Body otpData: OtpData
   ): Call<String>
 
   @POST("update_customer_logins")

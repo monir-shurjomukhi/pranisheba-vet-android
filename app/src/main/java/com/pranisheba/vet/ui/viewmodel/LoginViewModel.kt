@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.pranisheba.vet.model.InsertCheck
 import com.pranisheba.vet.model.Login
-import com.pranisheba.vet.model.Otp
+import com.pranisheba.vet.model.OtpData
 import com.pranisheba.vet.model.UpdateLogin
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,7 +39,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
     })
   }
 
-  fun verifyOtp(otpData: Otp) {
+  fun verifyOtp(otpData: OtpData) {
     progress.value = true
     apiClient?.verifyOtp(otpData)?.enqueue(object : Callback<String> {
       override fun onResponse(call: Call<String>, response: Response<String>) {

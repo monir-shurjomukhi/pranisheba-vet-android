@@ -17,7 +17,7 @@ class SignUpViewModel(application: Application) : BaseViewModel(application) {
   val signUp: LiveData<SignUp>
     get() = _signUp
 
-  public fun signUp(signUpData: SignUpData) {
+  fun signUp(signUpData: SignUpData) {
     progress.value = true
     val apiClient = ApiClient().getApiClient()?.create(ApiInterface::class.java)
     apiClient?.signUp(signUpData)?.enqueue(object : Callback<SignUp> {
