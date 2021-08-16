@@ -5,20 +5,19 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.pranisheba.vet.R
+import com.pranisheba.vet.databinding.ActivityFarmAndFarmerInfoBinding
 
 class FarmAndFarmerInfoActivity : AppCompatActivity() {
 
-  private lateinit var toolbar: Toolbar
+  private lateinit var binding: ActivityFarmAndFarmerInfoBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_farm_and_farmer_info)
+    binding = ActivityFarmAndFarmerInfoBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
-    toolbar = findViewById(R.id.toolbar)
-
-    setSupportActionBar(toolbar)
+    setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
   }

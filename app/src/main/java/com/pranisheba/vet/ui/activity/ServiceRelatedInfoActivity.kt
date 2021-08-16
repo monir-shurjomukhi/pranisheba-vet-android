@@ -4,33 +4,25 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.cardview.widget.CardView
 import com.pranisheba.vet.R
+import com.pranisheba.vet.databinding.ActivityServiceRelatedInfoBinding
 import com.pranisheba.vet.util.SERVICE_TYPE
 import com.pranisheba.vet.util.SERVICE_TYPE_DETAILS
 
 class ServiceRelatedInfoActivity : AppCompatActivity() {
 
-  private lateinit var toolbar: Toolbar
-  private lateinit var treatmentServiceCard: CardView
-  private lateinit var consultancyServiceCard: CardView
-  private lateinit var registeredFarmServiceCard: CardView
+  private lateinit var binding: ActivityServiceRelatedInfoBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_service_related_info)
+    binding = ActivityServiceRelatedInfoBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
-    toolbar = findViewById(R.id.toolbar)
-    treatmentServiceCard = findViewById(R.id.treatmentServiceCard)
-    consultancyServiceCard = findViewById(R.id.consultancyServiceCard)
-    registeredFarmServiceCard = findViewById(R.id.registeredFarmServiceCard)
-
-    setSupportActionBar(toolbar)
+    setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
-    treatmentServiceCard.setOnClickListener {
+    binding.treatmentServiceCard.setOnClickListener {
       val intent = Intent(this, ServiceDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(SERVICE_TYPE, getString(R.string.treatment_service))
@@ -42,7 +34,7 @@ class ServiceRelatedInfoActivity : AppCompatActivity() {
       startActivity(intent)
     }
 
-    consultancyServiceCard.setOnClickListener {
+    binding.consultancyServiceCard.setOnClickListener {
       val intent = Intent(this, ServiceDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(SERVICE_TYPE, getString(R.string.consultancy_service))
@@ -54,7 +46,7 @@ class ServiceRelatedInfoActivity : AppCompatActivity() {
       startActivity(intent)
     }
 
-    registeredFarmServiceCard.setOnClickListener {
+    binding.registeredFarmServiceCard.setOnClickListener {
       val intent = Intent(this, ServiceDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(SERVICE_TYPE, getString(R.string.registered_farm_service))

@@ -4,34 +4,26 @@ import android.os.Build
 import android.os.Bundle
 import android.text.Html
 import android.view.MenuItem
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.pranisheba.vet.R
+import com.pranisheba.vet.databinding.ActivityServiceDetailsBinding
 import com.pranisheba.vet.util.SERVICE_TYPE
 import com.pranisheba.vet.util.SERVICE_TYPE_DETAILS
 
 class ServiceDetailsActivity : AppCompatActivity() {
 
-  private lateinit var toolbar: Toolbar
-  private lateinit var collapsingToolbarLayout: CollapsingToolbarLayout
-  private lateinit var serviceDetailsTextView: TextView
+  private lateinit var binding: ActivityServiceDetailsBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_service_details)
+    binding = ActivityServiceDetailsBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
-    toolbar = findViewById(R.id.toolbar)
-    collapsingToolbarLayout = findViewById(R.id.collapsingToolbarLayout)
-    serviceDetailsTextView = findViewById(R.id.serviceDetailsTextView)
-
-    setSupportActionBar(toolbar)
+    setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
-    collapsingToolbarLayout.title = intent.extras?.getString(SERVICE_TYPE)
-    serviceDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+    binding.collapsingToolbarLayout.title = intent.extras?.getString(SERVICE_TYPE)
+    binding.serviceDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
       Html.fromHtml(
         intent.extras?.getString(SERVICE_TYPE_DETAILS),
         Html.FROM_HTML_MODE_COMPACT

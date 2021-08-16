@@ -4,35 +4,25 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.cardview.widget.CardView
 import com.pranisheba.vet.R
+import com.pranisheba.vet.databinding.ActivityFarmManagementInfoBinding
 import com.pranisheba.vet.util.FARM_MANAGEMENT_TYPE
 import com.pranisheba.vet.util.FARM_MANAGEMENT_TYPE_DETAILS
 
 class FarmManagementInfoActivity : AppCompatActivity() {
 
-  private lateinit var toolbar: Toolbar
-  private lateinit var pregnantCowCareCard: CardView
-  private lateinit var calfCareCard: CardView
-  private lateinit var dailyActivitiesCard: CardView
-  private lateinit var publicHealthCard: CardView
+  private lateinit var binding: ActivityFarmManagementInfoBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_farm_management_info)
+    binding = ActivityFarmManagementInfoBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
-    toolbar = findViewById(R.id.toolbar)
-    pregnantCowCareCard = findViewById(R.id.pregnantCowCareCard)
-    calfCareCard = findViewById(R.id.calfCareCard)
-    dailyActivitiesCard = findViewById(R.id.dailyActivitiesCard)
-    publicHealthCard = findViewById(R.id.publicHealthCard)
-
-    setSupportActionBar(toolbar)
+    setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
-    pregnantCowCareCard.setOnClickListener {
+    binding.pregnantCowCareCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.pregnant_cow_care_and_management))
@@ -44,7 +34,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       startActivity(intent)
     }
 
-    calfCareCard.setOnClickListener {
+    binding.calfCareCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.calf_care_and_management))
@@ -56,7 +46,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       startActivity(intent)
     }
 
-    dailyActivitiesCard.setOnClickListener {
+    binding.dailyActivitiesCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.daily_activities_of_farm))
@@ -68,7 +58,7 @@ class FarmManagementInfoActivity : AppCompatActivity() {
       startActivity(intent)
     }
 
-    publicHealthCard.setOnClickListener {
+    binding.publicHealthCard.setOnClickListener {
       val intent = Intent(this, FarmManagementDetailsActivity::class.java)
       val bundle = Bundle()
       bundle.putString(FARM_MANAGEMENT_TYPE, getString(R.string.importance_of_public_health))

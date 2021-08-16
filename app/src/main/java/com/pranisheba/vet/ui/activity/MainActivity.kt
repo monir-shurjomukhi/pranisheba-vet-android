@@ -12,33 +12,32 @@ import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
-import com.pranisheba.vet.R
+import com.pranisheba.vet.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
+  private lateinit var binding: ActivityMainBinding
+
   private lateinit var progress: ProgressDialog
-  private lateinit var webView: WebView
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-
-    setContentView(R.layout.activity_main)
+    binding = ActivityMainBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
     progress = ProgressDialog(this)
     progress.setMessage("Please Wait...")
     progress.setCancelable(false)
 
-    webView = findViewById(R.id.webView)
-
-    webView.settings.javaScriptEnabled = true
-    webView.settings.loadWithOverviewMode = true
-    webView.settings.useWideViewPort = true
-    webView.settings.domStorageEnabled = true
-    webView.settings.setAppCacheEnabled(true)
-    webView.settings.loadsImagesAutomatically = true
-    webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
-    webView.webViewClient = object : WebViewClient() {
+    binding.webView.settings.javaScriptEnabled = true
+    binding.webView.settings.loadWithOverviewMode = true
+    binding.webView.settings.useWideViewPort = true
+    binding.webView.settings.domStorageEnabled = true
+    binding.webView.settings.setAppCacheEnabled(true)
+    binding.webView.settings.loadsImagesAutomatically = true
+    binding.webView.settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+    binding.webView.webViewClient = object : WebViewClient() {
       override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
         if (Uri.parse(url).host == "pranishebavet.com.bd" ||
           Uri.parse(url).host == "https://pranishebavet.com.bd" ||
@@ -69,10 +68,10 @@ class MainActivity : AppCompatActivity() {
       }
     }
 
-    webView.loadUrl("https://pranishebavet.com.bd/")
+    binding.webView.loadUrl("https://pranishebavet.com.bd/")
 
     if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
-      WebSettingsCompat.setForceDark(webView.settings, WebSettingsCompat.FORCE_DARK_OFF)
+      WebSettingsCompat.setForceDark(binding.webView.settings, WebSettingsCompat.FORCE_DARK_OFF)
     }
   }
 
@@ -81,8 +80,8 @@ class MainActivity : AppCompatActivity() {
       return super.onKeyUp(keyCode, event)
     }
 
-    if (webView.canGoBack()) {
-      webView.goBack()
+    if (binding.webView.canGoBack()) {
+      binding.webView.goBack()
     } else {
       finish()
     }
