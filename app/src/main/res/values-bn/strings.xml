@@ -157,6 +157,7 @@
   <string name="select_animal_group">Select animal group*</string>
   <string name="select_animal_type">Select animal type*</string>
   <string name="select_animal_breed">Select animal breed</string>
+  <string name="select_breed_type">Select breed type</string>
   <string name="select_animal_gender">Select animal gender</string>
   <string name="is_this_animal_part_of_ps_iot_network">Is this animal part of pS IoT network?*</string>
   <string name="bolus_id">Bolus ID</string>

@@ -1,7 +1,9 @@
 package com.pranisheba.vet.ui.fragment
 
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputType
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,23 +41,126 @@ class TreatmentFormFragment : Fragment() {
     context?.let {
       ArrayAdapter(
         it, android.R.layout.simple_list_item_1,
-        listOf("Ruminants", "Poultry", "Bird", "Pet", "Elephant", "Horse", "Monkey")
+        listOf("Ruminants", "Poultry", "Pet Bird", "Pet & Zoo Animals")
       ).also { adapter ->
         binding.animalGroupTextView.setAdapter(adapter)
         binding.animalGroupTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    binding.animalTypeLayout.setOnKeyListener(null)
-    context?.let {
-      ArrayAdapter(
-        it, android.R.layout.simple_list_item_1,
-        listOf("Cattle", "Sheep", "Goat", "Buffalo")
-      ).also { adapter ->
-        binding.animalTypeTextView.setAdapter(adapter)
-        binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+    binding.animalGroupLayout.editText?.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
       }
-    }
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          when (s) {
+            "Ruminants" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Cattle", "Sheep", "Goat", "Buffalo")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Local", "Cross breed", "Foreign")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+            }
+            "Poultry" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf(
+                    "Broiler",
+                    "Layer",
+                    "Quail",
+                    "Duck",
+                    "Turkey",
+                    "Pigeon",
+                    "Goose",
+                    "Guinea Fowl",
+                    "Others"
+                  )
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.GONE
+            }
+            "Pet Bird" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Parrot", "Koel", "Mayna", "Dove", "Lovebird", "Others")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.GONE
+            }
+            "Pet & Zoo Animals" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf(
+                    "Dog",
+                    "Cat",
+                    "Deer",
+                    "Rabbit",
+                    "Snake",
+                    "Tiger",
+                    "Elephant",
+                    "Monkey",
+                    "Horse",
+                    "Others"
+                  )
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Local", "Cross breed", "Foreign")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+            }
+          }
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {
+
+      }
+    })
 
     binding.partOfIotLayout.setOnKeyListener(null)
     context?.let {
