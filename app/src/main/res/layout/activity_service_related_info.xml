@@ -1,113 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".ui.activity.ServiceRelatedInfoActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ServiceRelatedInfoActivity">
 
   <com.google.android.material.appbar.AppBarLayout
-    android:id="@+id/appBarLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/Theme.PranishebaVet.AppBarOverlay"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+      android:id="@+id/appBarLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/Theme.PranishebaVet.AppBarOverlay"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
 
     <androidx.appcompat.widget.Toolbar
-      android:id="@+id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="?attr/actionBarSize"
-      android:background="?attr/colorPrimary"
-      app:popupTheme="@style/Theme.PranishebaVet.PopupOverlay"
-      app:title="@string/service_related_information" />
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/Theme.PranishebaVet.PopupOverlay"
+        app:title="@string/service_related_information" />
   </com.google.android.material.appbar.AppBarLayout>
 
   <ScrollView
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:padding="16dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:padding="16dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="16dp"
-      android:layout_gravity="center">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
       <androidx.cardview.widget.CardView
-        android:id="@+id/treatmentServiceCard"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+          android:id="@+id/treatmentServiceCard"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:layout_margin="16dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="24dp"
+          app:cardElevation="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:gravity="center"
-          android:text="@string/treatment_service"
-          android:textColor="@color/white"
-          android:textSize="28sp"
-          android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/treatment_service"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
-        android:id="@+id/consultancyServiceCard"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/treatmentServiceCard">
+          android:id="@+id/consultancyServiceCard"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:layout_margin="16dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="24dp"
+          app:cardElevation="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/treatmentServiceCard">
 
         <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:gravity="center"
-          android:padding="16dp"
-          android:text="@string/consultancy_service"
-          android:textColor="@color/white"
-          android:textSize="28sp"
-          android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/consultancy_service"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
 
       <androidx.cardview.widget.CardView
-        android:id="@+id/registeredFarmServiceCard"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@color/green"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/consultancyServiceCard">
+          android:id="@+id/registeredFarmServiceCard"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:layout_margin="16dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:foreground="?android:attr/selectableItemBackground"
+          app:cardBackgroundColor="@color/green"
+          app:cardCornerRadius="24dp"
+          app:cardElevation="8dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/consultancyServiceCard">
 
         <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:gravity="center"
-          android:padding="16dp"
-          android:text="@string/registered_farm_service"
-          android:textColor="@color/white"
-          android:textSize="28sp"
-          android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/registered_farm_service"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
       </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
   </ScrollView>
