@@ -39,19 +39,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/service_related_information"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_service_related_info" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_service_related_info"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/service_related_information"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 1 -->
@@ -69,19 +80,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/farm_management_information"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_farm_management_info" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_farm_management_info"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/farm_management_information"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 2 -->
@@ -99,19 +121,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/weight_measurement"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_weight_measurement" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_weight_measurement"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/weight_measurement"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 2 -->
@@ -129,19 +162,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/one_time_service"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_one_time_service" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_one_time_service"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/one_time_service"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 3 -->
@@ -159,19 +203,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/monthly_service_registration"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_monthly_service_reg" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_monthly_service_reg"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/monthly_service_registration"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 3 -->
@@ -189,19 +244,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/monthly_service_related_information"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_monthly_service_info" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_monthly_service_info"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/monthly_service_related_information"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 4 -->
@@ -220,19 +286,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/agent_registration"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_agent_reg" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_agent_reg"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/agent_registration"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
 
       <!-- Row 4 -->
@@ -251,19 +328,30 @@
           app:cardCornerRadius="32dp"
           app:cardElevation="8dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="4dp"
-            android:drawablePadding="8dp"
-            android:gravity="center"
-            android:text="@string/payment_form"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:drawableTint="@color/white"
-            app:drawableTopCompat="@drawable/ic_payment_form" />
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/ic_payment_form"
+              app:tint="@color/white" />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="16dp"
+              android:gravity="center"
+              android:text="@string/payment_form"
+              android:textColor="@android:color/white"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+        </LinearLayout>
       </androidx.cardview.widget.CardView>
     </GridLayout>
   </ScrollView>
