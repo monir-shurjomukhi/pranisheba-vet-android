@@ -171,6 +171,30 @@ class TreatmentFormFragment : Fragment() {
         }
     }
 
+    binding.partOfIotLayout.editText?.addTextChangedListener(object: TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+      }
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          when(s) {
+            "Yes" -> {
+              binding.bolusIdLayout.visibility = View.VISIBLE
+            }
+            "No" -> {
+              binding.bolusIdLayout.visibility = View.GONE
+            }
+          }
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {
+
+      }
+
+    })
+
     binding.ageUnitLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
