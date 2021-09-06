@@ -441,4 +441,10 @@
   <string name="could_not_verify_otp">Could Not Verify OTP</string>
   <string name="could_not_login">Could Not Login</string>
   <string name="otp_sent_to_your_mobile_number">OTP Sent To Your Mobile Number</string>
+  <string name="date_of_birth">Date Of Birth</string>
+  <string name="type_of_business_service">Type of Business / Service</string>
+  <string name="years_in_business_service">Years in Business / Service</string>
+  <string name="trade_license_number">Trade License Number</string>
+  <string name="tin">TIN</string>
+  <string name="website_text">Website</string>
 </resources>
