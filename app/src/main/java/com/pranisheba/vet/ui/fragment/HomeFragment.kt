@@ -77,7 +77,7 @@ class HomeFragment : Fragment() {
     }
 
     binding.agentRegistrationCardView.setOnClickListener {
-      //startActivity(Intent(context, ServiceReceivingFormActivity::class.java))
+      startActivity(Intent(context, AgentRegistrationActivity::class.java))
     }
 
     binding.paymentFormCardView.setOnClickListener {

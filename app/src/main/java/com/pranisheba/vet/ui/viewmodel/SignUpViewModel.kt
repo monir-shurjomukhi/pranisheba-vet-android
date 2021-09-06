@@ -6,8 +6,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.pranisheba.vet.model.SignUp
 import com.pranisheba.vet.model.SignUpData
-import com.pranisheba.vet.networking.ApiClient
-import com.pranisheba.vet.networking.ApiInterface
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,7 +17,6 @@ class SignUpViewModel(application: Application) : BaseViewModel(application) {
 
   fun signUp(signUpData: SignUpData) {
     progress.value = true
-    val apiClient = ApiClient().getApiClient()?.create(ApiInterface::class.java)
     apiClient?.signUp(signUpData)?.enqueue(object : Callback<SignUp> {
       override fun onResponse(call: Call<SignUp>, response: Response<SignUp>) {
         if (response.isSuccessful) {

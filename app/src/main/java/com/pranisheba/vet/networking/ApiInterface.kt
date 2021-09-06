@@ -37,4 +37,9 @@ interface ApiInterface {
   fun login(
     @Body login: Login
   ): Call<String>
+
+  @POST("agentRegistrationFromWeb")
+  fun registerAgent(
+    @Body agentRegistrationData: AgentRegistrationData
+  ): Call<AgentRegistration>
 }
