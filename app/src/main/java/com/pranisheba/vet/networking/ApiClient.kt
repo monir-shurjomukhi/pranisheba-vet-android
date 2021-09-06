@@ -1,6 +1,6 @@
 package com.pranisheba.vet.networking
 
-import com.pranisheba.vet.BuildConfig
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 class ApiClient {
   private var retrofit: Retrofit? = null
 
-  fun getApiClient(): Retrofit? {
+  fun getApiClient(baseUrl: String): Retrofit? {
     if (retrofit == null) {
       val interceptor = HttpLoggingInterceptor()
       interceptor.level = HttpLoggingInterceptor.Level.BODY
@@ -23,10 +23,12 @@ class ApiClient {
         .addInterceptor(interceptor)
         .build()
 
+      val gson = GsonBuilder().setLenient().create()
+
       retrofit = Retrofit.Builder()
-        .baseUrl(BuildConfig.BASE_URL)
+        .baseUrl(baseUrl)
         .addConverterFactory(ScalarsConverterFactory.create())
-        .addConverterFactory(GsonConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create(gson))
         .client(okHttpClient)
         .build()
     }

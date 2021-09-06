@@ -19,7 +19,7 @@ class AgentRegistrationViewModel(application: Application) : BaseViewModel(appli
 
   fun registerAgent(agentRegistrationData: AgentRegistrationData) {
     progress.value = true
-    apiClient?.registerAgent(agentRegistrationData)?.enqueue(object : Callback<AgentRegistration> {
+    apiClientAdmin?.registerAgent(agentRegistrationData)?.enqueue(object : Callback<AgentRegistration> {
       override fun onResponse(
         call: Call<AgentRegistration>,
         response: Response<AgentRegistration>

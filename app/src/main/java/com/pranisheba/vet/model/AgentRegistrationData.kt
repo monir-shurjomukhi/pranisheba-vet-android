@@ -14,4 +14,29 @@ data class AgentRegistrationData(
   @SerializedName("trade_license") val tradeLicense: String?,
   @SerializedName("tin") val tin: String?,
   @SerializedName("website") val website: String?
-)
+) {
+  constructor(
+    applicantName: String?,
+    dob: String?,
+    mobileNumber: String?,
+    email: String?,
+    typeOfBusiness: String?,
+    address: String?,
+    yearsInBusiness: String?,
+    tradeLicense: String?,
+    tin: String?,
+    website: String?
+  ) : this(
+    null,
+    applicantName,
+    dob,
+    mobileNumber,
+    email,
+    typeOfBusiness,
+    address,
+    yearsInBusiness,
+    tradeLicense,
+    tin,
+    website
+  )
+}

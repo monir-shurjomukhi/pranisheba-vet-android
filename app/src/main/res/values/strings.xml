@@ -5,16 +5,16 @@
   <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
   <string name="already_registered_login">Already registered? Login</string>
   <string name="submit">Submit</string>
-  <string name="name">Name</string>
+  <string name="name">Name *</string>
   <string name="name_required">Name is required</string>
   <string name="farmer_name">Farmer Name</string>
-  <string name="mobile_number">Mobile Number</string>
+  <string name="mobile_number">Mobile Number *</string>
   <string name="mobile_number_required">Mobile number is required</string>
   <string name="email">Email</string>
   <string name="farm_name">Farm Name</string>
   <string name="farm_type">Farm Type</string>
   <string name="number_of_animal">Number of Animal</string>
-  <string name="address">Address</string>
+  <string name="address">Address *</string>
   <string name="address_required">Address is required</string>
   <string name="title_activity_main2">MainActivity2</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -427,12 +427,12 @@
     </ol>
     ]]>
   </string>
-  <string name="body_length_a_to_b_inch">Body length A to B (Inch)</string>
+  <string name="body_length_a_to_b_inch">Body length A to B (Inch) *</string>
   <string name="body_length_a_to_b_inch_is_required">Body length A to B (Inch) is required</string>
-  <string name="body_circumference_c_inch">Body circumference C (Inch)</string>
+  <string name="body_circumference_c_inch">Body circumference C (Inch) *</string>
   <string name="body_circumference_c_inch_is_required">Body circumference C (Inch) is required</string>
   <string name="click_here_for_measurement_instruction">Click here for measurement instruction</string>
-  <string name="otp">OTP</string>
+  <string name="otp">OTP *</string>
   <string name="otp_required">OTP is required</string>
   <string name="send">Send</string>
   <string name="login">Login</string>
@@ -441,11 +441,11 @@
   <string name="could_not_verify_otp">Could Not Verify OTP</string>
   <string name="could_not_login">Could Not Login</string>
   <string name="otp_sent_to_your_mobile_number">OTP Sent To Your Mobile Number</string>
-  <string name="date_of_birth">Date Of Birth</string>
+  <string name="date_of_birth">Date Of Birth *</string>
   <string name="date_of_birth_required">Date Of Birth Is Required</string>
-  <string name="type_of_business_service">Type of Business / Service</string>
+  <string name="type_of_business_service">Type of Business / Service *</string>
   <string name="type_of_business_service_required">Type of Business / Service Is Required</string>
-  <string name="years_in_business_service">Years in Business / Service</string>
+  <string name="years_in_business_service">Years in Business / Service *</string>
   <string name="years_in_business_service_required">Years in Business / Service Is Required</string>
   <string name="trade_license_number">Trade License Number</string>
   <string name="tin">TIN</string>

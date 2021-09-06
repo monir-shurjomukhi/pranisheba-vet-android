@@ -36,9 +36,11 @@ android {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
       buildConfigField("String", "BASE_URL", "\"https://pranishebavet.com.bd/api/\"")
+      buildConfigField("String", "BASE_URL_ADMIN", "\"https://admin.pranishebavet.com.bd/api/\"")
     }
     debug {
       buildConfigField("String", "BASE_URL", "\"https://pranishebavet.com.bd/api/\"")
+      buildConfigField("String", "BASE_URL_ADMIN", "\"https://admin.pranishebavet.com.bd/api/\"")
     }
     applicationVariants.all{
         // this method is use to rename your all apk weather

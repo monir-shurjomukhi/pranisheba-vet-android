@@ -2,11 +2,13 @@ package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityAgentRegistrationBinding
+import com.pranisheba.vet.model.AgentRegistrationData
 import com.pranisheba.vet.ui.viewmodel.AgentRegistrationViewModel
 
 class AgentRegistrationActivity : AppCompatActivity() {
@@ -27,11 +29,21 @@ class AgentRegistrationActivity : AppCompatActivity() {
 
     binding.submitButton.setOnClickListener { submit() }
 
+    viewModel.agentRegistration.observe(this, {
+      Snackbar.make(binding.parentLayout, it.message, Snackbar.LENGTH_SHORT).show()
+    })
+
     viewModel.message.observe(this, {
       Snackbar.make(binding.parentLayout, getString(it), Snackbar.LENGTH_SHORT).show()
     })
 
-
+    viewModel.progress.observe(this, {
+      if (it) {
+        binding.animationView.visibility = View.VISIBLE
+      } else {
+        binding.animationView.visibility = View.GONE
+      }
+    })
   }
 
   private fun submit() {
@@ -71,7 +83,10 @@ class AgentRegistrationActivity : AppCompatActivity() {
       return
     }
 
-
+    val agentRegistrationData = AgentRegistrationData(
+      name, dob, mobile, email, businessType, address, businessYears, tradeLicense, tin, website
+    )
+    viewModel.registerAgent(agentRegistrationData)
   }
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
