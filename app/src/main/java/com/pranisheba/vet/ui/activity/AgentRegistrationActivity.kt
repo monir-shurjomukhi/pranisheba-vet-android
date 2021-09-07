@@ -1,5 +1,7 @@
 package com.pranisheba.vet.ui.activity
 
+import android.app.DatePickerDialog
+import android.app.DatePickerDialog.OnDateSetListener
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -10,6 +12,9 @@ import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityAgentRegistrationBinding
 import com.pranisheba.vet.model.AgentRegistrationData
 import com.pranisheba.vet.ui.viewmodel.AgentRegistrationViewModel
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class AgentRegistrationActivity : AppCompatActivity() {
 
@@ -26,6 +31,29 @@ class AgentRegistrationActivity : AppCompatActivity() {
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
     viewModel = ViewModelProvider(this).get(AgentRegistrationViewModel::class.java)
+
+    val calendar = Calendar.getInstance()
+    val date = OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+      calendar.set(Calendar.YEAR, year)
+      calendar.set(Calendar.MONTH, monthOfYear)
+      calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+      val myFormat = "yyyy/MM/dd"
+
+      val sdf = SimpleDateFormat(myFormat, Locale.US)
+
+      binding.dobLayout.editText?.setText(sdf.format(calendar.time))
+    }
+
+    binding.dobLayout.editText?.setOnClickListener {
+      DatePickerDialog(
+        this,
+        date,
+        calendar.get(Calendar.YEAR),
+        calendar.get(Calendar.MONTH),
+        calendar.get(Calendar.DAY_OF_MONTH)
+      ).show()
+    }
 
     binding.submitButton.setOnClickListener { submit() }
 
