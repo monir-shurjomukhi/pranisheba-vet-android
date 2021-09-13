@@ -6,16 +6,16 @@
 
   <fragment
       android:id="@+id/step_1_dest"
-      android:name="com.pranisheba.vet.ui.fragment.GalleryFragment"
+      android:name="com.pranisheba.vet.ui.fragment.OwnerInfoFragment"
       android:label="Step 1" />
 
   <fragment
       android:id="@+id/step_2_dest"
-      android:name="com.pranisheba.vet.ui.fragment.HomeFragment"
+      android:name="com.pranisheba.vet.ui.fragment.OwnerInfoFragment"
       android:label="Step 2" />
 
   <fragment
       android:id="@+id/step_3_dest"
-      android:name="com.pranisheba.vet.ui.fragment.SlideshowFragment"
+      android:name="com.pranisheba.vet.ui.fragment.OwnerInfoFragment"
       android:label="Step 3" />
 </navigation>

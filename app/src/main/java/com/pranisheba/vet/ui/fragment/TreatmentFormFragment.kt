@@ -20,7 +20,6 @@ class TreatmentFormFragment : Fragment() {
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    // Inflate the layout for this fragment
     binding = FragmentTreatmentFormBinding.inflate(inflater, container, false)
     return binding.root
   }
