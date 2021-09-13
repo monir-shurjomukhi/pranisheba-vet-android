@@ -26,7 +26,7 @@ class ServiceReceivingFormActivity : AppCompatActivity() {
     binding.tabLayout.setupWithViewPager(binding.viewPager)*/
 
     binding.treatmentServiceCard.setOnClickListener {
-      val intent = Intent(this, ServiceDetailsActivity::class.java)
+      val intent = Intent(this, TreatmentFormActivity::class.java)
       val bundle = Bundle()
       bundle.putString(SERVICE_TYPE, getString(R.string.treatment_service))
       bundle.putString(
