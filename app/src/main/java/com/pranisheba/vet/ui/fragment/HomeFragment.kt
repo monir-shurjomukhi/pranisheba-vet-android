@@ -60,7 +60,7 @@ class HomeFragment : Fragment() {
         startActivity(Intent(context, WeightMeasurementActivity::class.java))
     }
 
-    binding.oneTimeServiceCardView.setOnClickListener {
+    binding.serviceReceivingFormCardView.setOnClickListener {
       if (preference.getAuthToken()?.isEmpty() == true) {
         startActivity(Intent(context, LoginActivity::class.java))
       } else {

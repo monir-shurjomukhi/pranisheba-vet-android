@@ -40,5 +40,4 @@
     <activity android:name=".ui.activity.SignUpActivity" />
     <activity android:name=".ui.activity.LoginActivity" />
   </application>
-
 </manifest>
