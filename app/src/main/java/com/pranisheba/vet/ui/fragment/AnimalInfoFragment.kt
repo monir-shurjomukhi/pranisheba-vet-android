@@ -1,0 +1,242 @@
+package com.pranisheba.vet.ui.fragment
+
+import android.os.Bundle
+import android.text.Editable
+import android.text.InputType
+import android.text.TextWatcher
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import androidx.fragment.app.Fragment
+import com.pranisheba.vet.databinding.FragmentAnimalInfoBinding
+
+
+class AnimalInfoFragment : Fragment() {
+
+  private lateinit var binding: FragmentAnimalInfoBinding
+
+  override fun onCreateView(
+    inflater: LayoutInflater, container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View {
+    binding = FragmentAnimalInfoBinding.inflate(inflater, container, false)
+    return binding.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    binding.treatedBeforeLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
+        .also { adapter ->
+          binding.treatedBeforeTextView.setAdapter(adapter)
+          binding.treatedBeforeTextView.inputType = InputType.TYPE_NULL
+        }
+    }
+
+    binding.animalGroupLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it, android.R.layout.simple_list_item_1,
+        listOf("Ruminants", "Poultry", "Pet Bird", "Pet & Zoo Animals")
+      ).also { adapter ->
+        binding.animalGroupTextView.setAdapter(adapter)
+        binding.animalGroupTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    binding.animalGroupLayout.editText?.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+      }
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          when (s) {
+            "Ruminants" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Cattle", "Sheep", "Goat", "Buffalo")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Local", "Cross breed", "Foreign")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+            }
+            "Poultry" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf(
+                    "Broiler",
+                    "Layer",
+                    "Quail",
+                    "Duck",
+                    "Turkey",
+                    "Pigeon",
+                    "Goose",
+                    "Guinea Fowl",
+                    "Others"
+                  )
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.GONE
+            }
+            "Pet Bird" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Parrot", "Koel", "Mayna", "Dove", "Lovebird", "Others")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.GONE
+            }
+            "Pet & Zoo Animals" -> {
+              binding.animalTypeLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf(
+                    "Dog",
+                    "Cat",
+                    "Deer",
+                    "Rabbit",
+                    "Snake",
+                    "Tiger",
+                    "Elephant",
+                    "Monkey",
+                    "Horse",
+                    "Others"
+                  )
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.animalBreedLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.setOnKeyListener(null)
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Local", "Cross breed", "Foreign")
+                ).also { adapter ->
+                  binding.animalTypeTextView.setAdapter(adapter)
+                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+            }
+          }
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {
+
+      }
+    })
+
+    binding.partOfIotLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
+        .also { adapter ->
+          binding.partOfIotTextView.setAdapter(adapter)
+          binding.partOfIotTextView.inputType = InputType.TYPE_NULL
+        }
+    }
+
+    binding.partOfIotLayout.editText?.addTextChangedListener(object: TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+      }
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          when(s) {
+            "Yes" -> {
+              binding.bolusIdLayout.visibility = View.VISIBLE
+            }
+            "No" -> {
+              binding.bolusIdLayout.visibility = View.GONE
+            }
+          }
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {
+
+      }
+
+    })
+
+    binding.ageUnitLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Years", "Months", "Weeks", "Days")
+      ).also { adapter ->
+        binding.ageUnitTextView.setAdapter(adapter)
+        binding.ageUnitTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    binding.animalGenderLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Male", "Female"))
+        .also { adapter ->
+          binding.animalGenderTextView.setAdapter(adapter)
+          binding.animalGenderTextView.inputType = InputType.TYPE_NULL
+        }
+    }
+
+    binding.dewormingStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("3 months", "2 months", "1 month", "No")
+      ).also { adapter ->
+        binding.dewormingStatusTextView.setAdapter(adapter)
+        binding.dewormingStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    binding.vaccinationStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("3 months", "2 months", "1 month", "No")
+      ).also { adapter ->
+        binding.vaccinationStatusTextView.setAdapter(adapter)
+        binding.vaccinationStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+  }
+}

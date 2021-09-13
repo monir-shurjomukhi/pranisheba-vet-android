@@ -2,7 +2,6 @@ package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.findNavController
@@ -27,12 +26,12 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     //setupActionBarWithNavController(findNavController(R.id.frame_stepper))
     binding.stepper.stepperNavListener = this
 
-    binding.buttonPrevious.setOnClickListener { binding.stepper.goToPreviousStep() }
+    binding.buttonPrevious.setOnClickListener { findNavController(R.id.frame_stepper).navigateUp() }
     binding.buttonNext.setOnClickListener { binding.stepper.goToNextStep() }
   }
 
   override fun onStepChanged(step: Int) {
-    Toast.makeText(this, "Step changed to: $step", Toast.LENGTH_SHORT).show()
+    //Toast.makeText(this, "Step changed to: $step", Toast.LENGTH_SHORT).show()
 
     binding.buttonPrevious.isVisible = step != 0
 
@@ -44,7 +43,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   }
 
   override fun onCompleted() {
-    Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
+    //Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
   }
 
   override fun onBackPressed() {

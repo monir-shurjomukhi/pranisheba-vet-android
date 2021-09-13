@@ -11,7 +11,7 @@
 
   <fragment
       android:id="@+id/step_2_dest"
-      android:name="com.pranisheba.vet.ui.fragment.OwnerInfoFragment"
+      android:name="com.pranisheba.vet.ui.fragment.AnimalInfoFragment"
       android:label="Step 2" />
 
   <fragment
