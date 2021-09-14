@@ -423,4 +423,7 @@
   <string name="tin">টিন</string>
   <string name="website_text">ওয়েবসাইট</string>
   <string name="could_not_register_agent">এজেন্ট নিবন্ধন সফল হয়নি</string>
+  <string name="owner_info">মালিকের তথ্য</string>
+  <string name="animal_info">প্রাণির তথ্য</string>
+  <string name="disease_info">রোগের তথ্য</string>
 </resources>

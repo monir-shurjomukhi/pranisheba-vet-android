@@ -7,15 +7,15 @@
   <fragment
       android:id="@+id/step_1_dest"
       android:name="com.pranisheba.vet.ui.fragment.OwnerInfoFragment"
-      android:label="Owner Info" />
+      android:label="@string/owner_info" />
 
   <fragment
       android:id="@+id/step_2_dest"
       android:name="com.pranisheba.vet.ui.fragment.AnimalInfoFragment"
-      android:label="Animal Info" />
+      android:label="@string/animal_info" />
 
   <fragment
       android:id="@+id/step_3_dest"
       android:name="com.pranisheba.vet.ui.fragment.DiseaseInfoFragment"
-      android:label="Disease Info" />
+      android:label="@string/disease_info" />
 </navigation>

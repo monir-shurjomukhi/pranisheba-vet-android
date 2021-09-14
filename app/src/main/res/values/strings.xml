@@ -452,4 +452,7 @@
   <string name="tin">TIN</string>
   <string name="website_text">Website</string>
   <string name="could_not_register_agent">Could Not Register Agent</string>
+  <string name="owner_info">Owner Info</string>
+  <string name="animal_info">Animal Info</string>
+  <string name="disease_info">Disease Info</string>
 </resources>
