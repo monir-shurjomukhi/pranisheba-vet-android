@@ -28,6 +28,16 @@ class AnimalInfoFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.treatedBeforeLayout.setOnKeyListener(null)
+    binding.animalGroupLayout.setOnKeyListener(null)
+    binding.animalTypeLayout.setOnKeyListener(null)
+    binding.breedTypeLayout.setOnKeyListener(null)
+    binding.animalBreedLayout.setOnClickListener(null)
+    binding.partOfIotLayout.setOnKeyListener(null)
+    binding.ageUnitLayout.setOnKeyListener(null)
+    binding.animalGenderLayout.setOnKeyListener(null)
+    binding.dewormingStatusLayout.setOnKeyListener(null)
+    binding.vaccinationStatusLayout.setOnKeyListener(null)
+
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
         .also { adapter ->
@@ -36,7 +46,25 @@ class AnimalInfoFragment : Fragment() {
         }
     }
 
-    binding.animalGroupLayout.setOnKeyListener(null)
+    binding.treatedBeforeLayout.editText?.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          when (s.toString()) {
+            "Yes" -> {
+              binding.previousPrescriptionLayout.visibility = View.VISIBLE
+            }
+            "No" -> {
+              binding.previousPrescriptionLayout.visibility = View.GONE
+            }
+          }
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {}
+    })
+
     context?.let {
       ArrayAdapter(
         it, android.R.layout.simple_list_item_1,
@@ -48,15 +76,18 @@ class AnimalInfoFragment : Fragment() {
     }
 
     binding.animalGroupLayout.editText?.addTextChangedListener(object : TextWatcher {
-      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-      }
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        binding.animalTypeLayout.editText?.text = null
+        binding.breedTypeLayout.editText?.text = null
+        binding.animalBreedLayout.editText?.text = null
         if (s?.isNotEmpty() == true) {
-          when (s) {
+          when (s.toString()) {
             "Ruminants" -> {
-              binding.animalTypeLayout.setOnKeyListener(null)
+              binding.breedTypeLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.visibility = View.VISIBLE
+
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
@@ -67,19 +98,224 @@ class AnimalInfoFragment : Fragment() {
                 }
               }
 
-              binding.animalBreedLayout.visibility = View.VISIBLE
-              binding.animalBreedLayout.setOnKeyListener(null)
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
                   listOf("Local", "Cross breed", "Foreign")
                 ).also { adapter ->
-                  binding.animalTypeTextView.setAdapter(adapter)
-                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                  binding.breedTypeTextView.setAdapter(adapter)
+                  binding.breedTypeTextView.inputType = InputType.TYPE_NULL
                 }
               }
+
+              binding.breedTypeLayout.editText?.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(
+                  s: CharSequence?,
+                  start: Int,
+                  count: Int,
+                  after: Int
+                ) {
+                }
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                  binding.animalBreedLayout.editText?.text = null
+                  if (s?.isNotEmpty() == true) {
+                    when (s.toString()) {
+                      "Local" -> {
+                        when (binding.animalTypeTextView.text.toString()) {
+                          "Cattle" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf("Deshi", "RCC", "Pabna", "North Bengal Grey")
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          else -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf("Deshi")
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                        }
+                      }
+                      else -> {
+                        when (binding.animalTypeTextView.text.toString()) {
+                          "Cattle" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Holstein-Friesian",
+                                  "Jersey",
+                                  "Guernsey",
+                                  "Ayrshire",
+                                  "Brown Swiss",
+                                  "Sindhi",
+                                  "Sahiwal",
+                                  "Gir",
+                                  "Hariyana",
+                                  "Tharparkar",
+                                  "Brahman",
+                                  "Angus",
+                                  "Charolais",
+                                  "Hereford",
+                                  "Devon"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          "Sheep" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Local",
+                                  "Debouillet",
+                                  "Merino",
+                                  "Rambouillet",
+                                  "Cheviot",
+                                  "Dorset",
+                                  "Suffolk",
+                                  "Lincoln",
+                                  "Romney"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          "Goat" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Local",
+                                  "Saanen",
+                                  "Toggenburg",
+                                  "Anglo Nubian",
+                                  "Beetal",
+                                  "Jamnapari",
+                                  "Marwari",
+                                  "Barbari",
+                                  "Black Bengal",
+                                  "Angora"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          "Buffalo" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Local",
+                                  "Murrah",
+                                  "Nili-Ravi",
+                                  "Jaffarabadi",
+                                  "Nagpuri",
+                                  "Kundi",
+                                  "Pandharpuri"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          "Horse" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Local",
+                                  "Anglo-Arabia",
+                                  "Arabian",
+                                  "Canadian",
+                                  "Friesian",
+                                  "Marwari",
+                                  "Russian Don",
+                                  "Russian Trotter"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          "Dog" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Local",
+                                  "Alsatian",
+                                  "German Shepherd",
+                                  "Labrador",
+                                  "Retriever",
+                                  "Chihuahua",
+                                  "Bulldog",
+                                  "Black Dog",
+                                  "Dalmatian",
+                                  "Guard Dog",
+                                  "Hunting Dog",
+                                  "Herding Dog",
+                                  "Boxer"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                          "Cat" -> {
+                            context?.let {
+                              ArrayAdapter(
+                                it, android.R.layout.simple_list_item_1,
+                                listOf(
+                                  "Local",
+                                  "American Bobtail",
+                                  "Angora",
+                                  "Himalayan",
+                                  "Siamese",
+                                  "Persian",
+                                  "Siberian",
+                                  "Burmese"
+                                )
+                              ).also { adapter ->
+                                binding.animalBreedTextView.setAdapter(adapter)
+                                binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                override fun afterTextChanged(s: Editable?) {}
+              })
             }
             "Poultry" -> {
+              binding.breedTypeLayout.visibility = View.GONE
+              binding.animalBreedLayout.visibility = View.GONE
+
               binding.animalTypeLayout.setOnKeyListener(null)
               context?.let {
                 ArrayAdapter(
@@ -100,10 +336,11 @@ class AnimalInfoFragment : Fragment() {
                   binding.animalTypeTextView.inputType = InputType.TYPE_NULL
                 }
               }
-
-              binding.animalBreedLayout.visibility = View.GONE
             }
             "Pet Bird" -> {
+              binding.breedTypeLayout.visibility = View.GONE
+              binding.animalBreedLayout.visibility = View.GONE
+
               binding.animalTypeLayout.setOnKeyListener(null)
               context?.let {
                 ArrayAdapter(
@@ -114,11 +351,11 @@ class AnimalInfoFragment : Fragment() {
                   binding.animalTypeTextView.inputType = InputType.TYPE_NULL
                 }
               }
-
-              binding.animalBreedLayout.visibility = View.GONE
             }
             "Pet & Zoo Animals" -> {
-              binding.animalTypeLayout.setOnKeyListener(null)
+              binding.breedTypeLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.visibility = View.VISIBLE
+
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
@@ -140,28 +377,117 @@ class AnimalInfoFragment : Fragment() {
                 }
               }
 
-              binding.animalBreedLayout.visibility = View.VISIBLE
-              binding.animalBreedLayout.setOnKeyListener(null)
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
                   listOf("Local", "Cross breed", "Foreign")
                 ).also { adapter ->
-                  binding.animalTypeTextView.setAdapter(adapter)
-                  binding.animalTypeTextView.inputType = InputType.TYPE_NULL
+                  binding.breedTypeTextView.setAdapter(adapter)
+                  binding.breedTypeTextView.inputType = InputType.TYPE_NULL
                 }
               }
+
+              context?.let {
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
+                  listOf("Local", "Cross breed", "Foreign")
+                ).also { adapter ->
+                  binding.breedTypeTextView.setAdapter(adapter)
+                  binding.breedTypeTextView.inputType = InputType.TYPE_NULL
+                }
+              }
+
+              binding.breedTypeLayout.editText?.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(
+                  s: CharSequence?,
+                  start: Int,
+                  count: Int,
+                  after: Int
+                ) {}
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                  binding.animalBreedLayout.editText?.text = null
+                  if (s?.isNotEmpty() == true) {
+                    when (binding.animalTypeTextView.text.toString()) {
+                      "Horse" -> {
+                        context?.let {
+                          ArrayAdapter(
+                            it, android.R.layout.simple_list_item_1,
+                            listOf(
+                              "Local",
+                              "Anglo-Arabia",
+                              "Arabian",
+                              "Canadian",
+                              "Friesian",
+                              "Marwari",
+                              "Russian Don",
+                              "Russian Trotter"
+                            )
+                          ).also { adapter ->
+                            binding.animalBreedTextView.setAdapter(adapter)
+                            binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                          }
+                        }
+                      }
+                      "Dog" -> {
+                        context?.let {
+                          ArrayAdapter(
+                            it, android.R.layout.simple_list_item_1,
+                            listOf(
+                              "Local",
+                              "Alsatian",
+                              "German Shepherd",
+                              "Labrador",
+                              "Retriever",
+                              "Chihuahua",
+                              "Bulldog",
+                              "Black Dog",
+                              "Dalmatian",
+                              "Guard Dog",
+                              "Hunting Dog",
+                              "Herding Dog",
+                              "Boxer"
+                            )
+                          ).also { adapter ->
+                            binding.animalBreedTextView.setAdapter(adapter)
+                            binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                          }
+                        }
+                      }
+                      "Cat" -> {
+                        context?.let {
+                          ArrayAdapter(
+                            it, android.R.layout.simple_list_item_1,
+                            listOf(
+                              "Local",
+                              "American Bobtail",
+                              "Angora",
+                              "Himalayan",
+                              "Siamese",
+                              "Persian",
+                              "Siberian",
+                              "Burmese"
+                            )
+                          ).also { adapter ->
+                            binding.animalBreedTextView.setAdapter(adapter)
+                            binding.animalBreedTextView.inputType = InputType.TYPE_NULL
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                override fun afterTextChanged(s: Editable?) {}
+              })
             }
           }
         }
       }
 
-      override fun afterTextChanged(s: Editable?) {
-
-      }
+      override fun afterTextChanged(s: Editable?) {}
     })
 
-    binding.partOfIotLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
         .also { adapter ->
@@ -170,14 +496,23 @@ class AnimalInfoFragment : Fragment() {
         }
     }
 
-    binding.partOfIotLayout.editText?.addTextChangedListener(object: TextWatcher {
-      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+    binding.animalTypeLayout.editText?.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        binding.breedTypeLayout.editText?.text = null
+        binding.animalBreedLayout.editText?.text = null
       }
+
+      override fun afterTextChanged(s: Editable?) {}
+    })
+
+    binding.partOfIotLayout.editText?.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         if (s?.isNotEmpty() == true) {
-          when(s) {
+          when (s.toString()) {
             "Yes" -> {
               binding.bolusIdLayout.visibility = View.VISIBLE
             }
@@ -188,13 +523,9 @@ class AnimalInfoFragment : Fragment() {
         }
       }
 
-      override fun afterTextChanged(s: Editable?) {
-
-      }
-
+      override fun afterTextChanged(s: Editable?) {}
     })
 
-    binding.ageUnitLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -206,7 +537,6 @@ class AnimalInfoFragment : Fragment() {
       }
     }
 
-    binding.animalGenderLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Male", "Female"))
         .also { adapter ->
@@ -215,7 +545,6 @@ class AnimalInfoFragment : Fragment() {
         }
     }
 
-    binding.dewormingStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -227,7 +556,6 @@ class AnimalInfoFragment : Fragment() {
       }
     }
 
-    binding.vaccinationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,

@@ -177,7 +177,7 @@ class TreatmentFormFragment : Fragment() {
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         if (s?.isNotEmpty() == true) {
-          when(s) {
+          when(s.toString()) {
             "Yes" -> {
               binding.bolusIdLayout.visibility = View.VISIBLE
             }

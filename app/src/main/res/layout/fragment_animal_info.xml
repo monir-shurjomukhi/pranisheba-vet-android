@@ -38,6 +38,8 @@
         android:layout_marginTop="8dp"
         android:hint="@string/previous_prescription_number"
         app:errorEnabled="true"
+        android:visibility="gone"
+        tools:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/treatedBeforeLayout">
@@ -74,7 +76,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/select_animal_group"
+        android:hint="@string/animal_group"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +95,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/select_animal_type"
+        android:hint="@string/animal_type"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,12 +110,12 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/animalBreedLayout"
+        android:id="@+id/breedTypeLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/select_animal_breed"
+        android:hint="@string/breed_type"
         android:visibility="gone"
         tools:visibility="visible"
         app:errorEnabled="true"
@@ -122,29 +124,28 @@
         app:layout_constraintTop_toBottomOf="@id/animalTypeLayout">
 
       <AutoCompleteTextView
-          android:id="@+id/animalBreedTextView"
+          android:id="@+id/breedTypeTextView"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/breedTypeLayout"
+        android:id="@+id/animalBreedLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:padding="8dp"
-        android:hint="@string/select_breed_type"
+        android:hint="@string/animal_breed"
         android:visibility="gone"
         tools:visibility="visible"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalBreedLayout">
+        app:layout_constraintTop_toBottomOf="@id/breedTypeLayout">
 
       <AutoCompleteTextView
-          android:id="@+id/breedTypeTextView"
+          android:id="@+id/animalBreedTextView"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="16sp" />
@@ -160,7 +161,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/breedTypeLayout">
+        app:layout_constraintTop_toBottomOf="@id/animalBreedLayout">
 
       <AutoCompleteTextView
           android:id="@+id/partOfIotTextView"
@@ -256,7 +257,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/select_animal_gender"
+        android:hint="@string/animal_gender"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -275,7 +276,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/select_deworming_status_within_the_last"
+        android:hint="@string/deworming_status_within_the_last"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -294,7 +295,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/select_vaccination_status_within_the_last"
+        android:hint="@string/vaccination_status_within_the_last"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

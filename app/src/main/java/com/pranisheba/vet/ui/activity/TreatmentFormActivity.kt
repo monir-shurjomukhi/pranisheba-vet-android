@@ -92,9 +92,9 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     binding.buttonPrevious.isVisible = step != 0
 
     if (step == 2) {
-      binding.buttonNext.setImageResource(com.pranisheba.vet.R.drawable.ic_check)
+      binding.buttonNext.setImageResource(R.drawable.ic_check)
     } else {
-      binding.buttonNext.setImageResource(com.pranisheba.vet.R.drawable.ic_right)
+      binding.buttonNext.setImageResource(R.drawable.ic_right)
     }
   }
 
