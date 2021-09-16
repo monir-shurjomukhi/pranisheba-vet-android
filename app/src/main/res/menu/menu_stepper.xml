@@ -5,8 +5,8 @@
       android:title="@string/owner_info" />
 
   <item android:id="@+id/step_2_dest"
-      android:title="@string/animal_info" />
+      android:title="@string/disease_info" />
 
   <item android:id="@+id/step_3_dest"
-      android:title="@string/disease_info" />
+      android:title="@string/animal_info"/>
 </menu>

@@ -26,6 +26,21 @@ class DiseaseInfoFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.temperatureLevelLayout.setOnKeyListener(null)
+    binding.feedIntakeLayout.setOnKeyListener(null)
+    binding.defecationStatusLayout.setOnKeyListener(null)
+    binding.urinationStatusLayout.setOnKeyListener(null)
+    binding.hairStatusLayout.setOnKeyListener(null)
+    binding.salivationStatusLayout.setOnKeyListener(null)
+    binding.postureStatusLayout.setOnKeyListener(null)
+    binding.muzzleStatusLayout.setOnKeyListener(null)
+    binding.sneezingStatusLayout.setOnKeyListener(null)
+    binding.sweatingStatusLayout.setOnKeyListener(null)
+    binding.gestureStatusLayout.setOnKeyListener(null)
+    binding.firstTimeLayout.setOnKeyListener(null)
+    binding.soughtElsewhereLayout.setOnKeyListener(null)
+    binding.otherAnimalsLayout.setOnKeyListener(null)
+    binding.emergencyTypeLayout.setOnKeyListener(null)
+
     context?.let {
       ArrayAdapter(
         it,
@@ -37,7 +52,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.feedIntakeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -49,7 +63,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.defecationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -70,7 +83,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.urinationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -82,31 +94,28 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.hairStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Normal", "Erected")
+        listOf("Normal", "Erected", "Ruffled")
       ).also { adapter ->
         binding.hairStatusTextView.setAdapter(adapter)
         binding.hairStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    binding.salivationStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("No", "Only salivation", "Salivation with foam")
+        listOf("No", "Only salivation", "Salivation with foam", "Panting")
       ).also { adapter ->
         binding.salivationStatusTextView.setAdapter(adapter)
         binding.salivationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
-    binding.postureStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -118,7 +127,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.muzzleStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -130,7 +138,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.sneezingStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -142,7 +149,17 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.gestureStatusLayout.setOnKeyListener(null)
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("No", "Low", "High")
+      ).also { adapter ->
+        binding.sweatingStatusTextView.setAdapter(adapter)
+        binding.sweatingStatusTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
     context?.let {
       ArrayAdapter(
         it,
@@ -154,7 +171,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.firstTimeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -166,7 +182,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.soughtElsewhereLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -178,7 +193,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.otherAnimalsLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
@@ -190,7 +204,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    binding.emergencyTypeLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
