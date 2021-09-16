@@ -8,7 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
+import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.FragmentAnimalInfoBinding
 
 
@@ -35,8 +37,10 @@ class AnimalInfoFragment : Fragment() {
     binding.partOfIotLayout.setOnKeyListener(null)
     binding.ageUnitLayout.setOnKeyListener(null)
     binding.animalGenderLayout.setOnKeyListener(null)
+    binding.stageOfGenderLayout.setOnKeyListener(null)
     binding.dewormingStatusLayout.setOnKeyListener(null)
     binding.vaccinationStatusLayout.setOnKeyListener(null)
+    binding.typeOfVaccinesLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
@@ -403,7 +407,8 @@ class AnimalInfoFragment : Fragment() {
                   start: Int,
                   count: Int,
                   after: Int
-                ) {}
+                ) {
+                }
 
                 override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                   binding.animalBreedLayout.editText?.text = null
@@ -545,6 +550,72 @@ class AnimalInfoFragment : Fragment() {
         }
     }
 
+    binding.animalGenderTextView.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          binding.stageOfGenderLayout.visibility = View.VISIBLE
+          when (s.toString()) {
+            "Male" -> {
+              binding.stageOfGenderLayout.hint = getString(R.string.stage_of_male)
+              binding.stageOfGenderTextView.text = null
+              context?.let {
+                ArrayAdapter(
+                  it,
+                  android.R.layout.simple_list_item_1,
+                  listOf(
+                    "Calf",
+                    "Kid",
+                    "Puppy",
+                    "Kitten",
+                    "Ox",
+                    "Bullock",
+                    "Bull",
+                    "Buck",
+                    "Ram",
+                    "Stallion"
+                  )
+                )
+                  .also { adapter ->
+                    binding.stageOfGenderTextView.setAdapter(adapter)
+                    binding.stageOfGenderTextView.inputType = InputType.TYPE_NULL
+                  }
+              }
+            }
+            "Female" -> {
+              binding.stageOfGenderLayout.hint = getString(R.string.stage_of_female)
+              binding.stageOfGenderTextView.text = null
+              context?.let {
+                ArrayAdapter(it, android.R.layout.simple_list_item_1,
+                  listOf(
+                    "Calf",
+                    "Kid",
+                    "Puppy",
+                    "Kitten",
+                    "Ox",
+                    "Mare",
+                    "Heifer",
+                    "Lactating",
+                    "Dry",
+                    "Pregnant"
+                  )
+                )
+                  .also { adapter ->
+                    binding.stageOfGenderTextView.setAdapter(adapter)
+                    binding.stageOfGenderTextView.inputType = InputType.TYPE_NULL
+                  }
+              }
+            }
+          }
+        } else {
+          binding.stageOfGenderLayout.visibility = View.GONE
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {}
+    })
+
     context?.let {
       ArrayAdapter(
         it,
@@ -566,5 +637,47 @@ class AnimalInfoFragment : Fragment() {
         binding.vaccinationStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
+
+    binding.vaccinationStatusTextView.addTextChangedListener(object : TextWatcher {
+      override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+      override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+        if (s?.isNotEmpty() == true) {
+          if (s.toString() != "No") {
+            binding.typeOfVaccinesLayout.visibility = View.VISIBLE
+            binding.typeOfVaccinesTextView.text = null
+            context?.let {
+              ArrayAdapter(
+                it,
+                android.R.layout.simple_list_item_multiple_choice,
+                listOf(
+                  "Calf",
+                  "Kid",
+                  "Puppy",
+                  "Kitten",
+                  "Ox",
+                  "Bullock",
+                  "Bull",
+                  "Buck",
+                  "Ram",
+                  "Stallion"
+                )
+              )
+                .also { adapter ->
+                  binding.typeOfVaccinesTextView.setAdapter(adapter)
+                  binding.typeOfVaccinesTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())
+                  binding.typeOfVaccinesTextView.inputType = InputType.TYPE_NULL
+                }
+            }
+          } else {
+            binding.typeOfVaccinesLayout.visibility = View.GONE
+          }
+        } else {
+          binding.typeOfVaccinesLayout.visibility = View.GONE
+        }
+      }
+
+      override fun afterTextChanged(s: Editable?) {}
+    })
   }
 }

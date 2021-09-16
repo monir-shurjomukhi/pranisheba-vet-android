@@ -271,16 +271,39 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/stageOfGenderLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:errorEnabled="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:hint="@string/stage_of_male"
+        android:labelFor="@id/stageOfGenderTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animalGenderLayout">
+
+      <AutoCompleteTextView
+          android:id="@+id/stageOfGenderTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dewormingStatusLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/deworming_status_within_the_last"
+        android:labelFor="@id/dewormingStatusTextView"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animalGenderLayout">
+        app:layout_constraintTop_toBottomOf="@id/stageOfGenderLayout">
 
       <AutoCompleteTextView
           android:id="@+id/dewormingStatusTextView"
@@ -296,6 +319,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/vaccination_status_within_the_last"
+        android:labelFor="@id/vaccinationStatusTextView"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -303,6 +327,28 @@
 
       <AutoCompleteTextView
           android:id="@+id/vaccinationStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeOfVaccinesLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_of_vaccines"
+        android:labelFor="@id/typeOfVaccinesTextView"
+        app:errorEnabled="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vaccinationStatusLayout">
+
+      <MultiAutoCompleteTextView
+          android:id="@+id/typeOfVaccinesTextView"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="16sp" />
