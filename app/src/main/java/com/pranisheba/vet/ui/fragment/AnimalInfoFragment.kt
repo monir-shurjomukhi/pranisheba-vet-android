@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
+import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.FragmentAnimalInfoBinding
 
@@ -26,6 +27,74 @@ class AnimalInfoFragment : Fragment() {
     return binding.root
   }
 
+  fun getTreatedBeforeLayout() : TextInputLayout {
+    return binding.treatedBeforeLayout
+  }
+
+  fun getPreviousPrescriptionLayout() : TextInputLayout {
+    return binding.previousPrescriptionLayout
+  }
+
+  fun getAnimalNameOrIdLayout() : TextInputLayout {
+    return binding.animalNameOrIdLayout
+  }
+
+  fun getAnimalGroupLayout() : TextInputLayout {
+    return binding.animalGroupLayout
+  }
+
+  fun getAnimalTypeLayout() : TextInputLayout {
+    return binding.animalTypeLayout
+  }
+
+  fun getBreedTypeLayout() : TextInputLayout {
+    return binding.breedTypeLayout
+  }
+
+  fun getAnimalBreedLayout() : TextInputLayout {
+    return binding.animalBreedLayout
+  }
+
+  fun getPartOfIotLayout() : TextInputLayout {
+    return binding.partOfIotLayout
+  }
+
+  fun getBolusIdLayout() : TextInputLayout {
+    return binding.bolusIdLayout
+  }
+
+  fun getAnimalAgeLayout() : TextInputLayout {
+    return binding.animalAgeLayout
+  }
+
+  fun getAgeUnitLayout() : TextInputLayout {
+    return binding.ageUnitLayout
+  }
+
+  fun getAnimalWeightLayout() : TextInputLayout {
+    return binding.animalWeightLayout
+  }
+
+  fun getAnimalGenderLayout() : TextInputLayout {
+    return binding.animalGenderLayout
+  }
+
+  fun getStageOfGenderLayout() : TextInputLayout {
+    return binding.stageOfGenderLayout
+  }
+
+  fun getDeWormingStatusLayout() : TextInputLayout {
+    return binding.deWormingStatusLayout
+  }
+
+  fun getVaccinationStatusLayout() : TextInputLayout {
+    return binding.vaccinationStatusLayout
+  }
+
+  fun getTypeOfVaccinesLayout() : TextInputLayout {
+    return binding.typeOfVaccinesLayout
+  }
+
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
@@ -38,7 +107,7 @@ class AnimalInfoFragment : Fragment() {
     binding.ageUnitLayout.setOnKeyListener(null)
     binding.animalGenderLayout.setOnKeyListener(null)
     binding.stageOfGenderLayout.setOnKeyListener(null)
-    binding.dewormingStatusLayout.setOnKeyListener(null)
+    binding.deWormingStatusLayout.setOnKeyListener(null)
     binding.vaccinationStatusLayout.setOnKeyListener(null)
     binding.typeOfVaccinesLayout.setOnKeyListener(null)
 
@@ -622,8 +691,8 @@ class AnimalInfoFragment : Fragment() {
         android.R.layout.simple_list_item_1,
         listOf("3 months", "2 months", "1 month", "No")
       ).also { adapter ->
-        binding.dewormingStatusTextView.setAdapter(adapter)
-        binding.dewormingStatusTextView.inputType = InputType.TYPE_NULL
+        binding.deWormingStatusTextView.setAdapter(adapter)
+        binding.deWormingStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 

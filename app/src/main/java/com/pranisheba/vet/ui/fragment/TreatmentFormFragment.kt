@@ -215,15 +215,15 @@ class TreatmentFormFragment : Fragment() {
         }
     }
 
-    binding.dewormingStatusLayout.setOnKeyListener(null)
+    binding.deWormingStatusLayout.setOnKeyListener(null)
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf("3 months", "2 months", "1 month", "No")
       ).also { adapter ->
-        binding.dewormingStatusTextView.setAdapter(adapter)
-        binding.dewormingStatusTextView.inputType = InputType.TYPE_NULL
+        binding.deWormingStatusTextView.setAdapter(adapter)
+        binding.deWormingStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 

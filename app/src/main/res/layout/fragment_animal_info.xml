@@ -293,20 +293,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dewormingStatusLayout"
+        android:id="@+id/deWormingStatusLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/deworming_status_within_the_last"
-        android:labelFor="@id/dewormingStatusTextView"
+        android:labelFor="@id/deWormingStatusTextView"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/stageOfGenderLayout">
 
       <AutoCompleteTextView
-          android:id="@+id/dewormingStatusTextView"
+          android:id="@+id/deWormingStatusTextView"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="16sp" />
@@ -323,7 +323,7 @@
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dewormingStatusLayout">
+        app:layout_constraintTop_toBottomOf="@id/deWormingStatusLayout">
 
       <AutoCompleteTextView
           android:id="@+id/vaccinationStatusTextView"
