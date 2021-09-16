@@ -44,6 +44,25 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   private var vaccinationStatus: String = ""
   private var typeOfVaccines: String = ""
 
+  // Disease Info
+  private var temperatureLevel: String = ""
+  private var temperature: String = ""
+  private var feedIntake: String = ""
+  private var defecation: String = ""
+  private var urination: String = ""
+  private var hair: String = ""
+  private var salivation: String = ""
+  private var staticPosture: String = ""
+  private var muzzle: String = ""
+  private var sneezing: String = ""
+  private var sweating: String = ""
+  private var postureAndGesture: String = ""
+  private var firstTime: String = ""
+  private var soughtElsewhere: String = ""
+  private var description: String = ""
+  private var otherAnimals: String = ""
+  private var emergency: String = ""
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     binding = ActivityTreatmentFormBinding.inflate(layoutInflater)
@@ -61,8 +80,9 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     binding.buttonNext.setOnClickListener {
 
       val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
-      val foregroundFragment = if (navHostFragment == null) null else navHostFragment.childFragmentManager
-        .fragments[0]
+      val foregroundFragment =
+        if (navHostFragment == null) null else navHostFragment.childFragmentManager
+          .fragments[0]
 
       when (foregroundFragment) {
         is OwnerInfoFragment -> {
@@ -77,7 +97,8 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
         is AnimalInfoFragment -> {
           treatedBefore = foregroundFragment.getTreatedBeforeLayout().editText?.text.toString()
-          previousPrescription = foregroundFragment.getPreviousPrescriptionLayout().editText?.text.toString()
+          previousPrescription =
+            foregroundFragment.getPreviousPrescriptionLayout().editText?.text.toString()
           animalNameOrId = foregroundFragment.getAnimalNameOrIdLayout().editText?.text.toString()
           animalGroup = foregroundFragment.getAnimalGroupLayout().editText?.text.toString()
           animalType = foregroundFragment.getAnimalTypeLayout().editText?.text.toString()
@@ -91,90 +112,191 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
           animalGender = foregroundFragment.getAnimalGenderLayout().editText?.text.toString()
           stageOfGender = foregroundFragment.getStageOfGenderLayout().editText?.text.toString()
           deWormingStatus = foregroundFragment.getDeWormingStatusLayout().editText?.text.toString()
-          vaccinationStatus = foregroundFragment.getVaccinationStatusLayout().editText?.text.toString()
+          vaccinationStatus =
+            foregroundFragment.getVaccinationStatusLayout().editText?.text.toString()
           typeOfVaccines = foregroundFragment.getTypeOfVaccinesLayout().editText?.text.toString()
 
           validateAnimalInfo(foregroundFragment)
         }
 
         is DiseaseInfoFragment -> {
+          temperatureLevel =
+            foregroundFragment.getTemperatureLevelLayout().editText?.text.toString()
+          temperature = foregroundFragment.getTemperatureLayout().editText?.text.toString()
+          feedIntake = foregroundFragment.getFeedIntakeLayout().editText?.text.toString()
+          defecation = foregroundFragment.getDefecationStatusLayout().editText?.text.toString()
+          urination = foregroundFragment.getUrinationStatusLayout().editText?.text.toString()
+          hair = foregroundFragment.getHairStatusLayout().editText?.text.toString()
+          salivation = foregroundFragment.getSalivationStatusLayout().editText?.text.toString()
+          staticPosture = foregroundFragment.getPostureStatusLayout().editText?.text.toString()
+          muzzle = foregroundFragment.getMuzzleStatusLayout().editText?.text.toString()
+          sneezing = foregroundFragment.getSneezingStatusLayout().editText?.text.toString()
+          sweating = foregroundFragment.getSweatingStatusLayout().editText?.text.toString()
+          postureAndGesture = foregroundFragment.getGestureStatusLayout().editText?.text.toString()
+          firstTime = foregroundFragment.getFirstTimeLayout().editText?.text.toString()
+          soughtElsewhere = foregroundFragment.getSoughtElsewhereLayout().editText?.text.toString()
+          description = foregroundFragment.getProblemDescriptionLayout().editText?.text.toString()
+          otherAnimals = foregroundFragment.getOtherAnimalsLayout().editText?.text.toString()
+          emergency = foregroundFragment.getEmergencyTypeLayout().editText?.text.toString()
 
+          validateDiseaseInfo(foregroundFragment)
         }
       }
     }
   }
 
   private fun validateOwnerInfo(fragment: OwnerInfoFragment) {
-    when {
-      name.isEmpty() -> {
-        fragment.getNameLayout().editText?.error = getString(R.string.name_required)
-        return
-      }
-      mobile.isEmpty() -> {
-        fragment.getMobileLayout().editText?.error = getString(R.string.mobile_number_required)
-        return
-      }
-      address.isEmpty() -> {
-        fragment.getAddressLayout().editText?.error = getString(R.string.address_required)
-        return
-      }
-      else -> {
-        binding.stepper.goToNextStep()
-      }
+    if (name.isEmpty()) {
+      fragment.getNameLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getNameLayout().error = null
     }
+    if (mobile.isEmpty()) {
+      fragment.getMobileLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getMobileLayout().error = null
+    }
+    if (address.isEmpty()) {
+      fragment.getAddressLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAddressLayout().error = null
+    }
+
+    binding.stepper.goToNextStep()
   }
 
   private fun validateAnimalInfo(fragment: AnimalInfoFragment) {
-    when {
-      treatedBefore.isEmpty() -> {
-        fragment.getTreatedBeforeLayout().editText?.error = getString(R.string.treated_before_status_required)
-        return
-      }
-      animalGroup.isEmpty() -> {
-        fragment.getAnimalGroupLayout().editText?.error = getString(R.string.animal_group_required)
-        return
-      }
-      animalType.isEmpty() -> {
-        fragment.getAnimalTypeLayout().editText?.error = getString(R.string.animal_type_required)
-        return
-      }
-      partOfIot.isEmpty() -> {
-        fragment.getPartOfIotLayout().editText?.error = getString(R.string.part_of_iot_status_required)
-        return
-      }
-      animalAge.isEmpty() -> {
-        fragment.getAnimalAgeLayout().editText?.error = getString(R.string.age_retuired)
-        return
-      }
-      ageUnit.isEmpty() -> {
-        fragment.getAgeUnitLayout().editText?.error = getString(R.string.unit_required)
-        return
-      }
-      animalWeight.isEmpty() -> {
-        fragment.getAnimalWeightLayout().editText?.error = getString(R.string.weight_of_the_animal_in_kg)
-        return
-      }
-      animalGender.isEmpty() -> {
-        fragment.getAnimalGenderLayout().editText?.error = getString(R.string.gender_required)
-        return
-      }
-      deWormingStatus.isEmpty() -> {
-        fragment.getDeWormingStatusLayout().editText?.error = getString(R.string.deworming_status_required)
-        return
-      }
-      vaccinationStatus.isEmpty() -> {
-        fragment.getVaccinationStatusLayout().editText?.error = getString(R.string.vaccination_status_required)
-        return
-      }
-      else -> {
-        binding.stepper.goToNextStep()
-      }
+    if (treatedBefore.isEmpty()) {
+      fragment.getTreatedBeforeLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getTreatedBeforeLayout().error = null
+    }
+    if (animalGroup.isEmpty()) {
+      fragment.getAnimalGroupLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAnimalGroupLayout().error = null
+    }
+    if (animalType.isEmpty()) {
+      fragment.getAnimalTypeLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAnimalTypeLayout().error = null
+    }
+    if (partOfIot.isEmpty()) {
+      fragment.getPartOfIotLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getPartOfIotLayout().error = null
+    }
+    if (animalAge.isEmpty()) {
+      fragment.getAnimalAgeLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAnimalAgeLayout().error = null
+    }
+    if (ageUnit.isEmpty()) {
+      fragment.getAgeUnitLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAgeUnitLayout().error = null
+    }
+    if (animalWeight.isEmpty()) {
+      fragment.getAnimalWeightLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAnimalWeightLayout().error = null
+    }
+    if (animalGender.isEmpty()) {
+      fragment.getAnimalGenderLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getAnimalGenderLayout().error = null
+    }
+    if (deWormingStatus.isEmpty()) {
+      fragment.getDeWormingStatusLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getDeWormingStatusLayout().error = null
+    }
+    if (vaccinationStatus.isEmpty()) {
+      fragment.getVaccinationStatusLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getVaccinationStatusLayout().error = null
+    }
+
+    binding.stepper.goToNextStep()
+  }
+
+  private fun validateDiseaseInfo(fragment: DiseaseInfoFragment) {
+    if (temperatureLevel.isEmpty()) {
+      fragment.getTemperatureLevelLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getTemperatureLevelLayout().error = null
+    }
+    if (temperature.isEmpty()) {
+      fragment.getTemperatureLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getTemperatureLayout().error = null
+    }
+    if (feedIntake.isEmpty()) {
+      fragment.getFeedIntakeLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getFeedIntakeLayout().error = null
+    }
+    if (defecation.isEmpty()) {
+      fragment.getDefecationStatusLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getDefecationStatusLayout().error = null
+    }
+    if (staticPosture.isEmpty()) {
+      fragment.getPostureStatusLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getPostureStatusLayout().error = null
+    }
+    if (postureAndGesture.isEmpty()) {
+      fragment.getGestureStatusLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getGestureStatusLayout().error = null
+    }
+    if (firstTime.isEmpty()) {
+      fragment.getFirstTimeLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getFirstTimeLayout().error = null
+    }
+    if (description.isEmpty()) {
+      fragment.getProblemDescriptionLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getProblemDescriptionLayout().error = null
+    }
+    if (otherAnimals.isEmpty()) {
+      fragment.getOtherAnimalsLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getOtherAnimalsLayout().error = null
+    }
+    if (emergency.isEmpty()) {
+      fragment.getEmergencyTypeLayout().error = getString(R.string.this_field_is_required)
+      return
+    } else {
+      fragment.getEmergencyTypeLayout().error = null
     }
   }
 
   override fun onStepChanged(step: Int) {
-    //Toast.makeText(this, "Step changed to: $step", Toast.LENGTH_SHORT).show()
-
     binding.buttonPrevious.isVisible = step != 0
 
     if (step == 2) {
@@ -202,11 +324,5 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
       finish()
     }
     return super.onOptionsItemSelected(item)
-  }
-
-  private fun getForegroundFragment(): Fragment? {
-    val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-    return if (navHostFragment == null) null else navHostFragment.childFragmentManager
-      .fragments[0]
   }
 }

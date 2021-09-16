@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
+import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDiseaseInfoBinding
 
 
@@ -20,6 +21,74 @@ class DiseaseInfoFragment : Fragment() {
   ): View {
     binding = FragmentDiseaseInfoBinding.inflate(inflater, container, false)
     return binding.root
+  }
+
+  fun getTemperatureLevelLayout() : TextInputLayout {
+    return binding.temperatureLevelLayout
+  }
+
+  fun getTemperatureLayout() : TextInputLayout {
+    return binding.temperatureLayout
+  }
+
+  fun getFeedIntakeLayout() : TextInputLayout {
+    return binding.feedIntakeLayout
+  }
+
+  fun getDefecationStatusLayout() : TextInputLayout {
+    return binding.defecationStatusLayout
+  }
+
+  fun getUrinationStatusLayout() : TextInputLayout {
+    return binding.urinationStatusLayout
+  }
+
+  fun getHairStatusLayout() : TextInputLayout {
+    return binding.hairStatusLayout
+  }
+
+  fun getSalivationStatusLayout() : TextInputLayout {
+    return binding.salivationStatusLayout
+  }
+
+  fun getPostureStatusLayout() : TextInputLayout {
+    return binding.postureStatusLayout
+  }
+
+  fun getMuzzleStatusLayout() : TextInputLayout {
+    return binding.muzzleStatusLayout
+  }
+
+  fun getSneezingStatusLayout() : TextInputLayout {
+    return binding.sneezingStatusLayout
+  }
+
+  fun getSweatingStatusLayout() : TextInputLayout {
+    return binding.sweatingStatusLayout
+  }
+
+  fun getGestureStatusLayout() : TextInputLayout {
+    return binding.gestureStatusLayout
+  }
+
+  fun getFirstTimeLayout() : TextInputLayout {
+    return binding.firstTimeLayout
+  }
+
+  fun getSoughtElsewhereLayout() : TextInputLayout {
+    return binding.soughtElsewhereLayout
+  }
+
+  fun getProblemDescriptionLayout() : TextInputLayout {
+    return binding.problemDescriptionLayout
+  }
+
+  fun getOtherAnimalsLayout() : TextInputLayout {
+    return binding.otherAnimalsLayout
+  }
+
+  fun getEmergencyTypeLayout() : TextInputLayout {
+    return binding.emergencyTypeLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
