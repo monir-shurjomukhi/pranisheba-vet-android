@@ -76,14 +76,13 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     //setupActionBarWithNavController(findNavController(R.id.frame_stepper))
     binding.stepper.stepperNavListener = this
 
+    val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+    val foregroundFragment =
+      if (navHostFragment == null) null else navHostFragment.childFragmentManager
+        .fragments[0]
+
     binding.buttonPrevious.setOnClickListener { findNavController(R.id.frame_stepper).navigateUp() }
     binding.buttonNext.setOnClickListener {
-
-      val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
-      val foregroundFragment =
-        if (navHostFragment == null) null else navHostFragment.childFragmentManager
-          .fragments[0]
-
       when (foregroundFragment) {
         is OwnerInfoFragment -> {
           name = foregroundFragment.getNameLayout().editText?.text.toString()
@@ -324,5 +323,22 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
       finish()
     }
     return super.onOptionsItemSelected(item)
+  }
+
+  fun showPreviousInfo() {
+    val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+    val foregroundFragment =
+      if (navHostFragment == null) null else navHostFragment.childFragmentManager
+        .fragments[0]
+
+    when(foregroundFragment) {
+      is OwnerInfoFragment -> {
+        foregroundFragment.getNameLayout().editText?.setText(name)
+        foregroundFragment.getMobileLayout().editText?.setText(mobile)
+        foregroundFragment.getEmailLayout().editText?.setText(email)
+        foregroundFragment.getFarmNameLayout().editText?.setText(farmName)
+        foregroundFragment.getAddressLayout().editText?.setText(address)
+      }
+    }
   }
 }

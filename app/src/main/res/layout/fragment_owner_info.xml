@@ -28,7 +28,6 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:inputType="textPersonName"
-          android:text="Test"
           android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,7 +48,6 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:inputType="phone"
-          android:text="12345678901"
           android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +68,6 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:inputType="textEmailAddress"
-          android:text="test@test.com"
           android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,7 +88,6 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:inputType="text"
-          android:text="Test"
           android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,7 +109,6 @@
           android:layout_height="120dp"
           android:gravity="start"
           android:inputType="textPostalAddress"
-          android:text="Test"
           android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
   </androidx.constraintlayout.widget.ConstraintLayout>

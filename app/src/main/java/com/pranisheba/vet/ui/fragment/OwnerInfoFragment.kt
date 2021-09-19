@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentOwnerInfoBinding
+import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
 class OwnerInfoFragment : Fragment() {
@@ -39,5 +40,11 @@ class OwnerInfoFragment : Fragment() {
 
   fun getAddressLayout() : TextInputLayout {
     return binding.addressLayout
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    (activity as TreatmentFormActivity).showPreviousInfo()
   }
 }
