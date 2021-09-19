@@ -38,7 +38,7 @@ class ServiceReceivingFormActivity : AppCompatActivity() {
     }
 
     binding.consultancyServiceCard.setOnClickListener {
-      val intent = Intent(this, ServiceDetailsActivity::class.java)
+      val intent = Intent(this, ConsultancyFormActivity::class.java)
       val bundle = Bundle()
       bundle.putString(SERVICE_TYPE, getString(R.string.consultancy_service))
       bundle.putString(

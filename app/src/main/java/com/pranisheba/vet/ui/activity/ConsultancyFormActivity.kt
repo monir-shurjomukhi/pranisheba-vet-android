@@ -9,15 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.aceinteract.android.stepper.StepperNavListener
 import com.pranisheba.vet.R
-import com.pranisheba.vet.databinding.ActivityTreatmentFormBinding
-import com.pranisheba.vet.ui.fragment.AnimalInfoFragment
+import com.pranisheba.vet.databinding.ActivityConsultancyFormBinding
 import com.pranisheba.vet.ui.fragment.DiseaseInfoFragment
 import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
 
 
-class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
+class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
 
-  private lateinit var binding: ActivityTreatmentFormBinding
+  private lateinit var binding: ActivityConsultancyFormBinding
   private var currentStep = 0
 
   // Owner Info
@@ -26,25 +25,6 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   private var email: String = ""
   private var farmName: String = ""
   private var address: String = ""
-
-  // Animal Info
-  private var treatedBefore: String = ""
-  private var previousPrescription: String = ""
-  private var animalNameOrId: String = ""
-  private var animalGroup: String = ""
-  private var animalType: String = ""
-  private var breedType: String = ""
-  private var animalBreed: String = ""
-  private var partOfIot: String = ""
-  private var bolusId: String = ""
-  private var animalAge: String = ""
-  private var ageUnit: String = ""
-  private var animalWeight: String = ""
-  private var animalGender: String = ""
-  private var stageOfGender: String = ""
-  private var deWormingStatus: String = ""
-  private var vaccinationStatus: String = ""
-  private var typeOfVaccines: String = ""
 
   // Disease Info
   private var temperatureLevel: String = ""
@@ -67,7 +47,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    binding = ActivityTreatmentFormBinding.inflate(layoutInflater)
+    binding = ActivityConsultancyFormBinding.inflate(layoutInflater)
     setContentView(binding.root)
 
     setSupportActionBar(binding.toolbar)
@@ -96,34 +76,6 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
           validateOwnerInfo(foregroundFragment)
         }
         1 -> {
-          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
-          val foregroundFragment =
-            if (navHostFragment == null) null else navHostFragment.childFragmentManager
-              .fragments[0]
-          foregroundFragment as AnimalInfoFragment
-          treatedBefore = foregroundFragment.getTreatedBeforeLayout().editText?.text.toString()
-          previousPrescription =
-            foregroundFragment.getPreviousPrescriptionLayout().editText?.text.toString()
-          animalNameOrId = foregroundFragment.getAnimalNameOrIdLayout().editText?.text.toString()
-          animalGroup = foregroundFragment.getAnimalGroupLayout().editText?.text.toString()
-          animalType = foregroundFragment.getAnimalTypeLayout().editText?.text.toString()
-          breedType = foregroundFragment.getBreedTypeLayout().editText?.text.toString()
-          animalBreed = foregroundFragment.getAnimalBreedLayout().editText?.text.toString()
-          partOfIot = foregroundFragment.getPartOfIotLayout().editText?.text.toString()
-          bolusId = foregroundFragment.getBolusIdLayout().editText?.text.toString()
-          animalAge = foregroundFragment.getAnimalAgeLayout().editText?.text.toString()
-          ageUnit = foregroundFragment.getAgeUnitLayout().editText?.text.toString()
-          animalWeight = foregroundFragment.getAnimalWeightLayout().editText?.text.toString()
-          animalGender = foregroundFragment.getAnimalGenderLayout().editText?.text.toString()
-          stageOfGender = foregroundFragment.getStageOfGenderLayout().editText?.text.toString()
-          deWormingStatus = foregroundFragment.getDeWormingStatusLayout().editText?.text.toString()
-          vaccinationStatus =
-            foregroundFragment.getVaccinationStatusLayout().editText?.text.toString()
-          typeOfVaccines = foregroundFragment.getTypeOfVaccinesLayout().editText?.text.toString()
-
-          validateAnimalInfo(foregroundFragment)
-        }
-        2 -> {
           val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
@@ -172,71 +124,6 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
       return
     } else {
       fragment.getAddressLayout().error = null
-    }
-
-    binding.stepper.goToNextStep()
-  }
-
-  private fun validateAnimalInfo(fragment: AnimalInfoFragment) {
-    if (treatedBefore.isEmpty()) {
-      fragment.getTreatedBeforeLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getTreatedBeforeLayout().error = null
-    }
-    if (animalGroup.isEmpty()) {
-      fragment.getAnimalGroupLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getAnimalGroupLayout().error = null
-    }
-    if (animalType.isEmpty()) {
-      fragment.getAnimalTypeLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getAnimalTypeLayout().error = null
-    }
-    if (partOfIot.isEmpty()) {
-      fragment.getPartOfIotLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getPartOfIotLayout().error = null
-    }
-    if (animalAge.isEmpty()) {
-      fragment.getAnimalAgeLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getAnimalAgeLayout().error = null
-    }
-    if (ageUnit.isEmpty()) {
-      fragment.getAgeUnitLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getAgeUnitLayout().error = null
-    }
-    if (animalWeight.isEmpty()) {
-      fragment.getAnimalWeightLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getAnimalWeightLayout().error = null
-    }
-    if (animalGender.isEmpty()) {
-      fragment.getAnimalGenderLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getAnimalGenderLayout().error = null
-    }
-    if (deWormingStatus.isEmpty()) {
-      fragment.getDeWormingStatusLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getDeWormingStatusLayout().error = null
-    }
-    if (vaccinationStatus.isEmpty()) {
-      fragment.getVaccinationStatusLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getVaccinationStatusLayout().error = null
     }
 
     binding.stepper.goToNextStep()
@@ -305,7 +192,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     currentStep = step
     binding.buttonPrevious.isVisible = step != 0
 
-    if (step == 2) {
+    if (step == 1) {
       binding.buttonNext.setImageResource(R.drawable.ic_check)
     } else {
       binding.buttonNext.setImageResource(R.drawable.ic_right)
@@ -345,25 +232,6 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
         foregroundFragment.getEmailLayout().editText?.setText(email)
         foregroundFragment.getFarmNameLayout().editText?.setText(farmName)
         foregroundFragment.getAddressLayout().editText?.setText(address)
-      }
-      is AnimalInfoFragment -> {
-        foregroundFragment.getTreatedBeforeLayout().editText?.setText(treatedBefore)
-        foregroundFragment.getPreviousPrescriptionLayout().editText?.setText(previousPrescription)
-        foregroundFragment.getAnimalNameOrIdLayout().editText?.setText(animalNameOrId)
-        foregroundFragment.getAnimalGroupLayout().editText?.setText(animalGroup)
-        foregroundFragment.getAnimalTypeLayout().editText?.setText(animalType)
-        foregroundFragment.getBreedTypeLayout().editText?.setText(breedType)
-        foregroundFragment.getAnimalBreedLayout().editText?.setText(animalBreed)
-        foregroundFragment.getPartOfIotLayout().editText?.setText(partOfIot)
-        foregroundFragment.getBolusIdLayout().editText?.setText(bolusId)
-        foregroundFragment.getAnimalAgeLayout().editText?.setText(animalAge)
-        foregroundFragment.getAgeUnitLayout().editText?.setText(ageUnit)
-        foregroundFragment.getAnimalWeightLayout().editText?.setText(animalWeight)
-        foregroundFragment.getAnimalGenderLayout().editText?.setText(animalGender)
-        foregroundFragment.getStageOfGenderLayout().editText?.setText(stageOfGender)
-        foregroundFragment.getDeWormingStatusLayout().editText?.setText(deWormingStatus)
-        foregroundFragment.getVaccinationStatusLayout().editText?.setText(vaccinationStatus)
-        foregroundFragment.getTypeOfVaccinesLayout().editText?.setText(typeOfVaccines)
       }
       is DiseaseInfoFragment -> {
         foregroundFragment.getTemperatureLevelLayout().editText?.setText(temperatureLevel)

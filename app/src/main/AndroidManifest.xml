@@ -13,14 +13,14 @@
       android:supportsRtl="true"
       android:theme="@style/Theme.PranishebaVet"
       android:usesCleartextTraffic="true">
-    <activity
-        android:name=".ui.activity.TreatmentFormActivity"
-        android:exported="true" />
-    <activity
-        android:name=".ui.activity.AgentRegistrationActivity"
-        android:exported="true" />
-    <activity android:name=".ui.activity.WeightMeasurementActivity" />
+    <activity android:name=".ui.activity.MainActivity" />
     <activity android:name=".ui.activity.LanguageActivity" />
+    <activity android:name=".ui.activity.SignUpActivity" />
+    <activity android:name=".ui.activity.LoginActivity" />
+    <activity android:name=".ui.activity.TreatmentFormActivity" />
+    <activity android:name=".ui.activity.ConsultancyFormActivity" />
+    <activity android:name=".ui.activity.AgentRegistrationActivity" />
+    <activity android:name=".ui.activity.WeightMeasurementActivity" />
     <activity android:name=".ui.activity.ServiceReceivingFormActivity" />
     <activity android:name=".ui.activity.ServiceRelatedInfoActivity" />
     <activity android:name=".ui.activity.EditFarmAndFarmerInfoActivity" />
@@ -39,9 +39,5 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name=".ui.activity.MainActivity" />
-    <activity android:name=".ui.activity.SignUpActivity" />
-    <activity android:name=".ui.activity.LoginActivity" />
   </application>
-
 </manifest>

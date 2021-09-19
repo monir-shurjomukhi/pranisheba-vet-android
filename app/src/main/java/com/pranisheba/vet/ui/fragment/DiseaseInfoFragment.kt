@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDiseaseInfoBinding
+import com.pranisheba.vet.ui.activity.ConsultancyFormActivity
 import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
@@ -285,6 +286,9 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    (activity as TreatmentFormActivity).showPreviousInfo()
+    when(activity) {
+      is TreatmentFormActivity -> (activity as TreatmentFormActivity).showPreviousInfo()
+      is ConsultancyFormActivity -> (activity as ConsultancyFormActivity).showPreviousInfo()
+    }
   }
 }
