@@ -87,27 +87,27 @@ class AgentRegistrationActivity : AppCompatActivity() {
     val website = binding.websiteLayout.editText?.text.toString()
 
     if (name.isEmpty()) {
-      binding.nameLayout.error = getString(R.string.name_required)
+      binding.nameLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (dob.isEmpty()) {
-      binding.dobLayout.error = getString(R.string.date_of_birth_required)
+      binding.dobLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (mobile.isEmpty()) {
-      binding.mobileLayout.error = getString(R.string.mobile_number_required)
+      binding.mobileLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (businessType.isEmpty()) {
-      binding.businessTypeLayout.error = getString(R.string.type_of_business_service_required)
+      binding.businessTypeLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (address.isEmpty()) {
-      binding.addressLayout.error = getString(R.string.address_required)
+      binding.addressLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (businessYears.isEmpty()) {
-      binding.businessYearsLayout.error = getString(R.string.years_in_business_service_required)
+      binding.businessYearsLayout.error = getString(R.string.this_field_is_required)
       return
     }
 

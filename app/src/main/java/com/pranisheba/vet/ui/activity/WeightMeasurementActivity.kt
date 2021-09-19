@@ -29,11 +29,11 @@ class WeightMeasurementActivity : AppCompatActivity() {
       val length = binding.lengthLayout.editText?.text.toString()
       val circumference = binding.circumferenceLayout.editText?.text.toString()
       if (TextUtils.isEmpty(length)) {
-        binding.lengthLayout.error = getString(R.string.body_length_a_to_b_inch_is_required)
+        binding.lengthLayout.error = getString(R.string.this_field_is_required)
         return@setOnClickListener
       }
       if (TextUtils.isEmpty(circumference)) {
-        binding.circumferenceLayout.error = getString(R.string.body_circumference_c_inch_is_required)
+        binding.circumferenceLayout.error = getString(R.string.this_field_is_required)
         return@setOnClickListener
       }
 

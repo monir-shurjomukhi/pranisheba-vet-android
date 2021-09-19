@@ -56,15 +56,15 @@ class SignUpActivity : AppCompatActivity() {
     val address = binding.addressLayout.editText?.text.toString()
 
     if (name.isEmpty()) {
-      binding.nameLayout.error = getString(R.string.name_required)
+      binding.nameLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (mobileNumber.isEmpty()) {
-      binding.mobileLayout.error = getString(R.string.mobile_number_required)
+      binding.mobileLayout.error = getString(R.string.this_field_is_required)
       return
     }
     if (address.isEmpty()) {
-      binding.addressLayout.error = getString(R.string.address_required)
+      binding.addressLayout.error = getString(R.string.this_field_is_required)
       return
     }
 

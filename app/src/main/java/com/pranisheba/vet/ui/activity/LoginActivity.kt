@@ -71,7 +71,7 @@ class LoginActivity : AppCompatActivity() {
   private fun insertCheck() {
       val mobileNumber = binding.mobileLayout.editText?.text.toString()
       if (mobileNumber.isEmpty()) {
-        binding.mobileLayout.error = getString(R.string.mobile_number_required)
+        binding.mobileLayout.error = getString(R.string.this_field_is_required)
         return
       }
 
@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
   private fun login() {
     val otp = binding.otpLayout.editText?.text.toString()
     if (otp.isEmpty()) {
-      binding.otpLayout.error = getString(R.string.otp_required)
+      binding.otpLayout.error = getString(R.string.this_field_is_required)
       return
     }
 
