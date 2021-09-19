@@ -2,6 +2,7 @@ package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -17,6 +18,7 @@ import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
 class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
   private lateinit var binding: ActivityTreatmentFormBinding
+  private var currentStep = 0
 
   // Owner Info
   private var name: String = ""
@@ -76,15 +78,15 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     //setupActionBarWithNavController(findNavController(R.id.frame_stepper))
     binding.stepper.stepperNavListener = this
 
-    val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
-    val foregroundFragment =
-      if (navHostFragment == null) null else navHostFragment.childFragmentManager
-        .fragments[0]
-
     binding.buttonPrevious.setOnClickListener { findNavController(R.id.frame_stepper).navigateUp() }
     binding.buttonNext.setOnClickListener {
-      when (foregroundFragment) {
-        is OwnerInfoFragment -> {
+      when (currentStep) {
+        0 -> {
+          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val foregroundFragment =
+            if (navHostFragment == null) null else navHostFragment.childFragmentManager
+              .fragments[0]
+          foregroundFragment as OwnerInfoFragment
           name = foregroundFragment.getNameLayout().editText?.text.toString()
           mobile = foregroundFragment.getMobileLayout().editText?.text.toString()
           email = foregroundFragment.getEmailLayout().editText?.text.toString()
@@ -93,8 +95,12 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
           validateOwnerInfo(foregroundFragment)
         }
-
-        is AnimalInfoFragment -> {
+        1 -> {
+          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val foregroundFragment =
+            if (navHostFragment == null) null else navHostFragment.childFragmentManager
+              .fragments[0]
+          foregroundFragment as AnimalInfoFragment
           treatedBefore = foregroundFragment.getTreatedBeforeLayout().editText?.text.toString()
           previousPrescription =
             foregroundFragment.getPreviousPrescriptionLayout().editText?.text.toString()
@@ -117,8 +123,12 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
           validateAnimalInfo(foregroundFragment)
         }
-
-        is DiseaseInfoFragment -> {
+        2 -> {
+          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val foregroundFragment =
+            if (navHostFragment == null) null else navHostFragment.childFragmentManager
+              .fragments[0]
+          foregroundFragment as DiseaseInfoFragment
           temperatureLevel =
             foregroundFragment.getTemperatureLevelLayout().editText?.text.toString()
           temperature = foregroundFragment.getTemperatureLayout().editText?.text.toString()
@@ -293,9 +303,12 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     } else {
       fragment.getEmergencyTypeLayout().error = null
     }
+
+    binding.stepper.goToNextStep()
   }
 
   override fun onStepChanged(step: Int) {
+    currentStep = step
     binding.buttonPrevious.isVisible = step != 0
 
     if (step == 2) {
@@ -306,7 +319,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   }
 
   override fun onCompleted() {
-    //Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
   }
 
   override fun onBackPressed() {
@@ -338,6 +351,44 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
         foregroundFragment.getEmailLayout().editText?.setText(email)
         foregroundFragment.getFarmNameLayout().editText?.setText(farmName)
         foregroundFragment.getAddressLayout().editText?.setText(address)
+      }
+      is AnimalInfoFragment -> {
+        foregroundFragment.getTreatedBeforeLayout().editText?.setText(treatedBefore)
+        foregroundFragment.getPreviousPrescriptionLayout().editText?.setText(previousPrescription)
+        foregroundFragment.getAnimalNameOrIdLayout().editText?.setText(animalNameOrId)
+        foregroundFragment.getAnimalGroupLayout().editText?.setText(animalGroup)
+        foregroundFragment.getAnimalTypeLayout().editText?.setText(animalType)
+        foregroundFragment.getBreedTypeLayout().editText?.setText(breedType)
+        foregroundFragment.getAnimalBreedLayout().editText?.setText(animalBreed)
+        foregroundFragment.getPartOfIotLayout().editText?.setText(partOfIot)
+        foregroundFragment.getBolusIdLayout().editText?.setText(bolusId)
+        foregroundFragment.getAnimalAgeLayout().editText?.setText(animalAge)
+        foregroundFragment.getAgeUnitLayout().editText?.setText(ageUnit)
+        foregroundFragment.getAnimalWeightLayout().editText?.setText(animalWeight)
+        foregroundFragment.getAnimalGenderLayout().editText?.setText(animalGender)
+        foregroundFragment.getStageOfGenderLayout().editText?.setText(stageOfGender)
+        foregroundFragment.getDeWormingStatusLayout().editText?.setText(deWormingStatus)
+        foregroundFragment.getVaccinationStatusLayout().editText?.setText(vaccinationStatus)
+        foregroundFragment.getTypeOfVaccinesLayout().editText?.setText(typeOfVaccines)
+      }
+      is DiseaseInfoFragment -> {
+        foregroundFragment.getTemperatureLevelLayout().editText?.setText(temperatureLevel)
+        foregroundFragment.getTemperatureLayout().editText?.setText(temperature)
+        foregroundFragment.getFeedIntakeLayout().editText?.setText(feedIntake)
+        foregroundFragment.getDefecationStatusLayout().editText?.setText(defecation)
+        foregroundFragment.getUrinationStatusLayout().editText?.setText(urination)
+        foregroundFragment.getHairStatusLayout().editText?.setText(hair)
+        foregroundFragment.getSalivationStatusLayout().editText?.setText(salivation)
+        foregroundFragment.getPostureStatusLayout().editText?.setText(staticPosture)
+        foregroundFragment.getMuzzleStatusLayout().editText?.setText(muzzle)
+        foregroundFragment.getSneezingStatusLayout().editText?.setText(sneezing)
+        foregroundFragment.getSweatingStatusLayout().editText?.setText(sweating)
+        foregroundFragment.getGestureStatusLayout().editText?.setText(postureAndGesture)
+        foregroundFragment.getFirstTimeLayout().editText?.setText(firstTime)
+        foregroundFragment.getSoughtElsewhereLayout().editText?.setText(soughtElsewhere)
+        foregroundFragment.getProblemDescriptionLayout().editText?.setText(description)
+        foregroundFragment.getOtherAnimalsLayout().editText?.setText(otherAnimals)
+        foregroundFragment.getEmergencyTypeLayout().editText?.setText(emergency)
       }
     }
   }

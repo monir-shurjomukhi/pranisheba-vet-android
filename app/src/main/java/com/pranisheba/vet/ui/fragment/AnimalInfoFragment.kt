@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.FragmentAnimalInfoBinding
-
+import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 class AnimalInfoFragment : Fragment() {
 
@@ -27,71 +27,71 @@ class AnimalInfoFragment : Fragment() {
     return binding.root
   }
 
-  fun getTreatedBeforeLayout() : TextInputLayout {
+  fun getTreatedBeforeLayout(): TextInputLayout {
     return binding.treatedBeforeLayout
   }
 
-  fun getPreviousPrescriptionLayout() : TextInputLayout {
+  fun getPreviousPrescriptionLayout(): TextInputLayout {
     return binding.previousPrescriptionLayout
   }
 
-  fun getAnimalNameOrIdLayout() : TextInputLayout {
+  fun getAnimalNameOrIdLayout(): TextInputLayout {
     return binding.animalNameOrIdLayout
   }
 
-  fun getAnimalGroupLayout() : TextInputLayout {
+  fun getAnimalGroupLayout(): TextInputLayout {
     return binding.animalGroupLayout
   }
 
-  fun getAnimalTypeLayout() : TextInputLayout {
+  fun getAnimalTypeLayout(): TextInputLayout {
     return binding.animalTypeLayout
   }
 
-  fun getBreedTypeLayout() : TextInputLayout {
+  fun getBreedTypeLayout(): TextInputLayout {
     return binding.breedTypeLayout
   }
 
-  fun getAnimalBreedLayout() : TextInputLayout {
+  fun getAnimalBreedLayout(): TextInputLayout {
     return binding.animalBreedLayout
   }
 
-  fun getPartOfIotLayout() : TextInputLayout {
+  fun getPartOfIotLayout(): TextInputLayout {
     return binding.partOfIotLayout
   }
 
-  fun getBolusIdLayout() : TextInputLayout {
+  fun getBolusIdLayout(): TextInputLayout {
     return binding.bolusIdLayout
   }
 
-  fun getAnimalAgeLayout() : TextInputLayout {
+  fun getAnimalAgeLayout(): TextInputLayout {
     return binding.animalAgeLayout
   }
 
-  fun getAgeUnitLayout() : TextInputLayout {
+  fun getAgeUnitLayout(): TextInputLayout {
     return binding.ageUnitLayout
   }
 
-  fun getAnimalWeightLayout() : TextInputLayout {
+  fun getAnimalWeightLayout(): TextInputLayout {
     return binding.animalWeightLayout
   }
 
-  fun getAnimalGenderLayout() : TextInputLayout {
+  fun getAnimalGenderLayout(): TextInputLayout {
     return binding.animalGenderLayout
   }
 
-  fun getStageOfGenderLayout() : TextInputLayout {
+  fun getStageOfGenderLayout(): TextInputLayout {
     return binding.stageOfGenderLayout
   }
 
-  fun getDeWormingStatusLayout() : TextInputLayout {
+  fun getDeWormingStatusLayout(): TextInputLayout {
     return binding.deWormingStatusLayout
   }
 
-  fun getVaccinationStatusLayout() : TextInputLayout {
+  fun getVaccinationStatusLayout(): TextInputLayout {
     return binding.vaccinationStatusLayout
   }
 
-  fun getTypeOfVaccinesLayout() : TextInputLayout {
+  fun getTypeOfVaccinesLayout(): TextInputLayout {
     return binding.typeOfVaccinesLayout
   }
 
@@ -656,7 +656,8 @@ class AnimalInfoFragment : Fragment() {
               binding.stageOfGenderLayout.hint = getString(R.string.stage_of_female)
               binding.stageOfGenderTextView.text = null
               context?.let {
-                ArrayAdapter(it, android.R.layout.simple_list_item_1,
+                ArrayAdapter(
+                  it, android.R.layout.simple_list_item_1,
                   listOf(
                     "Calf",
                     "Kid",
@@ -748,5 +749,9 @@ class AnimalInfoFragment : Fragment() {
 
       override fun afterTextChanged(s: Editable?) {}
     })
+
+    (activity as TreatmentFormActivity).showPreviousInfo()
   }
 }
+
+

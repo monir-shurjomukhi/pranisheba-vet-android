@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDiseaseInfoBinding
+import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
 class DiseaseInfoFragment : Fragment() {
@@ -283,5 +284,7 @@ class DiseaseInfoFragment : Fragment() {
         binding.emergencyTypeTextView.inputType = InputType.TYPE_NULL
       }
     }
+
+    (activity as TreatmentFormActivity).showPreviousInfo()
   }
 }
