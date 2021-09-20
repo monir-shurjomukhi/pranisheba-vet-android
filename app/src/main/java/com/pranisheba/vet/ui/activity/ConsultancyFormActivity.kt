@@ -11,6 +11,7 @@ import com.aceinteract.android.stepper.StepperNavListener
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityConsultancyFormBinding
 import com.pranisheba.vet.ui.fragment.DiseaseInfoFragment
+import com.pranisheba.vet.ui.fragment.FarmInfoFragment
 import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
 
 
@@ -27,23 +28,12 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
   private var address: String = ""
 
   // Disease Info
-  private var temperatureLevel: String = ""
-  private var temperature: String = ""
-  private var feedIntake: String = ""
-  private var defecation: String = ""
-  private var urination: String = ""
-  private var hair: String = ""
-  private var salivation: String = ""
-  private var staticPosture: String = ""
-  private var muzzle: String = ""
-  private var sneezing: String = ""
-  private var sweating: String = ""
-  private var postureAndGesture: String = ""
-  private var firstTime: String = ""
-  private var soughtElsewhere: String = ""
-  private var description: String = ""
-  private var otherAnimals: String = ""
-  private var emergency: String = ""
+  private var typeOfConsultancy: String = ""
+  private var typeOfFarm: String = ""
+  private var numberOfAnimals: String = ""
+  private var placeOfFarm: String = ""
+  private var ageOfFarm: String = ""
+  private var frequencyOfConsultancy: String = ""
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -67,6 +57,7 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
           foregroundFragment as OwnerInfoFragment
+
           name = foregroundFragment.getNameLayout().editText?.text.toString()
           mobile = foregroundFragment.getMobileLayout().editText?.text.toString()
           email = foregroundFragment.getEmailLayout().editText?.text.toString()
@@ -80,27 +71,16 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
-          foregroundFragment as DiseaseInfoFragment
-          temperatureLevel =
-            foregroundFragment.getTemperatureLevelLayout().editText?.text.toString()
-          temperature = foregroundFragment.getTemperatureLayout().editText?.text.toString()
-          feedIntake = foregroundFragment.getFeedIntakeLayout().editText?.text.toString()
-          defecation = foregroundFragment.getDefecationStatusLayout().editText?.text.toString()
-          urination = foregroundFragment.getUrinationStatusLayout().editText?.text.toString()
-          hair = foregroundFragment.getHairStatusLayout().editText?.text.toString()
-          salivation = foregroundFragment.getSalivationStatusLayout().editText?.text.toString()
-          staticPosture = foregroundFragment.getPostureStatusLayout().editText?.text.toString()
-          muzzle = foregroundFragment.getMuzzleStatusLayout().editText?.text.toString()
-          sneezing = foregroundFragment.getSneezingStatusLayout().editText?.text.toString()
-          sweating = foregroundFragment.getSweatingStatusLayout().editText?.text.toString()
-          postureAndGesture = foregroundFragment.getGestureStatusLayout().editText?.text.toString()
-          firstTime = foregroundFragment.getFirstTimeLayout().editText?.text.toString()
-          soughtElsewhere = foregroundFragment.getSoughtElsewhereLayout().editText?.text.toString()
-          description = foregroundFragment.getProblemDescriptionLayout().editText?.text.toString()
-          otherAnimals = foregroundFragment.getOtherAnimalsLayout().editText?.text.toString()
-          emergency = foregroundFragment.getEmergencyTypeLayout().editText?.text.toString()
+          foregroundFragment as FarmInfoFragment
 
-          validateDiseaseInfo(foregroundFragment)
+          typeOfConsultancy = foregroundFragment.getTypeOfConsultancyLayout().editText?.text.toString()
+          typeOfFarm = foregroundFragment.getTypeOfFarmLayout().editText?.text.toString()
+          numberOfAnimals = foregroundFragment.getNumberOfAnimalsLayout().editText?.text.toString()
+          placeOfFarm = foregroundFragment.getPlaceOfFarmLayout().editText?.text.toString()
+          ageOfFarm = foregroundFragment.getAgeOfFirmLayout().editText?.text.toString()
+          frequencyOfConsultancy = foregroundFragment.getFrequencyOfConsultancyLayout().editText?.text.toString()
+
+          validateFarmInfo(foregroundFragment)
         }
       }
     }
@@ -129,60 +109,30 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
     binding.stepper.goToNextStep()
   }
 
-  private fun validateDiseaseInfo(fragment: DiseaseInfoFragment) {
-    if (temperatureLevel.isEmpty()) {
-      fragment.getTemperatureLevelLayout().error = getString(R.string.this_field_is_required)
+  private fun validateFarmInfo(fragment: FarmInfoFragment) {
+    if (typeOfConsultancy.isEmpty()) {
+      fragment.getTypeOfConsultancyLayout().error = getString(R.string.this_field_is_required)
       return
     } else {
-      fragment.getTemperatureLevelLayout().error = null
+      fragment.getTypeOfConsultancyLayout().error = null
     }
-    if (feedIntake.isEmpty()) {
-      fragment.getFeedIntakeLayout().error = getString(R.string.this_field_is_required)
+    if (typeOfFarm.isEmpty()) {
+      fragment.getTypeOfFarmLayout().error = getString(R.string.this_field_is_required)
       return
     } else {
-      fragment.getFeedIntakeLayout().error = null
+      fragment.getTypeOfFarmLayout().error = null
     }
-    if (defecation.isEmpty()) {
-      fragment.getDefecationStatusLayout().error = getString(R.string.this_field_is_required)
+    if (ageOfFarm.isEmpty()) {
+      fragment.getAgeOfFirmLayout().error = getString(R.string.this_field_is_required)
       return
     } else {
-      fragment.getDefecationStatusLayout().error = null
+      fragment.getAgeOfFirmLayout().error = null
     }
-    if (staticPosture.isEmpty()) {
-      fragment.getPostureStatusLayout().error = getString(R.string.this_field_is_required)
+    if (frequencyOfConsultancy.isEmpty()) {
+      fragment.getFrequencyOfConsultancyLayout().error = getString(R.string.this_field_is_required)
       return
     } else {
-      fragment.getPostureStatusLayout().error = null
-    }
-    if (postureAndGesture.isEmpty()) {
-      fragment.getGestureStatusLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getGestureStatusLayout().error = null
-    }
-    if (firstTime.isEmpty()) {
-      fragment.getFirstTimeLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getFirstTimeLayout().error = null
-    }
-    if (description.isEmpty()) {
-      fragment.getProblemDescriptionLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getProblemDescriptionLayout().error = null
-    }
-    if (otherAnimals.isEmpty()) {
-      fragment.getOtherAnimalsLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getOtherAnimalsLayout().error = null
-    }
-    if (emergency.isEmpty()) {
-      fragment.getEmergencyTypeLayout().error = getString(R.string.this_field_is_required)
-      return
-    } else {
-      fragment.getEmergencyTypeLayout().error = null
+      fragment.getFrequencyOfConsultancyLayout().error = null
     }
 
     binding.stepper.goToNextStep()
@@ -233,24 +183,13 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
         foregroundFragment.getFarmNameLayout().editText?.setText(farmName)
         foregroundFragment.getAddressLayout().editText?.setText(address)
       }
-      is DiseaseInfoFragment -> {
-        foregroundFragment.getTemperatureLevelLayout().editText?.setText(temperatureLevel)
-        foregroundFragment.getTemperatureLayout().editText?.setText(temperature)
-        foregroundFragment.getFeedIntakeLayout().editText?.setText(feedIntake)
-        foregroundFragment.getDefecationStatusLayout().editText?.setText(defecation)
-        foregroundFragment.getUrinationStatusLayout().editText?.setText(urination)
-        foregroundFragment.getHairStatusLayout().editText?.setText(hair)
-        foregroundFragment.getSalivationStatusLayout().editText?.setText(salivation)
-        foregroundFragment.getPostureStatusLayout().editText?.setText(staticPosture)
-        foregroundFragment.getMuzzleStatusLayout().editText?.setText(muzzle)
-        foregroundFragment.getSneezingStatusLayout().editText?.setText(sneezing)
-        foregroundFragment.getSweatingStatusLayout().editText?.setText(sweating)
-        foregroundFragment.getGestureStatusLayout().editText?.setText(postureAndGesture)
-        foregroundFragment.getFirstTimeLayout().editText?.setText(firstTime)
-        foregroundFragment.getSoughtElsewhereLayout().editText?.setText(soughtElsewhere)
-        foregroundFragment.getProblemDescriptionLayout().editText?.setText(description)
-        foregroundFragment.getOtherAnimalsLayout().editText?.setText(otherAnimals)
-        foregroundFragment.getEmergencyTypeLayout().editText?.setText(emergency)
+      is FarmInfoFragment -> {
+        foregroundFragment.getTypeOfConsultancyLayout().editText?.setText(typeOfConsultancy)
+        foregroundFragment.getTypeOfFarmLayout().editText?.setText(typeOfFarm)
+        foregroundFragment.getNumberOfAnimalsLayout().editText?.setText(numberOfAnimals)
+        foregroundFragment.getPlaceOfFarmLayout().editText?.setText(placeOfFarm)
+        foregroundFragment.getAgeOfFirmLayout().editText?.setText(ageOfFarm)
+        foregroundFragment.getFrequencyOfConsultancyLayout().editText?.setText(frequencyOfConsultancy)
       }
     }
   }

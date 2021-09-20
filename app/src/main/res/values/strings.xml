@@ -476,4 +476,5 @@
   <string name="place_of_firm">Place Of Firm</string>
   <string name="age_of_firm">Age Of Firm*</string>
   <string name="frequency_of_consultancy">Frequency Of Consultancy*</string>
+  <string name="farm_info">Farm Info</string>
 </resources>

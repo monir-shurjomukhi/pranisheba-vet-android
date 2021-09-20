@@ -135,7 +135,7 @@ class FarmInfoFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("One time", "Yearly")
+        listOf("One Time", "Yearly")
       ).also { adapter ->
         binding.frequencyOfConsultancyTextView.setAdapter(adapter)
         binding.frequencyOfConsultancyTextView.inputType = InputType.TYPE_NULL

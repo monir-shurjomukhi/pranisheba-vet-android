@@ -7,5 +7,5 @@
 
   <item
       android:id="@+id/step_2_dest"
-      android:title="@string/disease_info" />
+      android:title="@string/farm_info" />
 </menu>

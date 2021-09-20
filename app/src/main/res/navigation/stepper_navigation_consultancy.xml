@@ -11,6 +11,6 @@
 
   <fragment
       android:id="@+id/step_2_dest"
-      android:name="com.pranisheba.vet.ui.fragment.DiseaseInfoFragment"
-      android:label="@string/disease_info" />
+      android:name="com.pranisheba.vet.ui.fragment.FarmInfoFragment"
+      android:label="@string/farm_info" />
 </navigation>

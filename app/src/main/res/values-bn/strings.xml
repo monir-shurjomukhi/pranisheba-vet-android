@@ -447,4 +447,5 @@
   <string name="place_of_firm">খামারের অবস্থান</string>
   <string name="age_of_firm">খামারের বয়স*</string>
   <string name="frequency_of_consultancy">কত বার পরামর্শ সেবা নিতে চান?*</string>
+  <string name="farm_info">খামারের তথ্য</string>
 </resources>
