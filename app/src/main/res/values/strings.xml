@@ -5,14 +5,14 @@
   <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
   <string name="already_registered_login">Already registered? Login</string>
   <string name="submit">Submit</string>
-  <string name="name">Name *</string>
+  <string name="name">Name*</string>
   <string name="farmer_name">Farmer Name</string>
-  <string name="mobile_number">Mobile Number *</string>
+  <string name="mobile_number">Mobile Number*</string>
   <string name="email">Email</string>
   <string name="farm_name">Farm Name</string>
   <string name="farm_type">Farm Type</string>
   <string name="number_of_animal">Number of Animal</string>
-  <string name="address">Address *</string>
+  <string name="address">Address*</string>
   <string name="title_activity_main2">MainActivity2</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
   <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -449,10 +449,10 @@
     </ol>
     ]]>
   </string>
-  <string name="body_length_a_to_b_inch">Body length A to B (Inch) *</string>
-  <string name="body_circumference_c_inch">Body circumference C (Inch) *</string>
+  <string name="body_length_a_to_b_inch">Body length A to B (Inch)*</string>
+  <string name="body_circumference_c_inch">Body circumference C (Inch)*</string>
   <string name="click_here_for_measurement_instruction">Click here for measurement instruction</string>
-  <string name="otp">OTP *</string>
+  <string name="otp">OTP*</string>
   <string name="send">Send</string>
   <string name="login">Login</string>
   <string name="resend">Resend</string>
@@ -460,9 +460,9 @@
   <string name="could_not_verify_otp">Could Not Verify OTP</string>
   <string name="could_not_login">Could Not Login</string>
   <string name="otp_sent_to_your_mobile_number">OTP Sent To Your Mobile Number</string>
-  <string name="date_of_birth">Date Of Birth *</string>
-  <string name="type_of_business_service">Type of Business / Service *</string>
-  <string name="years_in_business_service">Years in Business / Service *</string>
+  <string name="date_of_birth">Date Of Birth*</string>
+  <string name="type_of_business_service">Type of Business / Service*</string>
+  <string name="years_in_business_service">Years in Business / Service*</string>
   <string name="trade_license_number">Trade License Number</string>
   <string name="tin">TIN</string>
   <string name="website_text">Website</string>
@@ -470,4 +470,10 @@
   <string name="owner_info">Owner Info</string>
   <string name="animal_info">Animal Info</string>
   <string name="disease_info">Disease Info</string>
+  <string name="type_of_consultancy_support">Type Of Consultancy Support*</string>
+  <string name="type_of_farm">Type Of Farm*</string>
+  <string name="animals_you_have_or_plan_to_have">Number Of Animals You Have Or Plan To Have</string>
+  <string name="place_of_firm">Place Of Firm</string>
+  <string name="age_of_firm">Age Of Firm*</string>
+  <string name="frequency_of_consultancy">Frequency Of Consultancy*</string>
 </resources>

@@ -4,14 +4,14 @@
   <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
   <string name="already_registered_login">Already registered? Login</string>
   <string name="submit">জমা দিন</string>
-  <string name="name">নাম *</string>
+  <string name="name">নাম*</string>
   <string name="farmer_name">Farmer Name</string>
-  <string name="mobile_number">মোবাইল নম্বর *</string>
+  <string name="mobile_number">মোবাইল নম্বর*</string>
   <string name="email">ইমেইল</string>
   <string name="farm_name">Farm Name</string>
   <string name="farm_type">Farm Type</string>
   <string name="number_of_animal">Number of Animal</string>
-  <string name="address">ঠিকানা *</string>
+  <string name="address">ঠিকানা*</string>
   <string name="title_activity_main2">MainActivity2</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
   <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -431,9 +431,9 @@
   <string name="could_not_verify_otp">OTP যাচাই করতে পারেনি</string>
   <string name="could_not_login">লগইন ব্যর্থ হয়েছে</string>
   <string name="otp_sent_to_your_mobile_number">আপনার মোবাইল নম্বরে OTP পাঠানো হয়েছে</string>
-  <string name="date_of_birth">জন্ম তারিখ *</string>
-  <string name="type_of_business_service">ব্যাবসান ধরন *</string>
-  <string name="years_in_business_service">কত বছর ব্যবসার সাথে জড়িত *</string>
+  <string name="date_of_birth">জন্ম তারিখ*</string>
+  <string name="type_of_business_service">ব্যাবসান ধরন*</string>
+  <string name="years_in_business_service">কত বছর ব্যবসার সাথে জড়িত*</string>
   <string name="trade_license_number">ট্রেড লাইসেন্স নাম্বার</string>
   <string name="tin">টিন</string>
   <string name="website_text">ওয়েবসাইট</string>
@@ -441,4 +441,10 @@
   <string name="owner_info">মালিকের তথ্য</string>
   <string name="animal_info">প্রাণির তথ্য</string>
   <string name="disease_info">রোগের তথ্য</string>
+  <string name="type_of_consultancy_support">পরামর্শ সেবার ধরণ*</string>
+  <string name="type_of_farm">খামারের ধরণ*</string>
+  <string name="animals_you_have_or_plan_to_have">আপনার খামারে কতগুলো প্রাণী আছে বা থাকতে পারে?</string>
+  <string name="place_of_firm">খামারের অবস্থান</string>
+  <string name="age_of_firm">খামারের বয়স*</string>
+  <string name="frequency_of_consultancy">কত বার পরামর্শ সেবা নিতে চান?*</string>
 </resources>
