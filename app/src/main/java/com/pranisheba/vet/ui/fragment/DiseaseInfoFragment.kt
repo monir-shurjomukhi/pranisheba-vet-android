@@ -286,9 +286,6 @@ class DiseaseInfoFragment : Fragment() {
       }
     }
 
-    when(activity) {
-      is TreatmentFormActivity -> (activity as TreatmentFormActivity).showPreviousInfo()
-      is ConsultancyFormActivity -> (activity as ConsultancyFormActivity).showPreviousInfo()
-    }
+    (activity as TreatmentFormActivity).showPreviousInfo()
   }
 }

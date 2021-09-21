@@ -9,19 +9,20 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentFarmInfoBinding
+import com.pranisheba.vet.databinding.FragmentFarmPlanningBinding
 import com.pranisheba.vet.ui.activity.ConsultancyFormActivity
 import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
-class FarmInfoFragment : Fragment() {
+class FarmPlanningFragment : Fragment() {
 
-  private lateinit var binding: FragmentFarmInfoBinding
+  private lateinit var binding: FragmentFarmPlanningBinding
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentFarmInfoBinding.inflate(inflater, container, false)
+    binding = FragmentFarmPlanningBinding.inflate(inflater, container, false)
     return binding.root
   }
 

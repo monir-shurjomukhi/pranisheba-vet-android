@@ -5,7 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:clipToPadding="true"
-  tools:context=".ui.fragment.FarmInfoFragment">
+  tools:context=".ui.fragment.FarmPlanningFragment">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
