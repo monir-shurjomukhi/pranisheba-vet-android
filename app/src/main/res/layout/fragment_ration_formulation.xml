@@ -5,7 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:clipToPadding="true"
-  tools:context=".ui.fragment.FarmPlanningFragment">
+  tools:context=".ui.fragment.RationFormulationFragment">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -17,7 +17,7 @@
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:hint="@string/type_of_animals_or_stages"
+      android:hint="@string/type_of_animals_or_stages_of_animals"
       android:labelFor="@id/typeOfAnimalTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
@@ -32,21 +32,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/housingStyleLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+      android:id="@+id/milkProductionLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:hint="@string/housing_style"
-      android:labelFor="@id/housingStyleTextView"
+      android:layout_marginTop="8dp"
+      android:hint="@string/milk_production_and_animal_number"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/typeOfAnimalLayout">
 
-      <AutoCompleteTextView
-        android:id="@+id/housingStyleTextView"
+      <com.google.android.material.textfield.TextInputEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textCapWords"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,7 +61,7 @@
       android:labelFor="@id/breedTypeTextView"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/housingStyleLayout">
+      app:layout_constraintTop_toBottomOf="@id/milkProductionLayout">
 
       <AutoCompleteTextView
         android:id="@+id/breedTypeTextView"

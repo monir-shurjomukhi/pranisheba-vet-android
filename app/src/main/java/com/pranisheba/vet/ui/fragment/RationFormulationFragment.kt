@@ -6,60 +6,104 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
-import com.pranisheba.vet.databinding.FragmentFarmPlanningBinding
+import com.pranisheba.vet.databinding.FragmentRationFormulationBinding
 
 
 class RationFormulationFragment : Fragment() {
 
-  private lateinit var binding: FragmentFarmPlanningBinding
+  private lateinit var binding: FragmentRationFormulationBinding
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentFarmPlanningBinding.inflate(inflater, container, false)
+    binding = FragmentRationFormulationBinding.inflate(inflater, container, false)
     return binding.root
   }
 
-  fun getFarmLandSizeLayout(): TextInputLayout {
-    return binding.farmLandSizeLayout
+  fun getTypeOfAnimalLayout(): TextInputLayout {
+    return binding.typeOfAnimalLayout
   }
 
-  fun getHousingStyleLayout(): TextInputLayout {
-    return binding.housingStyleLayout
+  fun getMilkProductionLayout(): TextInputLayout {
+    return binding.milkProductionLayout
   }
 
-  fun getTypeOfShadesLayout(): TextInputLayout {
-    return binding.typeOfShadesLayout
+  fun getBreedTypeLayout(): TextInputLayout {
+    return binding.breedTypeLayout
   }
 
-  fun getTypeOfHousesLayout(): TextInputLayout {
-    return binding.typeOfHousesLayout
+  fun getAnimalBreedLayout(): TextInputLayout {
+    return binding.animalBreedLayout
   }
 
-  fun getInvestmentLayout(): TextInputLayout {
-    return binding.investmentLayout
+  fun getNumberOfAnimalsLayout(): TextInputLayout {
+    return binding.numberOfAnimalsLayout
+  }
+
+  fun getTypeOfFeedLayout(): TextInputLayout {
+    return binding.typeOfFeedLayout
+  }
+
+  fun getTypeOfGreenGrassLayout(): TextInputLayout {
+    return binding.typeOfGreenGrassLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.farmLandSizeLayout.setOnKeyListener(null)
-    binding.housingStyleLayout.setOnKeyListener(null)
-    binding.typeOfShadesLayout.setOnKeyListener(null)
-    binding.typeOfHousesLayout.setOnKeyListener(null)
-    binding.investmentLayout.setOnKeyListener(null)
+    binding.typeOfAnimalLayout.setOnKeyListener(null)
+    binding.breedTypeLayout.setOnKeyListener(null)
+    binding.animalBreedLayout.setOnKeyListener(null)
+    binding.typeOfFeedLayout.setOnKeyListener(null)
+    binding.typeOfGreenGrassLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("≤2", "≤3", "≤4", "≤5", "≤10", "≤15", "≤20")
+        listOf(
+          "Dairy",
+          "Beef",
+          "Pregnant",
+          "Heifer",
+          "Calf",
+          "Horse",
+          "Horse",
+          "Kid",
+          "Sheep",
+          "Dog",
+          "Puppy",
+          "Broiler",
+          "Chick",
+          "Laying",
+          "Growing",
+          "Turkey",
+          "Duck",
+          "Duckling",
+          "Goose",
+          "Guinea Fowl",
+          "Pigeon"
+        )
       ).also { adapter ->
-        binding.farmLandSizeTextView.setAdapter(adapter)
-        binding.farmLandSizeTextView.inputType = InputType.TYPE_NULL
+        binding.typeOfAnimalTextView.setAdapter(adapter)
+        binding.typeOfAnimalTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf(
+          "Local", "Cross Breed", "Foreign"
+        )
+      ).also { adapter ->
+        binding.breedTypeTextView.setAdapter(adapter)
+        binding.breedTypeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -71,8 +115,8 @@ class RationFormulationFragment : Fragment() {
           "No Data Available"
         )
       ).also { adapter ->
-        binding.housingStyleTextView.setAdapter(adapter)
-        binding.housingStyleTextView.inputType = InputType.TYPE_NULL
+        binding.animalBreedTextView.setAdapter(adapter)
+        binding.animalBreedTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -81,37 +125,26 @@ class RationFormulationFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Cow, Calf, heifer, & Pregnant Cowshed",
-          "Cow, Calf, & Pregnant Cowshed",
-          "Cow & Calf Shed",
-          "Common Shed",
+          "Own Arrangement",
+          "Supplier Feed & Hygienic Water",
+          "No Specific Way For Feed & Watering",
           "Don’t Know"
         )
       ).also { adapter ->
-        binding.typeOfShadesTextView.setAdapter(adapter)
-        binding.typeOfShadesTextView.inputType = InputType.TYPE_NULL
+        binding.typeOfFeedTextView.setAdapter(adapter)
+        binding.typeOfFeedTextView.inputType = InputType.TYPE_NULL
       }
     }
 
     context?.let {
       ArrayAdapter(
         it,
-        android.R.layout.simple_list_item_1,
-        listOf("Cow", "Milk & Storehouse", "Cow & Storehouse", "Only Common House", "Don’t Know")
+        android.R.layout.simple_list_item_multiple_choice,
+        listOf("Napier", "Maize", "Jumbo", "German", "Kalai", "Para", "Bangla", "Mix Supply", "Don't Know")
       ).also { adapter ->
-        binding.typeOfHousesTextView.setAdapter(adapter)
-        binding.typeOfHousesTextView.inputType = InputType.TYPE_NULL
-      }
-    }
-
-    context?.let {
-      ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_1,
-        listOf("≤2", "≤3", "≤4", "≤5", "≤10", "≤15", "≤20", "More")
-      ).also { adapter ->
-        binding.investmentTextView.setAdapter(adapter)
-        binding.investmentTextView.inputType = InputType.TYPE_NULL
+        binding.typeOfGreenGrassTextView.setAdapter(adapter)
+        binding.typeOfGreenGrassTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())
+        binding.typeOfGreenGrassTextView.inputType = InputType.TYPE_NULL
       }
     }
   }

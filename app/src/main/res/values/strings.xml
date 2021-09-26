@@ -483,7 +483,8 @@
   <string name="type_of_shades">Type Of Shades</string>
   <string name="type_of_houses">Type Of Houses</string>
   <string name="investment_in_lac">Investment In Lac</string>
-  <string name="type_of_animals_or_stages">Type Of Animals Or Stages</string>
+  <string name="type_of_animals_or_stages_of_animals">Type Of Animals Or Stages Of Animals</string>
   <string name="type_of_feeds_available">Type Of Feeds Available</string>
   <string name="type_of_green_grasses_available">Type Of Green Grasses Available</string>
+  <string name="milk_production_and_animal_number">Milk Production And Animal Number</string>
 </resources>
