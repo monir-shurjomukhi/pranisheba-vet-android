@@ -12,6 +12,7 @@
   <string name="farm_name">Farm Name</string>
   <string name="farm_type">Farm Type</string>
   <string name="number_of_animal">Number of Animal</string>
+  <string name="number_of_animals">Number Of Animals</string>
   <string name="address">Address*</string>
   <string name="title_activity_main2">MainActivity2</string>
   <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -482,4 +483,7 @@
   <string name="type_of_shades">Type Of Shades</string>
   <string name="type_of_houses">Type Of Houses</string>
   <string name="investment_in_lac">Investment In Lac</string>
+  <string name="type_of_animals_or_stages">Type Of Animals Or Stages</string>
+  <string name="type_of_feeds_available">Type Of Feeds Available</string>
+  <string name="type_of_green_grasses_available">Type Of Green Grasses Available</string>
 </resources>
