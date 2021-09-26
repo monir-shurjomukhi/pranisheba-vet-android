@@ -448,4 +448,9 @@
   <string name="age_of_firm">খামারের বয়স*</string>
   <string name="frequency_of_consultancy">কত বার পরামর্শ সেবা নিতে চান?*</string>
   <string name="farm_info">খামারের তথ্য</string>
+  <string name="farm_land_size_in_acres">খামারের জমির পরিমাণ (একর)</string>
+  <string name="housing_style">ঘরের ধরন</string>
+  <string name="type_of_shades">শেডের ধরন</string>
+  <string name="type_of_houses">ঘরের ধরন</string>
+  <string name="investment_in_lac">বিনিয়োগের পরিমাণ (লাখ) </string>
 </resources>

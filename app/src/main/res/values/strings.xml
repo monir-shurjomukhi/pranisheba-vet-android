@@ -477,4 +477,9 @@
   <string name="age_of_firm">Age Of Firm*</string>
   <string name="frequency_of_consultancy">Frequency Of Consultancy*</string>
   <string name="farm_info">Farm Info</string>
+  <string name="farm_land_size_in_acres">Farm Land Size In Acres</string>
+  <string name="housing_style">Housing Style</string>
+  <string name="type_of_shades">Type Of Shades</string>
+  <string name="type_of_houses">Type Of Houses</string>
+  <string name="investment_in_lac">Investment In Lac</string>
 </resources>

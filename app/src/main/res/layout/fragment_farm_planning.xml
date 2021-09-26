@@ -13,117 +13,98 @@
     android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfConsultancyLayout"
+      android:id="@+id/farmLandSizeLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:hint="@string/type_of_consultancy_support"
-      android:labelFor="@id/typeOfConsultancyTextView"
+      android:hint="@string/farm_land_size_in_acres"
+      android:labelFor="@id/farmLandSizeTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
       <AutoCompleteTextView
-        android:id="@+id/typeOfConsultancyTextView"
+        android:id="@+id/farmLandSizeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfFarmLayout"
+      android:id="@+id/housingStyleLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:hint="@string/type_of_farm"
-      android:labelFor="@id/typeOfFarmTextView"
+      android:hint="@string/housing_style"
+      android:labelFor="@id/housingStyleTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfConsultancyLayout">
+      app:layout_constraintTop_toBottomOf="@id/farmLandSizeLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/typeOfFarmTextView"
+        android:id="@+id/housingStyleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/numberOfAnimalsLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/animals_you_have_or_plan_to_have"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfFarmLayout">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textCapWords"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/placeOfFarmLayout"
+      android:id="@+id/typeOfShadesLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/place_of_firm"
-      android:labelFor="@id/placeOfFarmTextView"
+      android:hint="@string/type_of_shades"
       app:errorEnabled="true"
+      android:labelFor="@id/typeOfShadesTextView"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/numberOfAnimalsLayout">
+      app:layout_constraintTop_toBottomOf="@id/housingStyleLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/placeOfFarmTextView"
+        android:id="@+id/typeOfShadesTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/ageOfFirmLayout"
+      android:id="@+id/typeOfHousesLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/age_of_firm"
-      android:labelFor="@id/ageOfFirmTextView"
+      android:hint="@string/type_of_houses"
+      android:labelFor="@id/typeOfHousesTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/placeOfFarmLayout">
+      app:layout_constraintTop_toBottomOf="@id/typeOfShadesLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/ageOfFirmTextView"
+        android:id="@+id/typeOfHousesTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/frequencyOfConsultancyLayout"
+      android:id="@+id/investmentLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/frequency_of_consultancy"
-      android:labelFor="@id/frequencyOfConsultancyTextView"
+      android:hint="@string/investment_in_lac"
+      android:labelFor="@id/investmentTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/ageOfFirmLayout">
+      app:layout_constraintTop_toBottomOf="@id/typeOfHousesLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/frequencyOfConsultancyTextView"
+        android:id="@+id/investmentTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />

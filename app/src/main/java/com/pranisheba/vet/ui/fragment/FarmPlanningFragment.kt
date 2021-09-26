@@ -8,10 +8,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
-import com.pranisheba.vet.databinding.FragmentFarmInfoBinding
 import com.pranisheba.vet.databinding.FragmentFarmPlanningBinding
-import com.pranisheba.vet.ui.activity.ConsultancyFormActivity
-import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
 class FarmPlanningFragment : Fragment() {
@@ -26,57 +23,43 @@ class FarmPlanningFragment : Fragment() {
     return binding.root
   }
 
-  fun getTypeOfConsultancyLayout(): TextInputLayout {
-    return binding.typeOfConsultancyLayout
+  fun getFarmLandSizeLayout(): TextInputLayout {
+    return binding.farmLandSizeLayout
   }
 
-  fun getTypeOfFarmLayout(): TextInputLayout {
-    return binding.typeOfFarmLayout
+  fun getHousingStyleLayout(): TextInputLayout {
+    return binding.housingStyleLayout
   }
 
-  fun getNumberOfAnimalsLayout(): TextInputLayout {
-    return binding.numberOfAnimalsLayout
+  fun getTypeOfShadesLayout(): TextInputLayout {
+    return binding.typeOfShadesLayout
   }
 
-  fun getPlaceOfFarmLayout(): TextInputLayout {
-    return binding.placeOfFarmLayout
+  fun getTypeOfHousesLayout(): TextInputLayout {
+    return binding.typeOfHousesLayout
   }
 
-  fun getAgeOfFirmLayout(): TextInputLayout {
-    return binding.ageOfFirmLayout
-  }
-
-  fun getFrequencyOfConsultancyLayout(): TextInputLayout {
-    return binding.frequencyOfConsultancyLayout
+  fun getInvestmentLayout(): TextInputLayout {
+    return binding.investmentLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.typeOfConsultancyLayout.setOnKeyListener(null)
-    binding.typeOfFarmLayout.setOnKeyListener(null)
-    binding.placeOfFarmLayout.setOnKeyListener(null)
-    binding.ageOfFirmLayout.setOnKeyListener(null)
-    binding.frequencyOfConsultancyLayout.setOnKeyListener(null)
+    binding.farmLandSizeLayout.setOnKeyListener(null)
+    binding.housingStyleLayout.setOnKeyListener(null)
+    binding.typeOfShadesLayout.setOnKeyListener(null)
+    binding.typeOfHousesLayout.setOnKeyListener(null)
+    binding.investmentLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf(
-          "Farm Planning(Number of animals ≤ 20)",
-          "Farm Planning(Number of animals > 20)",
-          "Ration Formulation",
-          "Green Grass Production and Management",
-          "Silage production and management",
-          "Farm Hygiene & Biosecurity Management",
-          "Deworming & Vaccination Scheduling",
-          "Reproduction and Its management",
-          "Farm Management"
-        )
+        listOf("≤2", "≤3", "≤4", "≤5", "≤10", "≤15", "≤20")
       ).also { adapter ->
-        binding.typeOfConsultancyTextView.setAdapter(adapter)
-        binding.typeOfConsultancyTextView.inputType = InputType.TYPE_NULL
+        binding.farmLandSizeTextView.setAdapter(adapter)
+        binding.farmLandSizeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -85,28 +68,11 @@ class FarmPlanningFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Dairy",
-          "Beef",
-          "Buffalo Dairy",
-          "Sheep",
-          "Goat",
-          "Goat Dairy",
-          "Horse",
-          "Dog",
-          "Cat",
-          "Broiler",
-          "Layer",
-          "Quail",
-          "Duck",
-          "Turkey",
-          "Pigeon",
-          "Goose",
-          "Guinea Fowl",
-          "Others"
+          "No Data Available"
         )
       ).also { adapter ->
-        binding.typeOfFarmTextView.setAdapter(adapter)
-        binding.typeOfFarmTextView.inputType = InputType.TYPE_NULL
+        binding.housingStyleTextView.setAdapter(adapter)
+        binding.housingStyleTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -114,10 +80,16 @@ class FarmPlanningFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Urban", "Semi Urban", "Agricultural Land", "Leased Land")
+        listOf(
+          "Cow, Calf, heifer, & Pregnant Cowshed",
+          "Cow, Calf, & Pregnant Cowshed",
+          "Cow & Calf Shed",
+          "Common Shed",
+          "Don’t Know"
+        )
       ).also { adapter ->
-        binding.placeOfFarmTextView.setAdapter(adapter)
-        binding.placeOfFarmTextView.inputType = InputType.TYPE_NULL
+        binding.typeOfShadesTextView.setAdapter(adapter)
+        binding.typeOfShadesTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -125,10 +97,10 @@ class FarmPlanningFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("New", "Less Than 1 Year", "1 to 2 Years", "2 to 5 Years", "More Than 5 Years")
+        listOf("Cow", "Milk & Storehouse", "Cow & Storehouse", "Only Common House", "Don’t Know")
       ).also { adapter ->
-        binding.ageOfFirmTextView.setAdapter(adapter)
-        binding.ageOfFirmTextView.inputType = InputType.TYPE_NULL
+        binding.typeOfHousesTextView.setAdapter(adapter)
+        binding.typeOfHousesTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -136,13 +108,11 @@ class FarmPlanningFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("One Time", "Yearly")
+        listOf("≤2", "≤3", "≤4", "≤5", "≤10", "≤15", "≤20", "More")
       ).also { adapter ->
-        binding.frequencyOfConsultancyTextView.setAdapter(adapter)
-        binding.frequencyOfConsultancyTextView.inputType = InputType.TYPE_NULL
+        binding.investmentTextView.setAdapter(adapter)
+        binding.investmentTextView.inputType = InputType.TYPE_NULL
       }
     }
-
-    (activity as ConsultancyFormActivity).showPreviousInfo()
   }
 }
