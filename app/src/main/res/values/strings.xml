@@ -487,4 +487,8 @@
   <string name="type_of_feeds_available">Type Of Feeds Available</string>
   <string name="type_of_green_grasses_available">Type Of Green Grasses Available</string>
   <string name="milk_production_and_animal_number">Milk Production And Animal Number</string>
+  <string name="pregnant">Pregnant</string>
+  <string name="milking">Milking</string>
+  <string name="heifer">Heifer</string>
+  <string name="calves">Calves</string>
 </resources>
