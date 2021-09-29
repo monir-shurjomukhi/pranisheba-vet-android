@@ -13,7 +13,7 @@ import com.pranisheba.vet.databinding.FragmentGreenGrassProductionBinding
 import com.pranisheba.vet.databinding.FragmentRationFormulationBinding
 
 
-class GreenGrassProductionFragment : Fragment() {
+class DewormingVaccinationFragment : Fragment() {
 
   private lateinit var binding: FragmentGreenGrassProductionBinding
 
