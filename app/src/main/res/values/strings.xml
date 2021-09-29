@@ -492,4 +492,10 @@
   <string name="heifer">Heifer</string>
   <string name="calves">Calves</string>
   <string name="male">Male</string>
+  <string name="land_size_in_decimal">Land Size In Decimal</string>
+  <string name="type_of_green_grass">Type Of Green Grass</string>
+  <string name="soil_quality_and_texture">Soil Quality And Texture</string>
+  <string name="land_status">Land Status</string>
+  <string name="irrigation_system_for_grass_cultivation">Irrigation System For Grass Cultivation</string>
+  <string name="grass_production_purposes">Grass Production Purposes</string>
 </resources>
