@@ -227,7 +227,7 @@
       app:layout_constraintTop_toBottomOf="@id/irrigationSystemLayout"
       tools:visibility="visible">
 
-      <MultiAutoCompleteTextView
+      <AutoCompleteTextView
         android:id="@+id/grassProductionPurposesTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
