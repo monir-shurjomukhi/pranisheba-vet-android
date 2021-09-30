@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
-import com.pranisheba.vet.databinding.*
+import com.pranisheba.vet.databinding.FragmentHygieneBiosecurityBinding
 
 
 class HygieneBiosecurityFragment : Fragment() {
@@ -114,7 +113,13 @@ class HygieneBiosecurityFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Water Source Nearby", "Public Place Nearby", "Highway Nearby", "Farm Nearby", "Don't Know")
+        listOf(
+          "Water Source Nearby",
+          "Public Place Nearby",
+          "Highway Nearby",
+          "Farm Nearby",
+          "Don't Know"
+        )
       ).also { adapter ->
         binding.farmSurroundingTextView.setAdapter(adapter)
         binding.farmSurroundingTextView.inputType = InputType.TYPE_NULL

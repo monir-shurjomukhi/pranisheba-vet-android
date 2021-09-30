@@ -7,5 +7,5 @@ data class Login(
   @SerializedName("password") var password: String?,
   @SerializedName("token") var token: String?
 ) {
-  constructor(mobileNumber: String, password: String): this(mobileNumber, password, null)
+  constructor(mobileNumber: String, password: String) : this(mobileNumber, password, null)
 }

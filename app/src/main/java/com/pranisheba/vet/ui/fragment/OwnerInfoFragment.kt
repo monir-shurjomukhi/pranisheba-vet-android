@@ -23,30 +23,30 @@ class OwnerInfoFragment : Fragment() {
     return binding.root
   }
 
-  fun getNameLayout() : TextInputLayout {
+  fun getNameLayout(): TextInputLayout {
     return binding.nameLayout
   }
 
-  fun getMobileLayout() : TextInputLayout {
+  fun getMobileLayout(): TextInputLayout {
     return binding.mobileLayout
   }
 
-  fun getEmailLayout() : TextInputLayout {
+  fun getEmailLayout(): TextInputLayout {
     return binding.emailLayout
   }
 
-  fun getFarmNameLayout() : TextInputLayout {
+  fun getFarmNameLayout(): TextInputLayout {
     return binding.farmNameLayout
   }
 
-  fun getAddressLayout() : TextInputLayout {
+  fun getAddressLayout(): TextInputLayout {
     return binding.addressLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    when(activity) {
+    when (activity) {
       is TreatmentFormActivity -> (activity as TreatmentFormActivity).showPreviousInfo()
       is ConsultancyFormActivity -> (activity as ConsultancyFormActivity).showPreviousInfo()
     }

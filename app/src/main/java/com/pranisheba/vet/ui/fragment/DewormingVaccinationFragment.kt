@@ -10,8 +10,6 @@ import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDewormingVaccinationBinding
-import com.pranisheba.vet.databinding.FragmentGreenGrassProductionBinding
-import com.pranisheba.vet.databinding.FragmentRationFormulationBinding
 
 
 class DewormingVaccinationFragment : Fragment() {

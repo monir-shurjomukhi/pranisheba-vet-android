@@ -9,5 +9,5 @@ data class UpdateLogin(
   @SerializedName("success") val success: Boolean?,
   @SerializedName("return_code") val returnCode: String?
 ) {
-  constructor(id: Int, mobileNumber: String, otp: String): this(id, mobileNumber, otp, null, null)
+  constructor(id: Int, mobileNumber: String, otp: String) : this(id, mobileNumber, otp, null, null)
 }

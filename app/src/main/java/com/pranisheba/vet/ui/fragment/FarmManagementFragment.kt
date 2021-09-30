@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
-import com.pranisheba.vet.databinding.*
+import com.pranisheba.vet.databinding.FragmentFarmManagementBinding
 
 
 class FarmManagementFragment : Fragment() {
@@ -83,7 +82,19 @@ class FarmManagementFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Pure Local", "25", "37.5", "50", "62.5", "68.75", "75", "84.37", "87.5", "100", "Don't Know")
+        listOf(
+          "Pure Local",
+          "25",
+          "37.5",
+          "50",
+          "62.5",
+          "68.75",
+          "75",
+          "84.37",
+          "87.5",
+          "100",
+          "Don't Know"
+        )
       ).also { adapter ->
         binding.foreignBloodLevelTextView.setAdapter(adapter)
         binding.foreignBloodLevelTextView.inputType = InputType.TYPE_NULL

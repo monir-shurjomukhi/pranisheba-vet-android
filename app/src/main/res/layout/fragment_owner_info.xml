@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="true"
-    tools:context=".ui.fragment.OwnerInfoFragment">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:clipToPadding="true"
+  tools:context=".ui.fragment.OwnerInfoFragment">
 
   <androidx.constraintlayout.widget.ConstraintLayout
-      android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/nameLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:padding="16dp">
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/name"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+      android:hint="@string/name"
+      app:errorEnabled="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textPersonName"
-          android:textSize="16sp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobileLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/mobile_number"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+      android:id="@+id/mobileLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:hint="@string/mobile_number"
+      app:errorEnabled="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/nameLayout"
+      app:layout_constraintVertical_chainStyle="packed">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="phone"
-          android:textSize="16sp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/email"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mobileLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+      android:id="@+id/emailLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:hint="@string/email"
+      app:errorEnabled="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/mobileLayout"
+      app:layout_constraintVertical_chainStyle="packed">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textEmailAddress"
-          android:textSize="16sp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/farmNameLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/farm_name"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+      android:id="@+id/farmNameLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:hint="@string/farm_name"
+      app:errorEnabled="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/emailLayout"
+      app:layout_constraintVertical_chainStyle="packed">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="text"
-          android:textSize="16sp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/addressLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/address"
-        app:errorEnabled="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/farmNameLayout"
-        app:layout_constraintVertical_chainStyle="packed">
+      android:id="@+id/addressLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:hint="@string/address"
+      app:errorEnabled="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/farmNameLayout"
+      app:layout_constraintVertical_chainStyle="packed">
 
       <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="120dp"
-          android:gravity="start"
-          android:inputType="textPostalAddress"
-          android:textSize="16sp" />
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="start"
+        android:inputType="textPostalAddress"
+        android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
   </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

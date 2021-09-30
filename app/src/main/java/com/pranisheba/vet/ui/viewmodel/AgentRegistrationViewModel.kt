@@ -19,23 +19,24 @@ class AgentRegistrationViewModel(application: Application) : BaseViewModel(appli
 
   fun registerAgent(agentRegistrationData: AgentRegistrationData) {
     progress.value = true
-    apiClientAdmin?.registerAgent(agentRegistrationData)?.enqueue(object : Callback<AgentRegistration> {
-      override fun onResponse(
-        call: Call<AgentRegistration>,
-        response: Response<AgentRegistration>
-      ) {
-        if (response.isSuccessful) _agentRegistration.value = response.body()
-        else message.value = R.string.could_not_register_agent
+    apiClientAdmin?.registerAgent(agentRegistrationData)
+      ?.enqueue(object : Callback<AgentRegistration> {
+        override fun onResponse(
+          call: Call<AgentRegistration>,
+          response: Response<AgentRegistration>
+        ) {
+          if (response.isSuccessful) _agentRegistration.value = response.body()
+          else message.value = R.string.could_not_register_agent
 
-        progress.value = false
-      }
+          progress.value = false
+        }
 
-      override fun onFailure(call: Call<AgentRegistration>, t: Throwable) {
-        Log.e(TAG, "onFailure: ${t.message}", t)
-        message.value = R.string.could_not_register_agent
-        progress.value = false
-      }
-    })
+        override fun onFailure(call: Call<AgentRegistration>, t: Throwable) {
+          Log.e(TAG, "onFailure: ${t.message}", t)
+          message.value = R.string.could_not_register_agent
+          progress.value = false
+        }
+      })
   }
 
   companion object {

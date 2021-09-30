@@ -13,5 +13,6 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
   val message = MutableLiveData<Int>()
   val preference = VetPreference(application)
   val apiClient = ApiClient().getApiClient(BuildConfig.BASE_URL)?.create(ApiInterface::class.java)
-  val apiClientAdmin = ApiClient().getApiClient(BuildConfig.BASE_URL_ADMIN)?.create(ApiInterface::class.java)
+  val apiClientAdmin =
+    ApiClient().getApiClient(BuildConfig.BASE_URL_ADMIN)?.create(ApiInterface::class.java)
 }

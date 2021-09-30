@@ -10,126 +10,126 @@
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:layout_marginBottom="16dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:clipToPadding="true"
     app:layout_constraintBottom_toTopOf="@id/button_next"
-    android:clipToPadding="true">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp">
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/targetAmountLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/target_amount_in_metric_ton"
+        android:labelFor="@id/targetAmountTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+          android:id="@+id/targetAmountTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeOfSilageLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_of_silage_to_produce"
+        android:labelFor="@id/typeOfSilageTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/targetAmountLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/typeOfSilageTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/greenGrassLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/green_grass_for_silage"
+        android:labelFor="@id/greenGrassTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeOfSilageLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/greenGrassTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ageOfGreenGrassLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/age_of_green_grass"
+        android:labelFor="@id/ageOfGreenGrassTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greenGrassLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/ageOfGreenGrassTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/placeForSilageLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/place_for_making_silage"
+        android:labelFor="@id/placeForSilageTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ageOfGreenGrassLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/placeForSilageTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/button_next"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="16dp">
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/targetAmountLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/target_amount_in_metric_ton"
-      android:labelFor="@id/targetAmountTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
-
-      <AutoCompleteTextView
-        android:id="@+id/targetAmountTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfSilageLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/type_of_silage_to_produce"
-      android:labelFor="@id/typeOfSilageTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/targetAmountLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/typeOfSilageTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/greenGrassLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/green_grass_for_silage"
-      android:labelFor="@id/greenGrassTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfSilageLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/greenGrassTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/ageOfGreenGrassLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/age_of_green_grass"
-      android:labelFor="@id/ageOfGreenGrassTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/greenGrassLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/ageOfGreenGrassTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/placeForSilageLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/place_for_making_silage"
-      android:labelFor="@id/placeForSilageTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/ageOfGreenGrassLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/placeForSilageTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-  </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
-
-<com.google.android.material.floatingactionbutton.FloatingActionButton
-android:id="@+id/button_next"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_margin="@dimen/fab_margin"
-android:backgroundTint="@color/accent"
-android:src="@drawable/ic_check"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:tint="@android:color/white" />
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_margin="@dimen/fab_margin"
+    android:backgroundTint="@color/accent"
+    android:src="@drawable/ic_check"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

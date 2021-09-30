@@ -10,7 +10,7 @@ import com.pranisheba.vet.util.setLocale
 
 class SplashActivity : AppCompatActivity() {
 
-  private lateinit var preference : VetPreference
+  private lateinit var preference: VetPreference
   private lateinit var launchIntent: Intent
 
   override fun onCreate(savedInstanceState: Bundle?) {

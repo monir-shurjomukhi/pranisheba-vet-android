@@ -16,6 +16,7 @@ import com.pranisheba.vet.ui.viewmodel.HomeViewModel
 class HomeFragment : Fragment() {
 
   private var _binding: FragmentHomeBinding? = null
+
   // This property is only valid between onCreateView and
   // onDestroyView.
   private val binding get() = _binding!!
@@ -57,7 +58,7 @@ class HomeFragment : Fragment() {
     }
 
     binding.weightMeasurementCardView.setOnClickListener {
-        startActivity(Intent(context, WeightMeasurementActivity::class.java))
+      startActivity(Intent(context, WeightMeasurementActivity::class.java))
     }
 
     binding.serviceReceivingFormCardView.setOnClickListener {

@@ -140,7 +140,17 @@ class RationFormulationFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_multiple_choice,
-        listOf("Napier", "Maize", "Jumbo", "German", "Kalai", "Para", "Bangla", "Mix Supply", "Don't Know")
+        listOf(
+          "Napier",
+          "Maize",
+          "Jumbo",
+          "German",
+          "Kalai",
+          "Para",
+          "Bangla",
+          "Mix Supply",
+          "Don't Know"
+        )
       ).also { adapter ->
         binding.typeOfGreenGrassTextView.setAdapter(adapter)
         binding.typeOfGreenGrassTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())

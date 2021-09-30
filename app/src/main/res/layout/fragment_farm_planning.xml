@@ -10,116 +10,116 @@
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:layout_marginBottom="16dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:clipToPadding="true"
     app:layout_constraintBottom_toTopOf="@id/button_next"
-    android:clipToPadding="true">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/farmLandSizeLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:hint="@string/farm_land_size_in_acres"
-      android:labelFor="@id/farmLandSizeTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      android:padding="16dp">
 
-      <AutoCompleteTextView
-        android:id="@+id/farmLandSizeTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farmLandSizeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:hint="@string/farm_land_size_in_acres"
+        android:labelFor="@id/farmLandSizeTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/housingStyleLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/housing_style"
-      android:labelFor="@id/housingStyleTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/farmLandSizeLayout">
+        <AutoCompleteTextView
+          android:id="@+id/farmLandSizeTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/housingStyleTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/housingStyleLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:hint="@string/housing_style"
+        android:labelFor="@id/housingStyleTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/farmLandSizeLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfShadesLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/type_of_shades"
-      app:errorEnabled="true"
-      android:labelFor="@id/typeOfShadesTextView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/housingStyleLayout">
+        <AutoCompleteTextView
+          android:id="@+id/housingStyleTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/typeOfShadesTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeOfShadesLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_of_shades"
+        android:labelFor="@id/typeOfShadesTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/housingStyleLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfHousesLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/type_of_houses"
-      android:labelFor="@id/typeOfHousesTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfShadesLayout">
+        <AutoCompleteTextView
+          android:id="@+id/typeOfShadesTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/typeOfHousesTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeOfHousesLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_of_houses"
+        android:labelFor="@id/typeOfHousesTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeOfShadesLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/investmentLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/investment_in_lac"
-      android:labelFor="@id/investmentTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfHousesLayout">
+        <AutoCompleteTextView
+          android:id="@+id/typeOfHousesTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/investmentTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/investmentLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-  </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        android:layout_marginTop="8dp"
+        android:hint="@string/investment_in_lac"
+        android:labelFor="@id/investmentTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeOfHousesLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/investmentTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:id="@+id/button_next"

@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentFarmInfoBinding
 import com.pranisheba.vet.ui.activity.ConsultancyFormActivity
-import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
 class FarmInfoFragment : Fragment() {

@@ -170,14 +170,14 @@ class TreatmentFormFragment : Fragment() {
         }
     }
 
-    binding.partOfIotLayout.editText?.addTextChangedListener(object: TextWatcher {
+    binding.partOfIotLayout.editText?.addTextChangedListener(object : TextWatcher {
       override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
       }
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         if (s?.isNotEmpty() == true) {
-          when(s.toString()) {
+          when (s.toString()) {
             "Yes" -> {
               binding.bolusIdLayout.visibility = View.VISIBLE
             }

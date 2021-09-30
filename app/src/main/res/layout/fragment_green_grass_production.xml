@@ -10,247 +10,247 @@
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:layout_marginBottom="16dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:clipToPadding="true"
     app:layout_constraintBottom_toTopOf="@id/button_next"
-    android:clipToPadding="true">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp">
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/milkingLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/milking"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toStartOf="@id/pregnantLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pregnantLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="@string/pregnant"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toStartOf="@id/heiferLayout"
+        app:layout_constraintStart_toEndOf="@id/milkingLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/heiferLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="@string/heifer"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/pregnantLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/calvesLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/calves"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toStartOf="@id/maleLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/milkingLayout"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/maleLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/male"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/calvesLayout"
+        app:layout_constraintTop_toBottomOf="@id/milkingLayout"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/landSizeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/land_size_in_decimal"
+        android:labelFor="@id/landSizeTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calvesLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/landSizeTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeOfGreenGrassLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_of_green_grass"
+        android:labelFor="@id/typeOfGreenGrassTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/landSizeLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/typeOfGreenGrassTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/soilQualityLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/soil_quality_and_texture"
+        android:labelFor="@id/soilQualityTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/typeOfGreenGrassLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/soilQualityTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/landStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/land_status"
+        android:labelFor="@id/landStatusTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soilQualityLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/landStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/irrigationSystemLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/irrigation_system_for_grass_cultivation"
+        android:labelFor="@id/irrigationSystemTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/landStatusLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/irrigationSystemTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/grassProductionPurposesLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/grass_production_purposes"
+        android:labelFor="@id/grassProductionPurposesTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/irrigationSystemLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/grassProductionPurposesTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/button_next"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="16dp">
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/milkingLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/milking"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toStartOf="@id/pregnantLayout"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/pregnantLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:hint="@string/pregnant"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toStartOf="@id/heiferLayout"
-      app:layout_constraintStart_toEndOf="@id/milkingLayout"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/heiferLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:hint="@string/heifer"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@id/pregnantLayout"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/calvesLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/calves"
-      app:errorEnabled="true"
-      android:layout_marginTop="8dp"
-      app:layout_constraintEnd_toStartOf="@id/maleLayout"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/milkingLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/maleLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/male"
-      app:errorEnabled="true"
-      android:layout_marginTop="8dp"
-      android:layout_marginStart="8dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@id/calvesLayout"
-      app:layout_constraintTop_toBottomOf="@id/milkingLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/landSizeLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/land_size_in_decimal"
-      android:labelFor="@id/landSizeTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/calvesLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/landSizeTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfGreenGrassLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/type_of_green_grass"
-      android:labelFor="@id/typeOfGreenGrassTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/landSizeLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/typeOfGreenGrassTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/soilQualityLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/soil_quality_and_texture"
-      android:labelFor="@id/soilQualityTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfGreenGrassLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/soilQualityTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/landStatusLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/land_status"
-      android:labelFor="@id/landStatusTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/soilQualityLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/landStatusTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/irrigationSystemLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/irrigation_system_for_grass_cultivation"
-      android:labelFor="@id/irrigationSystemTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/landStatusLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/irrigationSystemTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/grassProductionPurposesLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/grass_production_purposes"
-      android:labelFor="@id/grassProductionPurposesTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/irrigationSystemLayout">
-
-      <AutoCompleteTextView
-        android:id="@+id/grassProductionPurposesTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-  </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
-
-<com.google.android.material.floatingactionbutton.FloatingActionButton
-android:id="@+id/button_next"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_margin="@dimen/fab_margin"
-android:backgroundTint="@color/accent"
-android:src="@drawable/ic_check"
-app:layout_constraintBottom_toBottomOf="parent"
-app:layout_constraintEnd_toEndOf="parent"
-app:tint="@android:color/white" />
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_margin="@dimen/fab_margin"
+    android:backgroundTint="@color/accent"
+    android:src="@drawable/ic_check"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

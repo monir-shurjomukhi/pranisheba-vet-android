@@ -41,23 +41,23 @@
         android:id="@+id/weightMeasurementImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/weight_measurement"
         android:src="@drawable/cow_weight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/weight_measurement" />
+        app:layout_constraintTop_toTopOf="parent" />
 
       <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/lengthLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/body_length_a_to_b_inch"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:hint="@string/body_length_a_to_b_inch"
         app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/weightMeasurementImageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weightMeasurementImageView">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -71,12 +71,12 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/body_circumference_c_inch"
         android:layout_marginTop="8dp"
+        android:hint="@string/body_circumference_c_inch"
         app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/lengthLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lengthLayout">
 
         <com.google.android.material.textfield.TextInputEditText
           android:layout_width="match_parent"
@@ -94,9 +94,9 @@
         android:text="@string/submit"
         android:textAllCaps="false"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/circumferenceLayout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
   </ScrollView>

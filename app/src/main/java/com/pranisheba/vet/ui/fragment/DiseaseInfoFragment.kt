@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDiseaseInfoBinding
-import com.pranisheba.vet.ui.activity.ConsultancyFormActivity
 import com.pranisheba.vet.ui.activity.TreatmentFormActivity
 
 
@@ -25,71 +24,71 @@ class DiseaseInfoFragment : Fragment() {
     return binding.root
   }
 
-  fun getTemperatureLevelLayout() : TextInputLayout {
+  fun getTemperatureLevelLayout(): TextInputLayout {
     return binding.temperatureLevelLayout
   }
 
-  fun getTemperatureLayout() : TextInputLayout {
+  fun getTemperatureLayout(): TextInputLayout {
     return binding.temperatureLayout
   }
 
-  fun getFeedIntakeLayout() : TextInputLayout {
+  fun getFeedIntakeLayout(): TextInputLayout {
     return binding.feedIntakeLayout
   }
 
-  fun getDefecationStatusLayout() : TextInputLayout {
+  fun getDefecationStatusLayout(): TextInputLayout {
     return binding.defecationStatusLayout
   }
 
-  fun getUrinationStatusLayout() : TextInputLayout {
+  fun getUrinationStatusLayout(): TextInputLayout {
     return binding.urinationStatusLayout
   }
 
-  fun getHairStatusLayout() : TextInputLayout {
+  fun getHairStatusLayout(): TextInputLayout {
     return binding.hairStatusLayout
   }
 
-  fun getSalivationStatusLayout() : TextInputLayout {
+  fun getSalivationStatusLayout(): TextInputLayout {
     return binding.salivationStatusLayout
   }
 
-  fun getPostureStatusLayout() : TextInputLayout {
+  fun getPostureStatusLayout(): TextInputLayout {
     return binding.postureStatusLayout
   }
 
-  fun getMuzzleStatusLayout() : TextInputLayout {
+  fun getMuzzleStatusLayout(): TextInputLayout {
     return binding.muzzleStatusLayout
   }
 
-  fun getSneezingStatusLayout() : TextInputLayout {
+  fun getSneezingStatusLayout(): TextInputLayout {
     return binding.sneezingStatusLayout
   }
 
-  fun getSweatingStatusLayout() : TextInputLayout {
+  fun getSweatingStatusLayout(): TextInputLayout {
     return binding.sweatingStatusLayout
   }
 
-  fun getGestureStatusLayout() : TextInputLayout {
+  fun getGestureStatusLayout(): TextInputLayout {
     return binding.gestureStatusLayout
   }
 
-  fun getFirstTimeLayout() : TextInputLayout {
+  fun getFirstTimeLayout(): TextInputLayout {
     return binding.firstTimeLayout
   }
 
-  fun getSoughtElsewhereLayout() : TextInputLayout {
+  fun getSoughtElsewhereLayout(): TextInputLayout {
     return binding.soughtElsewhereLayout
   }
 
-  fun getProblemDescriptionLayout() : TextInputLayout {
+  fun getProblemDescriptionLayout(): TextInputLayout {
     return binding.problemDescriptionLayout
   }
 
-  fun getOtherAnimalsLayout() : TextInputLayout {
+  fun getOtherAnimalsLayout(): TextInputLayout {
     return binding.otherAnimalsLayout
   }
 
-  fun getEmergencyTypeLayout() : TextInputLayout {
+  fun getEmergencyTypeLayout(): TextInputLayout {
     return binding.emergencyTypeLayout
   }
 

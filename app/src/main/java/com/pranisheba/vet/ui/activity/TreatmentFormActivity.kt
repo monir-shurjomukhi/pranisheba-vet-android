@@ -82,7 +82,8 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     binding.buttonNext.setOnClickListener {
       when (currentStep) {
         0 -> {
-          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val navHostFragment: Fragment? =
+            supportFragmentManager.findFragmentById(R.id.frame_stepper)
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
@@ -96,7 +97,8 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
           validateOwnerInfo(foregroundFragment)
         }
         1 -> {
-          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val navHostFragment: Fragment? =
+            supportFragmentManager.findFragmentById(R.id.frame_stepper)
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
@@ -124,7 +126,8 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
           validateAnimalInfo(foregroundFragment)
         }
         2 -> {
-          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val navHostFragment: Fragment? =
+            supportFragmentManager.findFragmentById(R.id.frame_stepper)
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
@@ -338,7 +341,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
       if (navHostFragment == null) null else navHostFragment.childFragmentManager
         .fragments[0]
 
-    when(foregroundFragment) {
+    when (foregroundFragment) {
       is OwnerInfoFragment -> {
         foregroundFragment.getNameLayout().editText?.setText(name)
         foregroundFragment.getMobileLayout().editText?.setText(mobile)

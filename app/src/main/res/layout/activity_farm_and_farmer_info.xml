@@ -10,204 +10,217 @@
     android:id="@+id/appBarLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
+    android:theme="@style/Theme.PranishebaVet.AppBarOverlay"
     app:layout_constraintEnd_toEndOf="parent"
-    android:theme="@style/Theme.PranishebaVet.AppBarOverlay">
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <androidx.appcompat.widget.Toolbar
       android:id="@+id/toolbar"
-      app:title="@string/farm_and_farmer_s_information"
       android:layout_width="match_parent"
       android:layout_height="?attr/actionBarSize"
       android:background="?attr/colorPrimary"
-      app:popupTheme="@style/Theme.PranishebaVet.PopupOverlay" />
+      app:popupTheme="@style/Theme.PranishebaVet.PopupOverlay"
+      app:title="@string/farm_and_farmer_s_information" />
   </com.google.android.material.appbar.AppBarLayout>
 
   <TextView
     android:id="@+id/farmerInfoTextView"
-    android:text="@string/farmer_s_information"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp"
-    android:textSize="20sp"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/farmer_s_information"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
   <LinearLayout
     android:id="@+id/farmerInfoLayout"
-    app:layout_constraintStart_toStartOf="@id/farmerInfoTextView"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/farmerInfoTextView"
-    android:layout_marginTop="8dp"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
     android:layout_marginEnd="16dp"
     android:orientation="horizontal"
-    android:layout_width="0dp"
     android:weightSum="5"
-    android:layout_height="wrap_content">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/farmerInfoTextView"
+    app:layout_constraintTop_toBottomOf="@id/farmerInfoTextView">
 
     <LinearLayout
       android:layout_width="0dp"
+      android:layout_height="wrap_content"
       android:layout_weight="2"
-      android:orientation="vertical"
-      android:layout_height="wrap_content">
+      android:orientation="vertical">
 
       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/mobile_number_"
-        android:textSize="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textSize="16dp" />
+
       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/name_of_farmer_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textSize="16dp" />
+
       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/name_of_farm_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textSize="16dp" />
+
       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/email_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textSize="16dp" />
+
       <TextView
-        android:text="@string/address_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/address_"
+        android:textSize="16dp" />
     </LinearLayout>
 
     <LinearLayout
       android:layout_width="0dp"
+      android:layout_height="wrap_content"
       android:layout_weight="3"
-      android:orientation="vertical"
-      android:layout_height="wrap_content">
+      android:orientation="vertical">
 
       <TextView
-        tools:text="0123456789"
-        android:textSize="16dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        tools:text="0123456789" />
+
       <TextView
-        tools:text="Abdul Kuddus Boyati"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="Abdul Kuddus Boyati" />
+
       <TextView
-        tools:text="AKB Farm"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="AKB Farm" />
+
       <TextView
-        tools:text="kuddus@boyati.com"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="kuddus@boyati.com" />
+
       <TextView
-        tools:text="Boyati Nagar, West Bengal, India"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="Boyati Nagar, West Bengal, India" />
     </LinearLayout>
   </LinearLayout>
 
   <TextView
     android:id="@+id/farmInfoTextView"
-    android:text="@string/farm_s_information"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/farmerInfoLayout"
-    android:layout_marginTop="16dp"
-    android:layout_marginStart="16dp"
-    android:textSize="20sp"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/farm_s_information"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/farmerInfoLayout" />
 
   <LinearLayout
     android:id="@+id/farmInfoLayout"
-    app:layout_constraintStart_toStartOf="@id/farmInfoTextView"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/farmInfoTextView"
-    android:layout_marginTop="8dp"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
     android:layout_marginEnd="16dp"
     android:orientation="horizontal"
-    android:layout_width="0dp"
     android:weightSum="5"
-    android:layout_height="wrap_content">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/farmInfoTextView"
+    app:layout_constraintTop_toBottomOf="@id/farmInfoTextView">
 
     <LinearLayout
       android:layout_width="0dp"
+      android:layout_height="wrap_content"
       android:layout_weight="2"
-      android:orientation="vertical"
-      android:layout_height="wrap_content">
+      android:orientation="vertical">
 
       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/name_of_farm_"
-        android:textSize="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-      <TextView
-        android:text="@string/type_of_farm_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-      <TextView
-        android:text="@string/number_of_animal_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textSize="16dp" />
 
       <TextView
-        android:text="@string/address_of_farm_"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/type_of_farm_"
+        android:textSize="16dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/number_of_animal_"
+        android:textSize="16dp" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/address_of_farm_"
+        android:textSize="16dp" />
     </LinearLayout>
 
     <LinearLayout
       android:layout_width="0dp"
+      android:layout_height="wrap_content"
       android:layout_weight="3"
-      android:orientation="vertical"
-      android:layout_height="wrap_content">
+      android:orientation="vertical">
 
       <TextView
-        tools:text="AKB Farm"
-        android:textSize="16dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        tools:text="AKB Farm" />
+
       <TextView
-        tools:text="Fattening"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="Fattening" />
+
       <TextView
-        tools:text="42"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="42" />
+
       <TextView
-        tools:text="Boyati Nagar, West Bengal, India"
-        android:textSize="16dp"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16dp"
+        tools:text="Boyati Nagar, West Bengal, India" />
     </LinearLayout>
   </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

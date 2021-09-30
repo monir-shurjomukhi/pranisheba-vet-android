@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
         if (Uri.parse(url).host == "pranishebavet.com.bd" ||
           Uri.parse(url).host == "https://pranishebavet.com.bd" ||
           Uri.parse(url).host == "admin.pranishebavet.com.bd" ||
-          Uri.parse(url).host == "https://admin.pranishebavet.com.bd") {
+          Uri.parse(url).host == "https://admin.pranishebavet.com.bd"
+        ) {
           // This is my web site, so do not override; let my WebView load the page
           return false
         }

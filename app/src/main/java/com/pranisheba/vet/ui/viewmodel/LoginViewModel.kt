@@ -50,8 +50,10 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
       override fun onResponse(call: Call<String>, response: Response<String>) {
         if (response.isSuccessful) {
           if (response.body().equals(" 1")) {
-            val updateLogin = UpdateLogin(insertCheck.value?.id!!,
-              insertCheck.value?.mobileNumber!!, otpData.otp.toString())
+            val updateLogin = UpdateLogin(
+              insertCheck.value?.id!!,
+              insertCheck.value?.mobileNumber!!, otpData.otp.toString()
+            )
             updateLogin(updateLogin)
           } else {
             message.value = R.string.could_not_verify_otp
@@ -72,7 +74,7 @@ class LoginViewModel(application: Application) : BaseViewModel(application) {
   }
 
   private fun updateLogin(updateLogin: UpdateLogin) {
-    apiClient?.updateLogin(updateLogin)?.enqueue(object: Callback<UpdateLogin> {
+    apiClient?.updateLogin(updateLogin)?.enqueue(object : Callback<UpdateLogin> {
       override fun onResponse(call: Call<UpdateLogin>, response: Response<UpdateLogin>) {
         if (response.isSuccessful) {
           val login = Login(updateLogin.mobileNumber.toString(), updateLogin.otp.toString())

@@ -11,7 +11,6 @@ import androidx.navigation.findNavController
 import com.aceinteract.android.stepper.StepperNavListener
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityConsultancyFormBinding
-import com.pranisheba.vet.ui.fragment.DiseaseInfoFragment
 import com.pranisheba.vet.ui.fragment.FarmInfoFragment
 import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
 
@@ -53,7 +52,8 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
     binding.buttonNext.setOnClickListener {
       when (currentStep) {
         0 -> {
-          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val navHostFragment: Fragment? =
+            supportFragmentManager.findFragmentById(R.id.frame_stepper)
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
@@ -68,18 +68,21 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
           validateOwnerInfo(foregroundFragment)
         }
         1 -> {
-          val navHostFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.frame_stepper)
+          val navHostFragment: Fragment? =
+            supportFragmentManager.findFragmentById(R.id.frame_stepper)
           val foregroundFragment =
             if (navHostFragment == null) null else navHostFragment.childFragmentManager
               .fragments[0]
           foregroundFragment as FarmInfoFragment
 
-          typeOfConsultancy = foregroundFragment.getTypeOfConsultancyLayout().editText?.text.toString()
+          typeOfConsultancy =
+            foregroundFragment.getTypeOfConsultancyLayout().editText?.text.toString()
           typeOfFarm = foregroundFragment.getTypeOfFarmLayout().editText?.text.toString()
           numberOfAnimals = foregroundFragment.getNumberOfAnimalsLayout().editText?.text.toString()
           placeOfFarm = foregroundFragment.getPlaceOfFarmLayout().editText?.text.toString()
           ageOfFarm = foregroundFragment.getAgeOfFirmLayout().editText?.text.toString()
-          frequencyOfConsultancy = foregroundFragment.getFrequencyOfConsultancyLayout().editText?.text.toString()
+          frequencyOfConsultancy =
+            foregroundFragment.getFrequencyOfConsultancyLayout().editText?.text.toString()
 
           validateFarmInfo(foregroundFragment)
         }
@@ -177,7 +180,7 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
       if (navHostFragment == null) null else navHostFragment.childFragmentManager
         .fragments[0]
 
-    when(foregroundFragment) {
+    when (foregroundFragment) {
       is OwnerInfoFragment -> {
         foregroundFragment.getNameLayout().editText?.setText(name)
         foregroundFragment.getMobileLayout().editText?.setText(mobile)
@@ -191,7 +194,9 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
         foregroundFragment.getNumberOfAnimalsLayout().editText?.setText(numberOfAnimals)
         foregroundFragment.getPlaceOfFarmLayout().editText?.setText(placeOfFarm)
         foregroundFragment.getAgeOfFirmLayout().editText?.setText(ageOfFarm)
-        foregroundFragment.getFrequencyOfConsultancyLayout().editText?.setText(frequencyOfConsultancy)
+        foregroundFragment.getFrequencyOfConsultancyLayout().editText?.setText(
+          frequencyOfConsultancy
+        )
       }
     }
   }

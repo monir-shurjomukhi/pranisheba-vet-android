@@ -69,13 +69,13 @@ class LoginActivity : AppCompatActivity() {
   }
 
   private fun insertCheck() {
-      val mobileNumber = binding.mobileLayout.editText?.text.toString()
-      if (mobileNumber.isEmpty()) {
-        binding.mobileLayout.error = getString(R.string.this_field_is_required)
-        return
-      }
+    val mobileNumber = binding.mobileLayout.editText?.text.toString()
+    if (mobileNumber.isEmpty()) {
+      binding.mobileLayout.error = getString(R.string.this_field_is_required)
+      return
+    }
 
-      viewModel.insertCheck(mobileNumber)
+    viewModel.insertCheck(mobileNumber)
   }
 
   private fun login() {

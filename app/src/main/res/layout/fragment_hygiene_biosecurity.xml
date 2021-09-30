@@ -10,197 +10,197 @@
     android:layout_width="0dp"
     android:layout_height="0dp"
     android:layout_marginBottom="16dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:clipToPadding="true"
     app:layout_constraintBottom_toTopOf="@id/button_next"
-    android:clipToPadding="true">
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/farmLocationLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:hint="@string/farm_location"
-      android:labelFor="@id/farmLocationTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+      android:padding="16dp">
 
-      <AutoCompleteTextView
-        android:id="@+id/farmLocationTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farmLocationLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:hint="@string/farm_location"
+        android:labelFor="@id/farmLocationTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/biosecurityMeasuresLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/biosecurity_measures"
-      android:labelFor="@id/biosecurityMeasuresTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/farmLocationLayout">
+        <AutoCompleteTextView
+          android:id="@+id/farmLocationTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/biosecurityMeasuresTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/biosecurityMeasuresLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/biosecurity_measures"
+        android:labelFor="@id/biosecurityMeasuresTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/farmLocationLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/housingStatusLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/housing_status"
-      android:labelFor="@id/housingStatusTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/biosecurityMeasuresLayout">
+        <AutoCompleteTextView
+          android:id="@+id/biosecurityMeasuresTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/housingStatusTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/housingStatusLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/housing_status"
+        android:labelFor="@id/housingStatusTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/biosecurityMeasuresLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/farmSurroundingLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/farm_surrounding_area_status"
-      android:labelFor="@id/farmSurroundingTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/housingStatusLayout">
+        <AutoCompleteTextView
+          android:id="@+id/housingStatusTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/farmSurroundingTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farmSurroundingLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/farm_surrounding_area_status"
+        android:labelFor="@id/farmSurroundingTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/housingStatusLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/farmTypeLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/farm_type"
-      android:labelFor="@id/farmTypeTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/farmSurroundingLayout">
+        <AutoCompleteTextView
+          android:id="@+id/farmSurroundingTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/farmTypeTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farmTypeLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/farm_type"
+        android:labelFor="@id/farmTypeTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/farmSurroundingLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/staffResidentLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/staff_resident_status_at_farm"
-      android:labelFor="@id/staffResidentTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/farmTypeLayout">
+        <AutoCompleteTextView
+          android:id="@+id/farmTypeTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/staffResidentTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/staffResidentLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/staff_resident_status_at_farm"
+        android:labelFor="@id/staffResidentTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/farmTypeLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/feedAndWaterLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/feed_and_water_source"
-      android:labelFor="@id/feedAndWaterTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/staffResidentLayout">
+        <AutoCompleteTextView
+          android:id="@+id/staffResidentTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/feedAndWaterTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/feedAndWaterLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/feed_and_water_source"
+        android:labelFor="@id/feedAndWaterTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/staffResidentLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/wasteDisposalLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/waste_disposal_system_faces_urine_and_others"
-      android:labelFor="@id/wasteDisposalTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/feedAndWaterLayout">
+        <AutoCompleteTextView
+          android:id="@+id/feedAndWaterTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/wasteDisposalTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/wasteDisposalLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_marginTop="8dp"
+        android:hint="@string/waste_disposal_system_faces_urine_and_others"
+        android:labelFor="@id/wasteDisposalTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feedAndWaterLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfVehicleLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/type_of_vehicle_for_transportation"
-      android:labelFor="@id/typeOfVehicleTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/wasteDisposalLayout">
+        <AutoCompleteTextView
+          android:id="@+id/wasteDisposalTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
 
-      <AutoCompleteTextView
-        android:id="@+id/typeOfVehicleTextView"
-        android:layout_width="match_parent"
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/typeOfVehicleLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-  </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_of_vehicle_for_transportation"
+        android:labelFor="@id/typeOfVehicleTextView"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wasteDisposalLayout">
+
+        <AutoCompleteTextView
+          android:id="@+id/typeOfVehicleTextView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
 
   <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:id="@+id/button_next"

@@ -23,14 +23,15 @@ class FarmManagementDetailsActivity : AppCompatActivity() {
     supportActionBar?.setDisplayShowHomeEnabled(true)
 
     binding.collapsingToolbarLayout.title = intent.extras?.getString(FARM_MANAGEMENT_TYPE)
-    binding.farmManagementDetailsTextView.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-      Html.fromHtml(
-        intent.extras?.getString(FARM_MANAGEMENT_TYPE_DETAILS),
-        Html.FROM_HTML_MODE_COMPACT
-      )
-    } else {
-      Html.fromHtml(intent.extras?.getString(FARM_MANAGEMENT_TYPE_DETAILS))
-    }
+    binding.farmManagementDetailsTextView.text =
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+        Html.fromHtml(
+          intent.extras?.getString(FARM_MANAGEMENT_TYPE_DETAILS),
+          Html.FROM_HTML_MODE_COMPACT
+        )
+      } else {
+        Html.fromHtml(intent.extras?.getString(FARM_MANAGEMENT_TYPE_DETAILS))
+      }
   }
 
   override fun onOptionsItemSelected(item: MenuItem): Boolean {
