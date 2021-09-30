@@ -12,101 +12,68 @@ import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDewormingVaccinationBinding
 import com.pranisheba.vet.databinding.FragmentGreenGrassProductionBinding
 import com.pranisheba.vet.databinding.FragmentRationFormulationBinding
+import com.pranisheba.vet.databinding.FragmentSilageProductionBinding
 
 
 class SilageProductionFragment : Fragment() {
 
-  private lateinit var binding: FragmentDewormingVaccinationBinding
+  private lateinit var binding: FragmentSilageProductionBinding
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentDewormingVaccinationBinding.inflate(inflater, container, false)
+    binding = FragmentSilageProductionBinding.inflate(inflater, container, false)
     return binding.root
   }
 
-  fun getTypeOfAnimalLayout(): TextInputLayout {
-    return binding.typeOfAnimalLayout
+  fun getTargetAmountLayout(): TextInputLayout {
+    return binding.targetAmountLayout
   }
 
-  fun getMilkingLayout(): TextInputLayout {
-    return binding.milkingLayout
+  fun getTypeOfSilageLayout(): TextInputLayout {
+    return binding.typeOfSilageLayout
   }
 
-  fun getPregnantLayout(): TextInputLayout {
-    return binding.pregnantLayout
+  fun getGreenGrassLayout(): TextInputLayout {
+    return binding.greenGrassLayout
   }
 
-  fun getHeiferLayout(): TextInputLayout {
-    return binding.heiferLayout
+  fun getAgeOfGreenGrassLayout(): TextInputLayout {
+    return binding.ageOfGreenGrassLayout
   }
 
-  fun getCalvesLayout(): TextInputLayout {
-    return binding.calvesLayout
-  }
-
-  fun getMaleLayout(): TextInputLayout {
-    return binding.maleLayout
-  }
-
-  fun getNumberOfCalvesLayout(): TextInputLayout {
-    return binding.numberOfCalvesLayout
-  }
-
-  fun getNumberOfPregnantLayout(): TextInputLayout {
-    return binding.numberOfPregnantLayout
-  }
-
-  fun getLastDewormingTimeLayout(): TextInputLayout {
-    return binding.lastDewormingTimeLayout
-  }
-
-  fun getFeedingSystemLayout(): TextInputLayout {
-    return binding.feedingSystemLayout
-  }
-
-  fun getLastVaccinationTimeLayout(): TextInputLayout {
-    return binding.lastVaccinationTimeLayout
-  }
-
-  fun getVaccinationsLayout(): TextInputLayout {
-    return binding.vaccinationsLayout
+  fun getPlaceForSilageLayout(): TextInputLayout {
+    return binding.placeForSilageLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.typeOfAnimalLayout.setOnKeyListener(null)
-    binding.lastDewormingTimeLayout.setOnKeyListener(null)
-    binding.feedingSystemLayout.setOnKeyListener(null)
-    binding.lastVaccinationTimeLayout.setOnKeyListener(null)
-    binding.vaccinationsLayout.setOnKeyListener(null)
+    binding.targetAmountLayout.setOnKeyListener(null)
+    binding.typeOfSilageLayout.setOnKeyListener(null)
+    binding.greenGrassLayout.setOnKeyListener(null)
+    binding.ageOfGreenGrassLayout.setOnKeyListener(null)
+    binding.placeForSilageLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Cattle",
-          "Sheep",
-          "Goat",
-          "Buffalo",
-          "Horse",
-          "Dog",
-          "Cat",
-          "Broiler",
-          "Quail",
-          "Duck",
-          "Turkey",
-          "Pigeon",
-          "Goose",
-          "Guinea Fowl",
-          "Bird"
+          "10",
+          "20",
+          "30",
+          "40",
+          "50",
+          "60",
+          "80",
+          "100",
+          "120"
         )
       ).also { adapter ->
-        binding.typeOfAnimalTextView.setAdapter(adapter)
-        binding.typeOfAnimalTextView.inputType = InputType.TYPE_NULL
+        binding.targetAmountTextView.setAdapter(adapter)
+        binding.targetAmountTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -114,10 +81,32 @@ class SilageProductionFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("3 Months", "2 Months", "1 Month", "No")
+        listOf("Pit", "Drum", "Packet", "Stalk")
       ).also { adapter ->
-        binding.lastDewormingTimeTextView.setAdapter(adapter)
-        binding.lastDewormingTimeTextView.inputType = InputType.TYPE_NULL
+        binding.typeOfSilageTextView.setAdapter(adapter)
+        binding.typeOfSilageTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("Maize", "Sorghum", "Oats", "Bajra", "Hybrid Napier", "Mixture")
+      ).also { adapter ->
+        binding.greenGrassTextView.setAdapter(adapter)
+        binding.greenGrassTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf("30-40 Days", "40-50 Days", "50-60 Days", "60-70 Days", "More")
+      ).also { adapter ->
+        binding.ageOfGreenGrassTextView.setAdapter(adapter)
+        binding.ageOfGreenGrassTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -126,47 +115,14 @@ class SilageProductionFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Stall", "Grazing", "Both", "Don't Know"
+          "Low",
+          "High",
+          "High & Sandy",
+          "Medium"
         )
       ).also { adapter ->
-        binding.feedingSystemTextView.setAdapter(adapter)
-        binding.feedingSystemTextView.inputType = InputType.TYPE_NULL
-      }
-    }
-
-    context?.let {
-      ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_1,
-        listOf("3 Months", "2 Months", "1 Month", "No")
-      ).also { adapter ->
-        binding.lastVaccinationTimeTextView.setAdapter(adapter)
-        binding.lastVaccinationTimeTextView.inputType = InputType.TYPE_NULL
-      }
-    }
-
-    context?.let {
-      ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_multiple_choice,
-        listOf(
-          "FMD",
-          "Anthrax",
-          "Black Quarter",
-          "HS",
-          "Brucella",
-          "LSD",
-          "TB",
-          "BEF",
-          "Goat Pox",
-          "Enterotoxemia",
-          "Contagious Ecthyma",
-          "PPR"
-        )
-      ).also { adapter ->
-        binding.vaccinationsTextView.setAdapter(adapter)
-        binding.vaccinationsTextView.setTokenizer(MultiAutoCompleteTextView.CommaTokenizer())
-        binding.vaccinationsTextView.inputType = InputType.TYPE_NULL
+        binding.placeForSilageTextView.setAdapter(adapter)
+        binding.placeForSilageTextView.inputType = InputType.TYPE_NULL
       }
     }
   }
