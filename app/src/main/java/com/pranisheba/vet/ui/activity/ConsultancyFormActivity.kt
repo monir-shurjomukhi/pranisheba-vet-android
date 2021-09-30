@@ -143,11 +143,11 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
     currentStep = step
     binding.buttonPrevious.isVisible = step != 0
 
-    if (step == 1) {
+    /*if (step == 1) {
       binding.buttonNext.setImageResource(R.drawable.ic_check)
     } else {
       binding.buttonNext.setImageResource(R.drawable.ic_right)
-    }
+    }*/
   }
 
   override fun onCompleted() {
