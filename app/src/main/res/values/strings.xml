@@ -523,4 +523,5 @@
   <string name="farmers_economic_and_attitude_status">Farmers Economic And Attitude Status</string>
   <string name="average_milk_production_in_liter">Average Milk Production In Liter</string>
   <string name="highest_and_lowest_milk_production_in_liter">Highest And Lowest Milk Production In Liter</string>
+  <string name="consultancy_info">Consultancy Info</string>
 </resources>

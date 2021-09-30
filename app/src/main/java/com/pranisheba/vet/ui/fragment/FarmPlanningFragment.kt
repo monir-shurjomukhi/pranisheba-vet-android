@@ -115,4 +115,14 @@ class FarmPlanningFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): FarmPlanningFragment {
+      val farmPlanningFragment = FarmPlanningFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      farmPlanningFragment.arguments = args
+      return farmPlanningFragment
+    }
+  }
 }

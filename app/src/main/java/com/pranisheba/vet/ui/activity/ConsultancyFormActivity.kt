@@ -1,5 +1,6 @@
 package com.pranisheba.vet.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -151,6 +152,7 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
 
   override fun onCompleted() {
     Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
+    startActivity(Intent(this, ConsultancyInfoActivity::class.java))
   }
 
   override fun onBackPressed() {
