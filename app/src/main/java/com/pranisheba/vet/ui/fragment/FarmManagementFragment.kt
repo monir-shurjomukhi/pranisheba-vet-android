@@ -14,13 +14,13 @@ import com.pranisheba.vet.databinding.*
 
 class FarmManagementFragment : Fragment() {
 
-  private lateinit var binding: FragmentReproductionManagementBinding
+  private lateinit var binding: FragmentFarmManagementBinding
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentReproductionManagementBinding.inflate(inflater, container, false)
+    binding = FragmentFarmManagementBinding.inflate(inflater, container, false)
     return binding.root
   }
 
@@ -44,16 +44,8 @@ class FarmManagementFragment : Fragment() {
     return binding.farmManagementPracticeLayout
   }
 
-  fun getFarmersEconomicStatusLayout(): TextInputLayout {
-    return binding.farmersEconomicStatusLayout
-  }
-
-  fun getAverageMilkProductionLayout(): TextInputLayout {
-    return binding.averageMilkProductionLayout
-  }
-
-  fun getHighestLowestMilkProductionLayout(): TextInputLayout {
-    return binding.highestLowestMilkProductionLayout
+  fun getHousingStyleLayout(): TextInputLayout {
+    return binding.housingStyleLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -64,9 +56,7 @@ class FarmManagementFragment : Fragment() {
     binding.foreignBloodLevelLayout.setOnKeyListener(null)
     binding.normalBreedingPlanLayout.setOnKeyListener(null)
     binding.farmManagementPracticeLayout.setOnKeyListener(null)
-    binding.farmersEconomicStatusLayout.setOnKeyListener(null)
-    binding.averageMilkProductionLayout.setOnKeyListener(null)
-    binding.highestLowestMilkProductionLayout.setOnKeyListener(null)
+    binding.housingStyleLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(
@@ -82,7 +72,7 @@ class FarmManagementFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("No Data Available")
+        listOf("Don't Know")
       ).also { adapter ->
         binding.animalBreedTextView.setAdapter(adapter)
         binding.animalBreedTextView.inputType = InputType.TYPE_NULL
@@ -131,62 +121,10 @@ class FarmManagementFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf(
-          "Poor & Low Attitude",
-          "Medium Income & Conscious",
-          "Medium Income & Good Attitude",
-          "Solvent & Good Attitude",
-          "Don't Know"
-        )
+        listOf("Don't Know")
       ).also { adapter ->
-        binding.farmersEconomicStatusTextView.setAdapter(adapter)
-        binding.farmersEconomicStatusTextView.inputType = InputType.TYPE_NULL
-      }
-    }
-
-    context?.let {
-      ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_1,
-        listOf(
-          "≤3",
-          "≤5",
-          "≤8",
-          "≤10",
-          "≤12",
-          "≤15",
-          "≤20",
-          "≤25",
-          "≤30",
-          "More",
-          "Don't Know"
-        )
-      ).also { adapter ->
-        binding.averageMilkProductionTextView.setAdapter(adapter)
-        binding.averageMilkProductionTextView.inputType = InputType.TYPE_NULL
-      }
-    }
-
-    context?.let {
-      ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_1,
-        listOf(
-          "4 & 2",
-          "7 & 3",
-          "10 & 5",
-          "12 & 7",
-          "15 & 10",
-          "20 & 12",
-          "20 & 15",
-          "25 & 20",
-          "30 & 25",
-          "More",
-          "Don't Know"
-        )
-      ).also { adapter ->
-        binding.highestLowestMilkProductionTextView.setAdapter(adapter)
-        binding.highestLowestMilkProductionTextView.inputType = InputType.TYPE_NULL
+        binding.housingStyleTextView.setAdapter(adapter)
+        binding.housingStyleTextView.inputType = InputType.TYPE_NULL
       }
     }
   }
