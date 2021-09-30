@@ -5,7 +5,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:clipToPadding="true"
-  tools:context=".ui.fragment.DewormingVaccinationFragment">
+  tools:context=".ui.fragment.SilageProductionFragment">
 
   <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -13,244 +13,101 @@
     android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/typeOfAnimalLayout"
+      android:id="@+id/targetAmountLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:hint="@string/type_of_animal"
-      android:labelFor="@id/typeOfAnimalTextView"
+      android:hint="@string/target_amount_in_metric_ton"
+      android:labelFor="@id/targetAmountTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent">
 
       <AutoCompleteTextView
-        android:id="@+id/typeOfAnimalTextView"
+        android:id="@+id/targetAmountTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/milkingLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/milking"
-      app:errorEnabled="true"
-      android:layout_marginTop="8dp"
-      app:layout_constraintEnd_toStartOf="@id/pregnantLayout"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/typeOfAnimalLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/pregnantLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="8dp"
-      android:hint="@string/pregnant"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toStartOf="@id/heiferLayout"
-      app:layout_constraintStart_toEndOf="@id/milkingLayout"
-      app:layout_constraintTop_toBottomOf="@id/typeOfAnimalLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/heiferLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="8dp"
-      android:hint="@string/heifer"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@id/pregnantLayout"
-      app:layout_constraintTop_toBottomOf="@id/typeOfAnimalLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/calvesLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/calves"
-      app:errorEnabled="true"
-      android:layout_marginTop="8dp"
-      app:layout_constraintEnd_toStartOf="@id/maleLayout"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/milkingLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/maleLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:hint="@string/male"
-      app:errorEnabled="true"
-      android:layout_marginTop="8dp"
-      android:layout_marginStart="8dp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@id/calvesLayout"
-      app:layout_constraintTop_toBottomOf="@id/milkingLayout"
-      app:layout_constraintVertical_chainStyle="packed">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/numberOfCalvesLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/number_of_calves_below_2_months"
-      android:labelFor="@id/landSizeTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/calvesLayout">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/numberOfPregnantLayout"
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="0dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
-      android:hint="@string/number_of_pregnant_animals_7_9_months"
-      android:labelFor="@id/typeOfGreenGrassTextView"
-      app:errorEnabled="true"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/numberOfCalvesLayout">
-
-      <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="16sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/lastDewormingTimeLayout"
+      android:id="@+id/typeOfSilageLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/last_deworming_time"
-      android:labelFor="@id/lastDewormingTimeTextView"
+      android:hint="@string/type_of_silage_to_produce"
+      android:labelFor="@id/typeOfSilageTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/numberOfPregnantLayout">
+      app:layout_constraintTop_toBottomOf="@id/targetAmountLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/lastDewormingTimeTextView"
+        android:id="@+id/typeOfSilageTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/feedingSystemLayout"
+      android:id="@+id/greenGrassLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/feeding_system"
-      android:labelFor="@id/feedingSystemTextView"
+      android:hint="@string/green_grass_for_silage"
+      android:labelFor="@id/greenGrassTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/lastDewormingTimeLayout">
+      app:layout_constraintTop_toBottomOf="@id/typeOfSilageLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/feedingSystemTextView"
+        android:id="@+id/greenGrassTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/lastVaccinationTimeLayout"
+      android:id="@+id/ageOfGreenGrassLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/last_vaccination_time"
-      android:labelFor="@id/lastVaccinationTimeTextView"
+      android:hint="@string/age_of_green_grass"
+      android:labelFor="@id/ageOfGreenGrassTextView"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/feedingSystemLayout">
+      app:layout_constraintTop_toBottomOf="@id/greenGrassLayout">
 
       <AutoCompleteTextView
-        android:id="@+id/lastVaccinationTimeTextView"
+        android:id="@+id/ageOfGreenGrassTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/vaccinationsLayout"
+      android:id="@+id/placeForSilageLayout"
       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:hint="@string/grass_production_purposes"
-      android:labelFor="@id/vaccinationsTextView"
+      android:hint="@string/place_for_making_silage"
+      android:labelFor="@id/placeForSilageTextView"
       android:visibility="gone"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/lastVaccinationTimeLayout"
+      app:layout_constraintTop_toBottomOf="@id/ageOfGreenGrassLayout"
       tools:visibility="visible">
 
-      <MultiAutoCompleteTextView
-        android:id="@+id/vaccinationsTextView"
+      <AutoCompleteTextView
+        android:id="@+id/placeForSilageTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="16sp" />

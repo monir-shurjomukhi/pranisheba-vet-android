@@ -504,4 +504,9 @@
   <string name="last_deworming_time">Last Deworming Time</string>
   <string name="feeding_system">Feeding System</string>
   <string name="last_vaccination_time">Last Vaccination Time</string>
+  <string name="target_amount_in_metric_ton">Target Amount In Metric Ton</string>
+  <string name="type_of_silage_to_produce">Type Of Silage To Produce</string>
+  <string name="green_grass_for_silage">Green Grass For Silage</string>
+  <string name="age_of_green_grass">Age Of Green Grass</string>
+  <string name="place_for_making_silage">Place For Making Silage</string>
 </resources>
