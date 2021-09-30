@@ -14,77 +14,67 @@ import com.pranisheba.vet.databinding.*
 
 class ReproductionManagementFragment : Fragment() {
 
-  private lateinit var binding: FragmentHygieneBiosecurityBinding
+  private lateinit var binding: FragmentReproductionManagementBinding
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentHygieneBiosecurityBinding.inflate(inflater, container, false)
+    binding = FragmentReproductionManagementBinding.inflate(inflater, container, false)
     return binding.root
   }
 
-  fun getFarmLocationLayout(): TextInputLayout {
-    return binding.farmLocationLayout
+  fun getBreedTypeLayout(): TextInputLayout {
+    return binding.breedTypeLayout
   }
 
-  fun getBiosecurityMeasuresLayout(): TextInputLayout {
-    return binding.biosecurityMeasuresLayout
+  fun getAnimalBreedLayout(): TextInputLayout {
+    return binding.animalBreedLayout
   }
 
-  fun getHousingStatusLayout(): TextInputLayout {
-    return binding.housingStatusLayout
+  fun getForeignBloodLevelLayout(): TextInputLayout {
+    return binding.foreignBloodLevelLayout
   }
 
-  fun getFarmSurroundingLayout(): TextInputLayout {
-    return binding.farmSurroundingLayout
+  fun getNormalBreedingPlanLayout(): TextInputLayout {
+    return binding.normalBreedingPlanLayout
   }
 
-  fun getFarmTypeLayout(): TextInputLayout {
-    return binding.farmTypeLayout
+  fun getFarmManagementPracticeLayout(): TextInputLayout {
+    return binding.farmManagementPracticeLayout
   }
 
-  fun getStaffResidentLayout(): TextInputLayout {
-    return binding.staffResidentLayout
+  fun getFarmersEconomicStatusLayout(): TextInputLayout {
+    return binding.farmersEconomicStatusLayout
   }
 
-  fun getFeedAndWaterLayout(): TextInputLayout {
-    return binding.feedAndWaterLayout
+  fun getAverageMilkProductionLayout(): TextInputLayout {
+    return binding.averageMilkProductionLayout
   }
 
-  fun getWasteDisposalLayout(): TextInputLayout {
-    return binding.wasteDisposalLayout
-  }
-
-  fun getTypeOfVehicleLayout(): TextInputLayout {
-    return binding.typeOfVehicleLayout
+  fun getHighestLowestMilkProductionLayout(): TextInputLayout {
+    return binding.highestLowestMilkProductionLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.farmLocationLayout.setOnKeyListener(null)
-    binding.biosecurityMeasuresLayout.setOnKeyListener(null)
-    binding.housingStatusLayout.setOnKeyListener(null)
-    binding.farmSurroundingLayout.setOnKeyListener(null)
-    binding.farmTypeLayout.setOnKeyListener(null)
-    binding.staffResidentLayout.setOnKeyListener(null)
-    binding.feedAndWaterLayout.setOnKeyListener(null)
-    binding.wasteDisposalLayout.setOnKeyListener(null)
-    binding.typeOfVehicleLayout.setOnKeyListener(null)
+    binding.breedTypeLayout.setOnKeyListener(null)
+    binding.animalBreedLayout.setOnKeyListener(null)
+    binding.foreignBloodLevelLayout.setOnKeyListener(null)
+    binding.normalBreedingPlanLayout.setOnKeyListener(null)
+    binding.farmManagementPracticeLayout.setOnKeyListener(null)
+    binding.farmersEconomicStatusLayout.setOnKeyListener(null)
+    binding.averageMilkProductionLayout.setOnKeyListener(null)
+    binding.highestLowestMilkProductionLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_1,
-        listOf(
-          "Urban",
-          "Semi Urban",
-          "Rural"
-        )
+        it, android.R.layout.simple_list_item_1,
+        listOf("Local", "Cross breed", "Foreign")
       ).also { adapter ->
-        binding.farmLocationTextView.setAdapter(adapter)
-        binding.farmLocationTextView.inputType = InputType.TYPE_NULL
+        binding.breedTypeTextView.setAdapter(adapter)
+        binding.breedTypeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -92,10 +82,10 @@ class ReproductionManagementFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Boundary", "Boundary With Well Gate", "Only Wire Net", "Open")
+        listOf("No Data Available")
       ).also { adapter ->
-        binding.biosecurityMeasuresTextView.setAdapter(adapter)
-        binding.biosecurityMeasuresTextView.inputType = InputType.TYPE_NULL
+        binding.animalBreedTextView.setAdapter(adapter)
+        binding.animalBreedTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -103,10 +93,10 @@ class ReproductionManagementFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Scientific", "Semi Scientific", "Normal", "Don't Know")
+        listOf("Pure Local", "25", "37.5", "50", "62.5", "68.75", "75", "84.37", "87.5", "100", "Don't Know")
       ).also { adapter ->
-        binding.housingStatusTextView.setAdapter(adapter)
-        binding.housingStatusTextView.inputType = InputType.TYPE_NULL
+        binding.foreignBloodLevelTextView.setAdapter(adapter)
+        binding.foreignBloodLevelTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -114,10 +104,10 @@ class ReproductionManagementFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Water Source Nearby", "Public Place Nearby", "Highway Nearby", "Farm Nearby", "Don't Know")
+        listOf("Cross", "Scientific", "Own Bull", "AISP Dependent", "Don't Know")
       ).also { adapter ->
-        binding.farmSurroundingTextView.setAdapter(adapter)
-        binding.farmSurroundingTextView.inputType = InputType.TYPE_NULL
+        binding.normalBreedingPlanTextView.setAdapter(adapter)
+        binding.normalBreedingPlanTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -126,14 +116,14 @@ class ReproductionManagementFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "One Type Animal Farm",
-          "Two Type Animal Farm",
-          "Integrated Farm",
+          "Scientific",
+          "Semi Scientific",
+          "Normal",
           "Don't Know"
         )
       ).also { adapter ->
-        binding.farmTypeTextView.setAdapter(adapter)
-        binding.farmTypeTextView.inputType = InputType.TYPE_NULL
+        binding.farmManagementPracticeTextView.setAdapter(adapter)
+        binding.farmManagementPracticeTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -142,15 +132,15 @@ class ReproductionManagementFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Only Farm Supervisor",
-          "Supervisor & Workers",
-          "Only Workers",
-          "Easily Move By All",
+          "Poor & Low Attitude",
+          "Medium Income & Conscious",
+          "Medium Income & Good Attitude",
+          "Solvent & Good Attitude",
           "Don't Know"
         )
       ).also { adapter ->
-        binding.staffResidentTextView.setAdapter(adapter)
-        binding.staffResidentTextView.inputType = InputType.TYPE_NULL
+        binding.farmersEconomicStatusTextView.setAdapter(adapter)
+        binding.farmersEconomicStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -159,14 +149,21 @@ class ReproductionManagementFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Own Management",
-          "Supplier Feed & Hygienic Water",
-          "No Specific Way For Feeding & Watering",
+          "≤3",
+          "≤5",
+          "≤8",
+          "≤10",
+          "≤12",
+          "≤15",
+          "≤20",
+          "≤25",
+          "≤30",
+          "More",
           "Don't Know"
         )
       ).also { adapter ->
-        binding.feedAndWaterTextView.setAdapter(adapter)
-        binding.feedAndWaterTextView.inputType = InputType.TYPE_NULL
+        binding.averageMilkProductionTextView.setAdapter(adapter)
+        binding.averageMilkProductionTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -175,30 +172,21 @@ class ReproductionManagementFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Good",
-          "Medium",
-          "Poor",
+          "4 & 2",
+          "7 & 3",
+          "10 & 5",
+          "12 & 7",
+          "15 & 10",
+          "20 & 12",
+          "20 & 15",
+          "25 & 20",
+          "30 & 25",
+          "More",
           "Don't Know"
         )
       ).also { adapter ->
-        binding.wasteDisposalTextView.setAdapter(adapter)
-        binding.wasteDisposalTextView.inputType = InputType.TYPE_NULL
-      }
-    }
-
-    context?.let {
-      ArrayAdapter(
-        it,
-        android.R.layout.simple_list_item_1,
-        listOf(
-          "Own",
-          "Others",
-          "Both",
-          "Don't Know"
-        )
-      ).also { adapter ->
-        binding.typeOfVehicleTextView.setAdapter(adapter)
-        binding.typeOfVehicleTextView.inputType = InputType.TYPE_NULL
+        binding.highestLowestMilkProductionTextView.setAdapter(adapter)
+        binding.highestLowestMilkProductionTextView.inputType = InputType.TYPE_NULL
       }
     }
   }
