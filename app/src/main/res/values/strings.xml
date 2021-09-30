@@ -517,4 +517,10 @@
   <string name="feed_and_water_source">Feed And Water Source</string>
   <string name="waste_disposal_system_faces_urine_and_others">Waste Disposal System (Faces, Urine And Others)</string>
   <string name="type_of_vehicle_for_transportation">Type Of Vehicle For Transportation</string>
+  <string name="foreign_blood_level_in_the_breed">Foreign Blood Level In The Breed</string>
+  <string name="normal_breeding_plan">Normal Breeding Plan</string>
+  <string name="farm_management_practice_along_with_housing">Farm Management Practice Along With Housing</string>
+  <string name="farmers_economic_and_attitude_status">Farmers Economic And Attitude Status</string>
+  <string name="average_milk_production_in_liter">Average Milk Production In Liter</string>
+  <string name="highest_and_lowest_milk_production_in_liter">Highest And Lowest Milk Production In Liter</string>
 </resources>
