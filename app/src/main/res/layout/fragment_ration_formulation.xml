@@ -138,8 +138,6 @@
       android:hint="@string/type_of_green_grasses_available"
       android:labelFor="@id/typeOfGreenGrassTextView"
       app:errorEnabled="true"
-      android:visibility="gone"
-      tools:visibility="visible"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/typeOfFeedLayout">

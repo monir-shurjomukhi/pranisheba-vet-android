@@ -242,12 +242,10 @@
       android:layout_marginTop="8dp"
       android:hint="@string/grass_production_purposes"
       android:labelFor="@id/vaccinationsTextView"
-      android:visibility="gone"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/lastVaccinationTimeLayout"
-      tools:visibility="visible">
+      app:layout_constraintTop_toBottomOf="@id/lastVaccinationTimeLayout">
 
       <MultiAutoCompleteTextView
         android:id="@+id/vaccinationsTextView"

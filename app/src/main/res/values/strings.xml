@@ -509,4 +509,12 @@
   <string name="green_grass_for_silage">Green Grass For Silage</string>
   <string name="age_of_green_grass">Age Of Green Grass</string>
   <string name="place_for_making_silage">Place For Making Silage</string>
+  <string name="farm_location">Farm Location</string>
+  <string name="biosecurity_measures">Biosecurity Measures</string>
+  <string name="housing_status">Housing Status</string>
+  <string name="farm_surrounding_area_status">Farm Surrounding Area Status</string>
+  <string name="staff_resident_status_at_farm">Staff Resident Status At Farm</string>
+  <string name="feed_and_water_source">Feed And Water Source</string>
+  <string name="waste_disposal_system_faces_urine_and_others">Waste Disposal System (Faces, Urine And Others)</string>
+  <string name="type_of_vehicle_for_transportation">Type Of Vehicle For Transportation</string>
 </resources>

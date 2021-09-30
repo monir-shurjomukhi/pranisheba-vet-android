@@ -99,12 +99,10 @@
       android:layout_marginTop="8dp"
       android:hint="@string/place_for_making_silage"
       android:labelFor="@id/placeForSilageTextView"
-      android:visibility="gone"
       app:errorEnabled="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/ageOfGreenGrassLayout"
-      tools:visibility="visible">
+      app:layout_constraintTop_toBottomOf="@id/ageOfGreenGrassLayout">
 
       <AutoCompleteTextView
         android:id="@+id/placeForSilageTextView"
