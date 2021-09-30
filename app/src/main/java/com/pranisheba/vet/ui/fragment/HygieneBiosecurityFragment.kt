@@ -9,71 +9,82 @@ import android.widget.ArrayAdapter
 import android.widget.MultiAutoCompleteTextView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
-import com.pranisheba.vet.databinding.FragmentDewormingVaccinationBinding
-import com.pranisheba.vet.databinding.FragmentGreenGrassProductionBinding
-import com.pranisheba.vet.databinding.FragmentRationFormulationBinding
-import com.pranisheba.vet.databinding.FragmentSilageProductionBinding
+import com.pranisheba.vet.databinding.*
 
 
 class HygieneBiosecurityFragment : Fragment() {
 
-  private lateinit var binding: FragmentSilageProductionBinding
+  private lateinit var binding: FragmentHygieneBiosecurityBinding
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    binding = FragmentSilageProductionBinding.inflate(inflater, container, false)
+    binding = FragmentHygieneBiosecurityBinding.inflate(inflater, container, false)
     return binding.root
   }
 
-  fun getTargetAmountLayout(): TextInputLayout {
-    return binding.targetAmountLayout
+  fun getFarmLocationLayout(): TextInputLayout {
+    return binding.farmLocationLayout
   }
 
-  fun getTypeOfSilageLayout(): TextInputLayout {
-    return binding.typeOfSilageLayout
+  fun getBiosecurityMeasuresLayout(): TextInputLayout {
+    return binding.biosecurityMeasuresLayout
   }
 
-  fun getGreenGrassLayout(): TextInputLayout {
-    return binding.greenGrassLayout
+  fun getHousingStatusLayout(): TextInputLayout {
+    return binding.housingStatusLayout
   }
 
-  fun getAgeOfGreenGrassLayout(): TextInputLayout {
-    return binding.ageOfGreenGrassLayout
+  fun getFarmSurroundingLayout(): TextInputLayout {
+    return binding.farmSurroundingLayout
   }
 
-  fun getPlaceForSilageLayout(): TextInputLayout {
-    return binding.placeForSilageLayout
+  fun getFarmTypeLayout(): TextInputLayout {
+    return binding.farmTypeLayout
+  }
+
+  fun getStaffResidentLayout(): TextInputLayout {
+    return binding.staffResidentLayout
+  }
+
+  fun getFeedAndWaterLayout(): TextInputLayout {
+    return binding.feedAndWaterLayout
+  }
+
+  fun getWasteDisposalLayout(): TextInputLayout {
+    return binding.wasteDisposalLayout
+  }
+
+  fun getTypeOfVehicleLayout(): TextInputLayout {
+    return binding.typeOfVehicleLayout
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.targetAmountLayout.setOnKeyListener(null)
-    binding.typeOfSilageLayout.setOnKeyListener(null)
-    binding.greenGrassLayout.setOnKeyListener(null)
-    binding.ageOfGreenGrassLayout.setOnKeyListener(null)
-    binding.placeForSilageLayout.setOnKeyListener(null)
+    binding.farmLocationLayout.setOnKeyListener(null)
+    binding.biosecurityMeasuresLayout.setOnKeyListener(null)
+    binding.housingStatusLayout.setOnKeyListener(null)
+    binding.farmSurroundingLayout.setOnKeyListener(null)
+    binding.farmTypeLayout.setOnKeyListener(null)
+    binding.staffResidentLayout.setOnKeyListener(null)
+    binding.feedAndWaterLayout.setOnKeyListener(null)
+    binding.wasteDisposalLayout.setOnKeyListener(null)
+    binding.typeOfVehicleLayout.setOnKeyListener(null)
 
     context?.let {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "10",
-          "20",
-          "30",
-          "40",
-          "50",
-          "60",
-          "80",
-          "100",
-          "120"
+          "Urban",
+          "Semi Urban",
+          "Rural"
         )
       ).also { adapter ->
-        binding.targetAmountTextView.setAdapter(adapter)
-        binding.targetAmountTextView.inputType = InputType.TYPE_NULL
+        binding.farmLocationTextView.setAdapter(adapter)
+        binding.farmLocationTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -81,10 +92,10 @@ class HygieneBiosecurityFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Pit", "Drum", "Packet", "Stalk")
+        listOf("Boundary", "Boundary With Well Gate", "Only Wire Net", "Open")
       ).also { adapter ->
-        binding.typeOfSilageTextView.setAdapter(adapter)
-        binding.typeOfSilageTextView.inputType = InputType.TYPE_NULL
+        binding.biosecurityMeasuresTextView.setAdapter(adapter)
+        binding.biosecurityMeasuresTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -92,10 +103,10 @@ class HygieneBiosecurityFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("Maize", "Sorghum", "Oats", "Bajra", "Hybrid Napier", "Mixture")
+        listOf("Scientific", "Semi Scientific", "Normal", "Don't Know")
       ).also { adapter ->
-        binding.greenGrassTextView.setAdapter(adapter)
-        binding.greenGrassTextView.inputType = InputType.TYPE_NULL
+        binding.housingStatusTextView.setAdapter(adapter)
+        binding.housingStatusTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -103,10 +114,10 @@ class HygieneBiosecurityFragment : Fragment() {
       ArrayAdapter(
         it,
         android.R.layout.simple_list_item_1,
-        listOf("30-40 Days", "40-50 Days", "50-60 Days", "60-70 Days", "More")
+        listOf("Water Source Nearby", "Public Place Nearby", "Highway Nearby", "Farm Nearby", "Don't Know")
       ).also { adapter ->
-        binding.ageOfGreenGrassTextView.setAdapter(adapter)
-        binding.ageOfGreenGrassTextView.inputType = InputType.TYPE_NULL
+        binding.farmSurroundingTextView.setAdapter(adapter)
+        binding.farmSurroundingTextView.inputType = InputType.TYPE_NULL
       }
     }
 
@@ -115,14 +126,79 @@ class HygieneBiosecurityFragment : Fragment() {
         it,
         android.R.layout.simple_list_item_1,
         listOf(
-          "Low",
-          "High",
-          "High & Sandy",
-          "Medium"
+          "One Type Animal Farm",
+          "Two Type Animal Farm",
+          "Integrated Farm",
+          "Don't Know"
         )
       ).also { adapter ->
-        binding.placeForSilageTextView.setAdapter(adapter)
-        binding.placeForSilageTextView.inputType = InputType.TYPE_NULL
+        binding.farmTypeTextView.setAdapter(adapter)
+        binding.farmTypeTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf(
+          "Only Farm Supervisor",
+          "Supervisor & Workers",
+          "Only Workers",
+          "Easily Move By All",
+          "Don't Know"
+        )
+      ).also { adapter ->
+        binding.staffResidentTextView.setAdapter(adapter)
+        binding.staffResidentTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf(
+          "Own Management",
+          "Supplier Feed & Hygienic Water",
+          "No Specific Way For Feeding & Watering",
+          "Don't Know"
+        )
+      ).also { adapter ->
+        binding.feedAndWaterTextView.setAdapter(adapter)
+        binding.feedAndWaterTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf(
+          "Good",
+          "Medium",
+          "Poor",
+          "Don't Know"
+        )
+      ).also { adapter ->
+        binding.wasteDisposalTextView.setAdapter(adapter)
+        binding.wasteDisposalTextView.inputType = InputType.TYPE_NULL
+      }
+    }
+
+    context?.let {
+      ArrayAdapter(
+        it,
+        android.R.layout.simple_list_item_1,
+        listOf(
+          "Own",
+          "Others",
+          "Both",
+          "Don't Know"
+        )
+      ).also { adapter ->
+        binding.typeOfVehicleTextView.setAdapter(adapter)
+        binding.typeOfVehicleTextView.inputType = InputType.TYPE_NULL
       }
     }
   }
