@@ -143,4 +143,10 @@ class FarmInfoFragment : Fragment() {
 
     (activity as ConsultancyFormActivity).showPreviousInfo()
   }
+
+  companion object {
+    fun newInstance(): FarmInfoFragment{
+      return FarmInfoFragment()
+    }
+  }
 }

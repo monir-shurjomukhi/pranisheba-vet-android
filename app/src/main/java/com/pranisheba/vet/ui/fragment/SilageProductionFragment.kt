@@ -122,4 +122,14 @@ class SilageProductionFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): SilageProductionFragment {
+      val fragment = SilageProductionFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      fragment.arguments = args
+      return fragment
+    }
+  }
 }

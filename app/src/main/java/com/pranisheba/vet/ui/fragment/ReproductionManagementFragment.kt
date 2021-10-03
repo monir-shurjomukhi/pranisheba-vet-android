@@ -201,4 +201,14 @@ class ReproductionManagementFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): ReproductionManagementFragment {
+      val fragment = ReproductionManagementFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      fragment.arguments = args
+      return fragment
+    }
+  }
 }

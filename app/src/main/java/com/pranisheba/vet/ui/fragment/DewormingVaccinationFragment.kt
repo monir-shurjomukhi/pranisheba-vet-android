@@ -168,4 +168,14 @@ class DewormingVaccinationFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): DewormingVaccinationFragment {
+      val fragment = DewormingVaccinationFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      fragment.arguments = args
+      return fragment
+    }
+  }
 }

@@ -182,4 +182,14 @@ class GreenGrassProductionFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): GreenGrassProductionFragment {
+      val fragment = GreenGrassProductionFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      fragment.arguments = args
+      return fragment
+    }
+  }
 }

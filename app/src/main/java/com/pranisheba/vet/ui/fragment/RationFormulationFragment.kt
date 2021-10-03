@@ -158,4 +158,14 @@ class RationFormulationFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): RationFormulationFragment {
+      val fragment = RationFormulationFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      fragment.arguments = args
+      return fragment
+    }
+  }
 }

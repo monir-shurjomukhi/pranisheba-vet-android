@@ -13,6 +13,7 @@ import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityConsultancyFormBinding
 import com.pranisheba.vet.ui.fragment.FarmInfoFragment
 import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
+import com.pranisheba.vet.util.TYPE_OF_CONSULTANCY
 
 
 class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
@@ -155,7 +156,17 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
 
   override fun onCompleted() {
     Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
-    startActivity(Intent(this, ConsultancyInfoActivity::class.java))
+    val intent = Intent(this, ConsultancyInfoActivity::class.java)
+
+    val navHostFragment: Fragment? =
+      supportFragmentManager.findFragmentById(R.id.frame_stepper)
+    val foregroundFragment =
+      if (navHostFragment == null) null else navHostFragment.childFragmentManager
+        .fragments[0]
+    foregroundFragment as FarmInfoFragment
+
+    intent.putExtra(TYPE_OF_CONSULTANCY, foregroundFragment.getTypeOfConsultancyLayout().editText?.text.toString())
+    startActivity(intent)
   }
 
   override fun onBackPressed() {

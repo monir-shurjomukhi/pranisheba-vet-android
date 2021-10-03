@@ -207,4 +207,14 @@ class HygieneBiosecurityFragment : Fragment() {
       }
     }
   }
+
+  companion object {
+    fun newInstance(someInt: Int = 0): HygieneBiosecurityFragment {
+      val fragment = HygieneBiosecurityFragment()
+      val args = Bundle()
+      args.putInt("someInt", someInt)
+      fragment.arguments = args
+      return fragment
+    }
+  }
 }
