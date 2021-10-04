@@ -114,6 +114,10 @@ class FarmPlanningFragment : Fragment() {
         binding.investmentTextView.inputType = InputType.TYPE_NULL
       }
     }
+
+    binding.buttonNext.setOnClickListener {
+
+    }
   }
 
   companion object {

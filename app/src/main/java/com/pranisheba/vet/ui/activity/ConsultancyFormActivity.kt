@@ -94,18 +94,21 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
   private fun validateOwnerInfo(fragment: OwnerInfoFragment) {
     if (name.isEmpty()) {
       fragment.getNameLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getNameLayout().y.toInt())
       return
     } else {
       fragment.getNameLayout().error = null
     }
     if (mobile.isEmpty()) {
       fragment.getMobileLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getMobileLayout().y.toInt())
       return
     } else {
       fragment.getMobileLayout().error = null
     }
     if (address.isEmpty()) {
       fragment.getAddressLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAddressLayout().y.toInt())
       return
     } else {
       fragment.getAddressLayout().error = null
@@ -117,24 +120,28 @@ class ConsultancyFormActivity : AppCompatActivity(), StepperNavListener {
   private fun validateFarmInfo(fragment: FarmInfoFragment) {
     if (typeOfConsultancy.isEmpty()) {
       fragment.getTypeOfConsultancyLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getTypeOfConsultancyLayout().y.toInt())
       return
     } else {
       fragment.getTypeOfConsultancyLayout().error = null
     }
     if (typeOfFarm.isEmpty()) {
       fragment.getTypeOfFarmLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getTypeOfFarmLayout().y.toInt())
       return
     } else {
       fragment.getTypeOfFarmLayout().error = null
     }
     if (ageOfFarm.isEmpty()) {
       fragment.getAgeOfFirmLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAgeOfFirmLayout().y.toInt())
       return
     } else {
       fragment.getAgeOfFirmLayout().error = null
     }
     if (frequencyOfConsultancy.isEmpty()) {
       fragment.getFrequencyOfConsultancyLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getFrequencyOfConsultancyLayout().y.toInt())
       return
     } else {
       fragment.getFrequencyOfConsultancyLayout().error = null
