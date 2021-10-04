@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ScrollView
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputLayout
 import com.pranisheba.vet.databinding.FragmentDiseaseInfoBinding
@@ -22,6 +23,10 @@ class DiseaseInfoFragment : Fragment() {
   ): View {
     binding = FragmentDiseaseInfoBinding.inflate(inflater, container, false)
     return binding.root
+  }
+
+  fun getScrollView(): ScrollView {
+    return binding.scrollView
   }
 
   fun getTemperatureLevelLayout(): TextInputLayout {

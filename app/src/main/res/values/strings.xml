@@ -133,7 +133,7 @@
   <string name="name_of_farm_">Name of Farm:</string>
   <string name="address_">Address:</string>
   <string name="email_">Email:</string>
-  <string name="farm_s_information">Farm\'s Information</string>
+  <string name="farm_s_information">Farm\'s Information:</string>
   <string name="type_of_farm_">Type of Farm:</string>
   <string name="number_of_animal_">Number of Animal:</string>
   <string name="address_of_farm_">Address of Farm:</string>
@@ -159,15 +159,10 @@
     at pS Vet?*</string>
   <string name="previous_prescription_number">Previous prescription number</string>
   <string name="animal_name_or_id_number">Animal name or ID number</string>
-  <string name="select_animal_group">Select animal group*</string>
   <string name="animal_group">Animal group*</string>
-  <string name="select_animal_type">Select animal type*</string>
   <string name="animal_type">Animal type*</string>
-  <string name="select_animal_breed">Select animal breed</string>
   <string name="animal_breed">Animal breed</string>
-  <string name="select_breed_type">Select breed type</string>
   <string name="breed_type">Breed type</string>
-  <string name="select_animal_gender">Select animal gender</string>
   <string name="animal_gender">Animal gender*</string>
   <string name="stage_of_male">Stage of male*</string>
   <string name="stage_of_female">Stage of female*</string>
@@ -176,33 +171,21 @@
   <string name="age_of_the_animal">Age of the animal*</string>
   <string name="unit">Unit*</string>
   <string name="weight_of_the_animal_in_kg">Weight of the animal in KG*</string>
-  <string name="select_deworming_status_within_the_last">Select deworming status within the last*</string>
   <string name="deworming_status_within_the_last">Deworming status within the last*</string>
-  <string name="select_vaccination_status_within_the_last">Select vaccination status within the last*</string>
   <string name="vaccination_status_within_the_last">Vaccination status within the last*</string>
   <string name="type_of_vaccines">Type of vaccines</string>
-  <string name="select_the_level_of_temperature">Select the level of temperature*</string>
   <string name="level_of_temperature">Level of temperature*</string>
   <string name="the_level_of_temperature">The level of temperature*</string>
   <string name="temperature_f">Temperature (F)</string>
-  <string name="select_the_feed_water_intake_status"><![CDATA[Select the feed & water intake status*]]></string>
   <string name="feed_water_intake_status"><![CDATA[Feed & water intake status*]]></string>
-  <string name="select_the_defecation_status">Select the defecation status*</string>
   <string name="defecation_status">Defecation status*</string>
-  <string name="select_the_urination_status">Select the urination status</string>
   <string name="urination_status">Urination status</string>
-  <string name="select_hair_of_the_animal_s_body_status">Select hair of the animal\'s body status</string>
   <string name="hair_of_the_animal_s_body_status">Hair of the animal\'s body status</string>
-  <string name="select_the_salivation_status">Select the salivation status</string>
   <string name="salivation_status">Salivation status</string>
-  <string name="select_animal_static_posture_status">Select animal static posture status*</string>
   <string name="animal_static_posture_status">Animal static posture status*</string>
-  <string name="select_the_muzzle_status">Select the muzzle status</string>
   <string name="muzzle_status">Muzzle status</string>
-  <string name="select_the_sneezing_coughing_status"><![CDATA[Select the sneezing & coughing status]]></string>
   <string name="sneezing_coughing_status"><![CDATA[Sneezing & coughing status]]></string>
   <string name="sweating_status">Sweating status</string>
-  <string name="select_the_posture_and_gesture_status">Select the posture and gesture status*</string>
   <string name="posture_and_gesture_status">Posture and gesture status*</string>
   <string name="is_the_illness_happening_for_the_first_time">Is the illness happening for the first time?*</string>
   <string name="was_treatment_sought_elsewhere">Was treatment sought elsewhere?</string>
@@ -210,7 +193,6 @@
   <string name="are_any_other_animals_affected_by_the_same_disease">Are any other animals affected
     by the same disease?*</string>
   <string name="this_field_is_required">This field is required</string>
-  <string name="select_type_of_emergency">Select type of emergency*</string>
   <string name="type_of_emergency">Type of emergency*</string>
   <string name="bangla">বাংলা</string>
   <string name="english">English</string>

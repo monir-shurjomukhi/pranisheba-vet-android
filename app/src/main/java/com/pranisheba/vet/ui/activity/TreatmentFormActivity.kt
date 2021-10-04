@@ -160,18 +160,21 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   private fun validateOwnerInfo(fragment: OwnerInfoFragment) {
     if (name.isEmpty()) {
       fragment.getNameLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getNameLayout().y.toInt())
       return
     } else {
       fragment.getNameLayout().error = null
     }
     if (mobile.isEmpty()) {
       fragment.getMobileLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getMobileLayout().y.toInt())
       return
     } else {
       fragment.getMobileLayout().error = null
     }
     if (address.isEmpty()) {
       fragment.getAddressLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAddressLayout().y.toInt())
       return
     } else {
       fragment.getAddressLayout().error = null
@@ -183,60 +186,70 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   private fun validateAnimalInfo(fragment: AnimalInfoFragment) {
     if (treatedBefore.isEmpty()) {
       fragment.getTreatedBeforeLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getTreatedBeforeLayout().y.toInt())
       return
     } else {
       fragment.getTreatedBeforeLayout().error = null
     }
     if (animalGroup.isEmpty()) {
       fragment.getAnimalGroupLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAnimalGroupLayout().y.toInt())
       return
     } else {
       fragment.getAnimalGroupLayout().error = null
     }
     if (animalType.isEmpty()) {
       fragment.getAnimalTypeLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAnimalTypeLayout().y.toInt())
       return
     } else {
       fragment.getAnimalTypeLayout().error = null
     }
     if (partOfIot.isEmpty()) {
       fragment.getPartOfIotLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getPartOfIotLayout().y.toInt())
       return
     } else {
       fragment.getPartOfIotLayout().error = null
     }
     if (animalAge.isEmpty()) {
       fragment.getAnimalAgeLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAnimalAgeLayout().y.toInt())
       return
     } else {
       fragment.getAnimalAgeLayout().error = null
     }
     if (ageUnit.isEmpty()) {
       fragment.getAgeUnitLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAgeUnitLayout().y.toInt())
       return
     } else {
       fragment.getAgeUnitLayout().error = null
     }
     if (animalWeight.isEmpty()) {
       fragment.getAnimalWeightLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAnimalWeightLayout().y.toInt())
       return
     } else {
       fragment.getAnimalWeightLayout().error = null
     }
     if (animalGender.isEmpty()) {
       fragment.getAnimalGenderLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getAnimalGenderLayout().y.toInt())
       return
     } else {
       fragment.getAnimalGenderLayout().error = null
     }
     if (deWormingStatus.isEmpty()) {
       fragment.getDeWormingStatusLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getDeWormingStatusLayout().y.toInt())
       return
     } else {
       fragment.getDeWormingStatusLayout().error = null
     }
     if (vaccinationStatus.isEmpty()) {
       fragment.getVaccinationStatusLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getVaccinationStatusLayout().y.toInt())
       return
     } else {
       fragment.getVaccinationStatusLayout().error = null
@@ -248,54 +261,63 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
   private fun validateDiseaseInfo(fragment: DiseaseInfoFragment) {
     if (temperatureLevel.isEmpty()) {
       fragment.getTemperatureLevelLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getTemperatureLevelLayout().y.toInt())
       return
     } else {
       fragment.getTemperatureLevelLayout().error = null
     }
     if (feedIntake.isEmpty()) {
       fragment.getFeedIntakeLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getFeedIntakeLayout().y.toInt())
       return
     } else {
       fragment.getFeedIntakeLayout().error = null
     }
     if (defecation.isEmpty()) {
       fragment.getDefecationStatusLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getDefecationStatusLayout().y.toInt())
       return
     } else {
       fragment.getDefecationStatusLayout().error = null
     }
     if (staticPosture.isEmpty()) {
       fragment.getPostureStatusLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getPostureStatusLayout().y.toInt())
       return
     } else {
       fragment.getPostureStatusLayout().error = null
     }
     if (postureAndGesture.isEmpty()) {
       fragment.getGestureStatusLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getGestureStatusLayout().y.toInt())
       return
     } else {
       fragment.getGestureStatusLayout().error = null
     }
     if (firstTime.isEmpty()) {
       fragment.getFirstTimeLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getFirstTimeLayout().y.toInt())
       return
     } else {
       fragment.getFirstTimeLayout().error = null
     }
     if (description.isEmpty()) {
       fragment.getProblemDescriptionLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getProblemDescriptionLayout().y.toInt())
       return
     } else {
       fragment.getProblemDescriptionLayout().error = null
     }
     if (otherAnimals.isEmpty()) {
       fragment.getOtherAnimalsLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getOtherAnimalsLayout().y.toInt())
       return
     } else {
       fragment.getOtherAnimalsLayout().error = null
     }
     if (emergency.isEmpty()) {
       fragment.getEmergencyTypeLayout().error = getString(R.string.this_field_is_required)
+      fragment.getScrollView().smoothScrollTo(0, fragment.getEmergencyTypeLayout().y.toInt())
       return
     } else {
       fragment.getEmergencyTypeLayout().error = null
