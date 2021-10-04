@@ -500,7 +500,7 @@
   <string name="grass_production_purposes">Grass Production Purposes</string>
   <string name="type_of_animal">Type Of Animal</string>
   <string name="number_of_calves_below_2_months">Number Of Calves Below 2 Months</string>
-  <string name="number_of_pregnant_animals_7_9_months">Number Of Pregnant Animals (7-9 Months)</string>
+  <string name="number_of_pregnant_animals_7_9_months">Number Of Pregnant Animals (7–9 Months)</string>
   <string name="last_deworming_time">Last Deworming Time</string>
   <string name="feeding_system">Feeding System</string>
   <string name="last_vaccination_time">Last Vaccination Time</string>
