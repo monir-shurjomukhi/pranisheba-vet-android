@@ -16,6 +16,11 @@ interface ApiInterface {
     @Path("mobile_number") mobileNumber: String
   ): Call<InsertCheck>
 
+  @GET("counterNumbers/createCounterNumber/{mobile_number}")
+  fun createCounterNumber(
+    @Path("mobile_number") mobileNumber: String
+  ): Call<CounterNumber>
+
   //////////////////// POST ///////////////////
 
   @POST("customers")
