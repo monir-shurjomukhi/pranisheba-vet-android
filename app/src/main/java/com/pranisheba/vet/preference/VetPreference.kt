@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import com.pranisheba.vet.util.AUTH_TOKEN
 import com.pranisheba.vet.util.FIRST_TIME
 import com.pranisheba.vet.util.LANGUAGE
+import com.pranisheba.vet.util.MOBILE_NUMBER
 
 
 class VetPreference(context: Context) {
@@ -19,6 +20,15 @@ class VetPreference(context: Context) {
 
   fun getAuthToken(): String? {
     return preferences.getString(AUTH_TOKEN, "")
+  }
+
+  fun putMobileNumber(token: String?) {
+    editor.putString(MOBILE_NUMBER, token)
+    editor.apply()
+  }
+
+  fun getMobileNumber(): String? {
+    return preferences.getString(MOBILE_NUMBER, "")
   }
 
   fun putFirstTimeLaunch(isFirstTime: Boolean) {

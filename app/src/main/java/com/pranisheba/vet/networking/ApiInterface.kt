@@ -2,10 +2,7 @@ package com.pranisheba.vet.networking
 
 import com.pranisheba.vet.model.*
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface ApiInterface {
 
@@ -16,9 +13,9 @@ interface ApiInterface {
     @Path("mobile_number") mobileNumber: String
   ): Call<InsertCheck>
 
-  @GET("counterNumbers/createCounterNumber/{mobile_number}")
+  @GET("counterNumbers/createCounterNumber/")
   fun createCounterNumber(
-    @Path("mobile_number") mobileNumber: String
+    @Header("Authorization") token: String
   ): Call<CounterNumber>
 
   //////////////////// POST ///////////////////

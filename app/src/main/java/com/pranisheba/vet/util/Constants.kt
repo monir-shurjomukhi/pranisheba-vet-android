@@ -1,6 +1,7 @@
 package com.pranisheba.vet.util
 
 const val AUTH_TOKEN = "auth-token"
+const val MOBILE_NUMBER = "mobile-number"
 const val FIRST_TIME = "first-time"
 const val LANGUAGE = "language"
 const val SERVICE_TYPE = "service-details-type"

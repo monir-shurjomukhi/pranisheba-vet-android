@@ -166,9 +166,9 @@
   <string name="deworming_status_within_the_last">কৃমিনাশক প্রয়োগের শেষ সময়*</string>
   <string name="vaccination_status_within_the_last">টিকা প্রয়োগের শেষ সময়*</string>
   <string name="type_of_vaccines">টিকার প্রকার</string>
-  <string name="level_of_temperature">তাপমাত্রার*</string>
-  <string name="the_level_of_temperature">তাপমাত্রার*</string>
-  <string name="temperature_f">তাপমাত্রার (F)</string>
+  <string name="level_of_temperature">তাপমাত্রার স্তর*</string>
+  <string name="the_level_of_temperature">তাপমাত্রার স্তর*</string>
+  <string name="temperature_f">তাপমাত্রা (F)</string>
   <string name="feed_water_intake_status"><![CDATA[খাদ্য এবং জল খাওয়ার অবস্থা*]]></string>
   <string name="defecation_status">মলত্যাগের অবস্থা*</string>
   <string name="urination_status">প্রস্রাবের অবস্থা</string>

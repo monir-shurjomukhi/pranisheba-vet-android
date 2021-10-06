@@ -1,74 +1,83 @@
 package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.aceinteract.android.stepper.StepperNavListener
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityTreatmentFormBinding
+import com.pranisheba.vet.preference.VetPreference
 import com.pranisheba.vet.ui.fragment.AnimalInfoFragment
 import com.pranisheba.vet.ui.fragment.DiseaseInfoFragment
 import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
+import com.pranisheba.vet.ui.viewmodel.TreatmentFormViewModel
 
 
 class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
   private lateinit var binding: ActivityTreatmentFormBinding
+  private lateinit var viewModel: TreatmentFormViewModel
+  private lateinit var preference: VetPreference
   private var currentStep = 0
 
   // Owner Info
-  private var name: String = ""
-  private var mobile: String = ""
-  private var email: String = ""
-  private var farmName: String = ""
-  private var address: String = ""
+  private var name: String = "test"
+  private var mobile: String = "123456"
+  private var email: String = "test@test.com"
+  private var farmName: String = "test"
+  private var address: String = "test"
 
   // Animal Info
-  private var treatedBefore: String = ""
-  private var previousPrescription: String = ""
-  private var animalNameOrId: String = ""
-  private var animalGroup: String = ""
-  private var animalType: String = ""
-  private var breedType: String = ""
-  private var animalBreed: String = ""
-  private var partOfIot: String = ""
-  private var bolusId: String = ""
-  private var animalAge: String = ""
-  private var ageUnit: String = ""
-  private var animalWeight: String = ""
-  private var animalGender: String = ""
-  private var stageOfGender: String = ""
-  private var deWormingStatus: String = ""
-  private var vaccinationStatus: String = ""
-  private var typeOfVaccines: String = ""
+  private var treatedBefore: String = "test"
+  private var previousPrescription: String = "test"
+  private var animalNameOrId: String = "test"
+  private var animalGroup: String = "test"
+  private var animalType: String = "test"
+  private var breedType: String = "test"
+  private var animalBreed: String = "test"
+  private var partOfIot: String = "test"
+  private var bolusId: String = "test"
+  private var animalAge: String = "1"
+  private var ageUnit: String = "test"
+  private var animalWeight: String = "1"
+  private var animalGender: String = "test"
+  private var stageOfGender: String = "test"
+  private var deWormingStatus: String = "test"
+  private var vaccinationStatus: String = "test"
+  private var typeOfVaccines: String = "test"
 
   // Disease Info
-  private var temperatureLevel: String = ""
-  private var temperature: String = ""
-  private var feedIntake: String = ""
-  private var defecation: String = ""
-  private var urination: String = ""
-  private var hair: String = ""
-  private var salivation: String = ""
-  private var staticPosture: String = ""
-  private var muzzle: String = ""
-  private var sneezing: String = ""
-  private var sweating: String = ""
-  private var postureAndGesture: String = ""
-  private var firstTime: String = ""
-  private var soughtElsewhere: String = ""
-  private var description: String = ""
-  private var otherAnimals: String = ""
-  private var emergency: String = ""
+  private var temperatureLevel: String = "test"
+  private var temperature: String = "1"
+  private var feedIntake: String = "test"
+  private var defecation: String = "test"
+  private var urination: String = "test"
+  private var hair: String = "test"
+  private var salivation: String = "test"
+  private var staticPosture: String = "test"
+  private var muzzle: String = "test"
+  private var sneezing: String = "test"
+  private var sweating: String = "test"
+  private var postureAndGesture: String = "test"
+  private var firstTime: String = "test"
+  private var soughtElsewhere: String = "test"
+  private var description: String = "test"
+  private var otherAnimals: String = "test"
+  private var emergency: String = "test"
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     binding = ActivityTreatmentFormBinding.inflate(layoutInflater)
     setContentView(binding.root)
+
+    viewModel = ViewModelProvider(this).get(TreatmentFormViewModel::class.java)
+    preference = VetPreference(this)
 
     setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -155,6 +164,10 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
         }
       }
     }
+
+    viewModel.counterNumber.observe(this, {
+      Log.d(TAG, "CounterNumber: $it")
+    })
   }
 
   private fun validateOwnerInfo(fragment: OwnerInfoFragment) {
@@ -339,6 +352,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
   override fun onCompleted() {
     Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
+    viewModel.getCounterNumber("Bearer ${preference.getAuthToken().toString()}")
   }
 
   override fun onBackPressed() {
@@ -410,5 +424,9 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
         foregroundFragment.getEmergencyTypeLayout().editText?.setText(emergency)
       }
     }
+  }
+
+  companion object {
+    private const val TAG = "TreatmentFormActivity"
   }
 }

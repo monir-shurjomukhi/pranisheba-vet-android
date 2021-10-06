@@ -49,7 +49,8 @@ class LoginActivity : AppCompatActivity() {
 
     viewModel.login.observe(this, {
       if (it.token.toString().isNotEmpty()) {
-        preference.putAuthToken(it.token.toString())
+        preference.putAuthToken(it.token)
+        preference.putMobileNumber(it.mobileNumber)
         startActivity(Intent(this, MainActivity2::class.java))
         finishAffinity()
       }
