@@ -12,7 +12,6 @@ import androidx.navigation.findNavController
 import com.aceinteract.android.stepper.StepperNavListener
 import com.pranisheba.vet.R
 import com.pranisheba.vet.databinding.ActivityTreatmentFormBinding
-import com.pranisheba.vet.preference.VetPreference
 import com.pranisheba.vet.ui.fragment.AnimalInfoFragment
 import com.pranisheba.vet.ui.fragment.DiseaseInfoFragment
 import com.pranisheba.vet.ui.fragment.OwnerInfoFragment
@@ -23,7 +22,6 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
   private lateinit var binding: ActivityTreatmentFormBinding
   private lateinit var viewModel: TreatmentFormViewModel
-  private lateinit var preference: VetPreference
   private var currentStep = 0
 
   // Owner Info
@@ -77,7 +75,6 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     setContentView(binding.root)
 
     viewModel = ViewModelProvider(this).get(TreatmentFormViewModel::class.java)
-    preference = VetPreference(this)
 
     setSupportActionBar(binding.toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -352,7 +349,7 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
   override fun onCompleted() {
     Toast.makeText(this, "Stepper completed", Toast.LENGTH_SHORT).show()
-    viewModel.getCounterNumber("Bearer ${preference.getAuthToken().toString()}")
+    viewModel.getCounterNumber()
   }
 
   override fun onBackPressed() {

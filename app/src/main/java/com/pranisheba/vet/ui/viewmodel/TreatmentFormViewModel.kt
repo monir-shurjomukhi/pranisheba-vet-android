@@ -14,8 +14,8 @@ class TreatmentFormViewModel(application: Application) : BaseViewModel(applicati
   val counterNumber: LiveData<CounterNumber>
     get() = _counterNumber
 
-  fun getCounterNumber(token: String) {
-    apiClient?.createCounterNumber(token)?.enqueue(object : Callback<CounterNumber> {
+  fun getCounterNumber() {
+    apiClient?.createCounterNumber("Bearer ${preference.getAuthToken()}")?.enqueue(object : Callback<CounterNumber> {
       override fun onResponse(call: Call<CounterNumber>, response: Response<CounterNumber>) {
         Log.d(TAG, "onResponse: $response")
         if (response.isSuccessful) {
