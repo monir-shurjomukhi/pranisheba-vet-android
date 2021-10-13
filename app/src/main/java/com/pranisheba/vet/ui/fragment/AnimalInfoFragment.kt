@@ -20,6 +20,51 @@ class AnimalInfoFragment : Fragment() {
 
   private lateinit var binding: FragmentAnimalInfoBinding
 
+  private val animalGroup =
+    mapOf("Ruminants" to 1, "Poultry" to 2, "Pet Bird" to 3, "Pet and Zoo Animals" to 4)
+  private val animalTypeRuminants =
+    mapOf("Cattle" to 1, "Sheep" to 2, "Goat" to 3, "Buffalo" to 4, "Others" to 35)
+  private val animalTypePoultry =
+    mapOf(
+      "Broiler" to 5,
+      "Layer" to 6,
+      "Quail" to 7,
+      "Duck" to 8,
+      "Turkey" to 9,
+      "Pigeon" to 10,
+      "Goose" to 11,
+      "Guinea Fowl" to 12,
+      "Others" to 36
+    )
+  private val animalTypePetAndZoo =
+    mapOf(
+      "Parrot" to 13,
+      "Koel" to 14,
+      "Mayna" to 15,
+      "Dove" to 16,
+      "Lovebird" to 17,
+      "Others" to 36
+    )
+  private val animalTypePetBird =
+    mapOf(
+      "Dog" to 18,
+      "Cat" to 19,
+      "Deer" to 20,
+      "Rabbit" to 21,
+      "Snake" to 22,
+      "Tiger" to 23,
+      "Elephant" to 24,
+      "Horse" to 29,
+      "Monkey" to 33,
+      "Others" to 36
+    )
+  private val typeOfBreed =
+    mapOf(
+      "Local" to 1,
+      "Cross Breed" to 2,
+      "Foreign" to 3
+    )
+
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
@@ -146,7 +191,7 @@ class AnimalInfoFragment : Fragment() {
     context?.let {
       ArrayAdapter(
         it, android.R.layout.simple_list_item_1,
-        listOf("Ruminants", "Poultry", "Pet Bird", "Pet & Zoo Animals")
+        animalGroup.keys.toList()
       ).also { adapter ->
         binding.animalGroupTextView.setAdapter(adapter)
         binding.animalGroupTextView.inputType = InputType.TYPE_NULL
@@ -169,7 +214,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf("Cattle", "Sheep", "Goat", "Buffalo")
+                  animalTypeRuminants.keys.toList()
                 ).also { adapter ->
                   binding.animalTypeTextView.setAdapter(adapter)
                   binding.animalTypeTextView.inputType = InputType.TYPE_NULL
@@ -179,7 +224,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf("Local", "Cross breed", "Foreign")
+                  typeOfBreed.keys.toList()
                 ).also { adapter ->
                   binding.breedTypeTextView.setAdapter(adapter)
                   binding.breedTypeTextView.inputType = InputType.TYPE_NULL
@@ -398,17 +443,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf(
-                    "Broiler",
-                    "Layer",
-                    "Quail",
-                    "Duck",
-                    "Turkey",
-                    "Pigeon",
-                    "Goose",
-                    "Guinea Fowl",
-                    "Others"
-                  )
+                  animalTypePoultry.keys.toList()
                 ).also { adapter ->
                   binding.animalTypeTextView.setAdapter(adapter)
                   binding.animalTypeTextView.inputType = InputType.TYPE_NULL
@@ -423,7 +458,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf("Parrot", "Koel", "Mayna", "Dove", "Lovebird", "Others")
+                  animalTypePetBird.keys.toList()
                 ).also { adapter ->
                   binding.animalTypeTextView.setAdapter(adapter)
                   binding.animalTypeTextView.inputType = InputType.TYPE_NULL
@@ -437,18 +472,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf(
-                    "Dog",
-                    "Cat",
-                    "Deer",
-                    "Rabbit",
-                    "Snake",
-                    "Tiger",
-                    "Elephant",
-                    "Monkey",
-                    "Horse",
-                    "Others"
-                  )
+                  animalTypePetAndZoo.keys.toList()
                 ).also { adapter ->
                   binding.animalTypeTextView.setAdapter(adapter)
                   binding.animalTypeTextView.inputType = InputType.TYPE_NULL
@@ -458,7 +482,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf("Local", "Cross breed", "Foreign")
+                  typeOfBreed.keys.toList()
                 ).also { adapter ->
                   binding.breedTypeTextView.setAdapter(adapter)
                   binding.breedTypeTextView.inputType = InputType.TYPE_NULL
@@ -468,7 +492,7 @@ class AnimalInfoFragment : Fragment() {
               context?.let {
                 ArrayAdapter(
                   it, android.R.layout.simple_list_item_1,
-                  listOf("Local", "Cross breed", "Foreign")
+                  typeOfBreed.keys.toList()
                 ).also { adapter ->
                   binding.breedTypeTextView.setAdapter(adapter)
                   binding.breedTypeTextView.inputType = InputType.TYPE_NULL
