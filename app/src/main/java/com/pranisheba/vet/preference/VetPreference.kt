@@ -28,8 +28,8 @@ class VetPreference(context: Context) {
     return preferences.getString(AUTH_TOKEN, "")
   }
 
-  fun putMobileNumber(token: String?) {
-    editor.putString(MOBILE_NUMBER, token)
+  fun putMobileNumber(mobileNumber: String?) {
+    editor.putString(MOBILE_NUMBER, mobileNumber)
     editor.apply()
   }
 

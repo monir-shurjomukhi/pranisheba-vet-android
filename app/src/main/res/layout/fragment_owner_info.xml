@@ -109,7 +109,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:gravity="start"
-        android:inputType="textPostalAddress"
+        android:inputType="textMultiLine"
         android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
   </androidx.constraintlayout.widget.ConstraintLayout>

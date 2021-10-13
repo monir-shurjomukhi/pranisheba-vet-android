@@ -18,6 +18,12 @@ interface ApiInterface {
     @Header("Authorization") token: String
   ): Call<CounterNumber>
 
+  @GET("customers/getByMobileNumber/{mobile_number}")
+  fun getCustomer(
+    @Header("Authorization") token: String,
+    @Path("mobile_number") mobileNumber: String
+  ): Call<Customer>
+
   //////////////////// POST ///////////////////
 
   @POST("customers")

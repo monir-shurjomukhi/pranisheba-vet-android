@@ -1,8 +1,10 @@
 package com.pranisheba.vet.ui.activity
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -84,6 +86,8 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
     //setupActionBarWithNavController(findNavController(R.id.frame_stepper))
     binding.stepper.stepperNavListener = this
 
+    viewModel.getCustomer()
+
     binding.buttonPrevious.setOnClickListener { findNavController(R.id.frame_stepper).navigateUp() }
     binding.buttonNext.setOnClickListener {
       when (currentStep) {
@@ -164,6 +168,48 @@ class TreatmentFormActivity : AppCompatActivity(), StepperNavListener {
 
     viewModel.counterNumber.observe(this, {
       Log.d(TAG, "CounterNumber: $it")
+    })
+
+    viewModel.progress.observe(this, {
+      if (it) {
+        binding.animationView.visibility = View.VISIBLE
+      } else {
+        binding.animationView.visibility = View.GONE
+      }
+    })
+
+    viewModel.customer.observe(this, {
+      val navHostFragment: Fragment? =
+        supportFragmentManager.findFragmentById(R.id.frame_stepper)
+      val foregroundFragment =
+        if (navHostFragment == null) null else navHostFragment.childFragmentManager
+          .fragments[0]
+      foregroundFragment as OwnerInfoFragment
+
+      foregroundFragment.getNameLayout().editText?.setText(it.data.name)
+      if (!TextUtils.isEmpty(foregroundFragment.getNameLayout().editText?.text)) {
+        foregroundFragment.getNameLayout().editText?.keyListener = null
+      }
+
+      foregroundFragment.getMobileLayout().editText?.setText(it.data.mobileNumber)
+      if (!TextUtils.isEmpty(foregroundFragment.getMobileLayout().editText?.text)) {
+        foregroundFragment.getMobileLayout().editText?.keyListener = null
+      }
+
+      foregroundFragment.getEmailLayout().editText?.setText(it.data.email)
+      if (!TextUtils.isEmpty(foregroundFragment.getEmailLayout().editText?.text)) {
+        foregroundFragment.getEmailLayout().editText?.keyListener = null
+      }
+
+      foregroundFragment.getFarmNameLayout().editText?.setText(it.data.farmName)
+      if (!TextUtils.isEmpty(foregroundFragment.getFarmNameLayout().editText?.text)) {
+        foregroundFragment.getFarmNameLayout().editText?.keyListener = null
+      }
+
+      foregroundFragment.getAddressLayout().editText?.setText(it.data.address)
+      if (!TextUtils.isEmpty(foregroundFragment.getAddressLayout().editText?.text)) {
+        foregroundFragment.getAddressLayout().editText?.keyListener = null
+      }
     })
   }
 
