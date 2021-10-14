@@ -185,7 +185,7 @@ class AnimalInfoFragment : Fragment() {
         }
     }
 
-    binding.treatedBeforeLayout.editText?.addTextChangedListener(object : TextWatcher {
+    binding.treatedBeforeTextView.addTextChangedListener(object : TextWatcher {
       override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -213,7 +213,7 @@ class AnimalInfoFragment : Fragment() {
       }
     }
 
-    binding.animalGroupLayout.editText?.addTextChangedListener(object : TextWatcher {
+    binding.animalGroupTextView.addTextChangedListener(object : TextWatcher {
       override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -264,6 +264,8 @@ class AnimalInfoFragment : Fragment() {
             }
             "Pet & Zoo Animals" -> {
               binding.animalTypeTextView.text = null
+              binding.breedTypeLayout.visibility = View.GONE
+              binding.animalBreedLayout.visibility = View.GONE
 
               context?.let {
                 ArrayAdapter(
@@ -273,54 +275,6 @@ class AnimalInfoFragment : Fragment() {
                   binding.animalTypeTextView.setAdapter(adapter)
                 }
               }
-
-              /*context?.let {
-                ArrayAdapter(
-                  it, android.R.layout.simple_list_item_1,
-                  typeOfBreed.keys.toList()
-                ).also { adapter ->
-                  binding.breedTypeTextView.setAdapter(adapter)
-                }
-              }*/
-
-              binding.breedTypeLayout.editText?.addTextChangedListener(object : TextWatcher {
-                override fun beforeTextChanged(
-                  s: CharSequence?,
-                  start: Int,
-                  count: Int,
-                  after: Int
-                ) {
-                }
-
-                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                  binding.animalBreedLayout.editText?.text = null
-                  if (s?.isNotEmpty() == true) {
-                    when (binding.animalTypeTextView.text.toString()) {
-                      "Horse", "Dog", "Cat" -> {
-                        context?.let {
-                          ArrayAdapter(
-                            it, android.R.layout.simple_list_item_1,
-                            listOf(
-                              "Local",
-                              "Anglo-Arabia",
-                              "Arabian",
-                              "Canadian",
-                              "Friesian",
-                              "Marwari",
-                              "Russian Don",
-                              "Russian Trotter"
-                            )
-                          ).also { adapter ->
-                            binding.animalBreedTextView.setAdapter(adapter)
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-
-                override fun afterTextChanged(s: Editable?) {}
-              })
             }
           }
         }
@@ -329,19 +283,51 @@ class AnimalInfoFragment : Fragment() {
       override fun afterTextChanged(s: Editable?) {}
     })
 
-    context?.let {
-      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
-        .also { adapter ->
-          binding.partOfIotTextView.setAdapter(adapter)
-        }
-    }
-
     binding.animalTypeTextView.addTextChangedListener(object : TextWatcher {
       override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         binding.breedTypeLayout.editText?.text = null
         binding.animalBreedLayout.editText?.text = null
+
+        if (binding.animalGroupTextView.text.toString() == "Pet & Zoo Animals") {
+          when(binding.animalTypeTextView.text.toString()) {
+            "Horse" -> {
+              binding.breedTypeLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.visibility = View.VISIBLE
+
+              /*val breed = Breed(
+                animalTypePetAndZoo[binding.animalTypeTextView.text.toString()],
+                typeOfBreed[binding.breedTypeTextView.text.toString()]
+              )
+              viewModel.getAnimalBreed(breed)*/
+            }
+            "Dog" -> {
+              binding.breedTypeLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.visibility = View.VISIBLE
+
+              /*val breed = Breed(
+                animalTypePetAndZoo[binding.animalTypeTextView.text.toString()],
+                typeOfBreed[binding.breedTypeTextView.text.toString()]
+              )
+              viewModel.getAnimalBreed(breed)*/
+            }
+            "Cat" -> {
+              binding.breedTypeLayout.visibility = View.VISIBLE
+              binding.animalBreedLayout.visibility = View.VISIBLE
+
+              /*val breed = Breed(
+                animalTypePetAndZoo[binding.animalTypeTextView.text.toString()],
+                typeOfBreed[binding.breedTypeTextView.text.toString()]
+              )
+              viewModel.getAnimalBreed(breed)*/
+            }
+            else -> {
+              binding.breedTypeLayout.visibility = View.GONE
+              binding.animalBreedLayout.visibility = View.GONE
+            }
+          }
+        }
       }
 
       override fun afterTextChanged(s: Editable?) {}
@@ -366,7 +352,7 @@ class AnimalInfoFragment : Fragment() {
       }
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-        binding.animalBreedLayout.editText?.text = null
+        binding.animalBreedTextView.text = null
         if (s?.isNotEmpty() == true) {
           /*when (s.toString()) {
             "Local" -> {
@@ -555,47 +541,50 @@ class AnimalInfoFragment : Fragment() {
             }
           }*/
 
-          val breed: Breed
-          when (binding.breedTypeTextView.text.toString()) {
+          when (binding.animalGroupTextView.text.toString()) {
             "Ruminants" -> {
-              breed = Breed(
+              val breed = Breed(
                 animalTypeRuminants[binding.animalTypeTextView.text.toString()],
                 typeOfBreed[binding.breedTypeTextView.text.toString()]
               )
+              viewModel.getAnimalBreed(breed)
             }
             "Poultry" -> {
-              breed = Breed(
+              val breed = Breed(
                 animalTypePoultry[binding.animalTypeTextView.text.toString()],
                 typeOfBreed[binding.breedTypeTextView.text.toString()]
               )
+              viewModel.getAnimalBreed(breed)
             }
             "Pet Bird" -> {
-              breed = Breed(
+              val breed = Breed(
                 animalTypePetBird[binding.animalTypeTextView.text.toString()],
                 typeOfBreed[binding.breedTypeTextView.text.toString()]
               )
+              viewModel.getAnimalBreed(breed)
             }
             "Pet & Zoo Animals" -> {
-              breed = Breed(
+              val breed = Breed(
                 animalTypePetAndZoo[binding.animalTypeTextView.text.toString()],
                 typeOfBreed[binding.breedTypeTextView.text.toString()]
               )
-            }
-            else -> {
-              breed = Breed(
-                animalTypeRuminants[binding.animalTypeTextView.text.toString()],
-                typeOfBreed[binding.breedTypeTextView.text.toString()]
-              )
+              viewModel.getAnimalBreed(breed)
             }
           }
-          viewModel.getAnimalBreed(breed)
         }
       }
 
       override fun afterTextChanged(s: Editable?) {}
     })
 
-    binding.partOfIotLayout.editText?.addTextChangedListener(object : TextWatcher {
+    context?.let {
+      ArrayAdapter(it, android.R.layout.simple_list_item_1, listOf("Yes", "No"))
+        .also { adapter ->
+          binding.partOfIotTextView.setAdapter(adapter)
+        }
+    }
+
+    binding.partOfIotTextView.addTextChangedListener(object : TextWatcher {
       override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
       override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
