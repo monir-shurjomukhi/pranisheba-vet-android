@@ -50,4 +50,9 @@ interface ApiInterface {
   fun registerAgent(
     @Body agentRegistrationData: AgentRegistrationData
   ): Call<AgentRegistration>
+
+  @POST("breedOfAnimals/typeOfBreeds")
+  fun getAnimalBreed(
+    @Body breed: Breed
+  ): Call<Breed>
 }
